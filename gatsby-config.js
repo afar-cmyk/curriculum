@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
-    title: 'Curriculum vitae'
+    title: 'Curriculum vitae',
+    pathPrefix: "/curriculum",
   },
   plugins: [
     `gatsby-plugin-offline`,
