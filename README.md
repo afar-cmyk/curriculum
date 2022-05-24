@@ -2,5 +2,5 @@
   Andrés Felipe Alvarez
 </h1>
 
-## Curriculum viate
+## Curriculum-vitae
 Desarrollo del curriculum vitae responsive en GatsbyJS, React y Material UI.
