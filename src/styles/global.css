@@ -1,0 +1,79 @@
+@import './typography.css';
+
+html,
+body {
+  width: 100%;
+  height: auto !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Anaheim';
+  font-weight: 400;
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+h1,
+h3 {
+  font-family: 'Source Sans Pro';
+}
+
+.titulo:hover h1 {
+  text-decoration: underline #11c3db96;
+}
+
+.acerca:hover h3 {
+  text-decoration: underline #11c3db96;
+}
+
+.formacion:hover h3 {
+  text-decoration: underline #11c3db96;
+}
+
+.habilidades:hover h3 {
+  text-decoration: underline #11c3db96;
+}
+
+.experiencia:hover h3 {
+  text-decoration: underline #11c3db96;
+}
+
+.experiencia-fecha {
+  text-align: center;
+  width: fit-content;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #4aabc980;
+  margin: 0px;
+  color: #f2f2f2;
+}
+
+.experiencias:hover .experiencia-fecha {
+  background-color: #11c3db96;
+}
+
+@keyframes pulso {
+  0% {
+    transform: scale(0.99);
+    border: solid 2px #3d94a000;
+  }
+  40% {
+    transform: scale(1.05);
+    border: solid 2px #3d94a026;
+  }
+  100% {
+    transform: scale(1);
+    border: solid 2px #3d95a000;
+  }
+}
+
+.titulo img {
+  animation-name: pulso;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
