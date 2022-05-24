@@ -3,8 +3,8 @@
 </h1>
 
 ## Curriculum-vitae and Portfolio
-`english`
+`english`<br/>
 Responsive curriculum vitae development in GatsbyJS, React and Material UI, hosted on Netlify and GitHub pages.
-
-`spanish`
+<br/><br/>
+`spanish`<br/>
 Desarrollo del curriculum vitae responsive en GatsbyJS, React y Material UI, alojado en Netlify y GitHub pages.
