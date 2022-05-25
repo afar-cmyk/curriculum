@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 const SEO = ({ description, lang, meta, title }) => {
-  const { site, imagen } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -16,15 +16,10 @@ const SEO = ({ description, lang, meta, title }) => {
             image
           }
         }
-        imagen: file(relativePath: { eq: "/twitter.jpg" }) {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED)
-          }
-        }
       }
     `
   )
-  const image = imagen
+  const image = site.siteMetadata.image
   const keywords = site.siteMetadata.keywords
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title

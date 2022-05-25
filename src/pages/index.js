@@ -7,12 +7,12 @@ import Acerca from '../components/indice/Acerca'
 import Estudios from '../components/indice/Estudios'
 import HabilidadesTecnicas from '../components/indice/HabilidadesTecnicas'
 import Experiencia from '../components/indice/Experiencia'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 
 export default function index() {
   return (
     <>
-      <SEO
+      <Seo
         title='Curriculum'
         description='Este es mi curriculum vitae version PWA'
       />
