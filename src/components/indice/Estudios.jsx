@@ -68,13 +68,13 @@ const TarjetaEstudios = (props) => {
     borderRadius: '8px',
     p: '12px',
     marginRight: 0,
-    maxWidth: '374px',
+    maxWidth: { xs: '290px', sm: '325px', md: '374px' },
     '&:hover': { border: 'solid 1px #11c3db96' },
     '& h4': {
       width: 'fit-content',
       fontWeight: 700,
       lineHeight: 'calc(0.9ex / 0.32)',
-      fontSize: { xs: '1.06em', xl: '1.13em' },
+      fontSize: { xs: '1.04em', sm: '1.06em', xl: '1.13em' },
       color: '#f2f2f2',
       m: 0
     },

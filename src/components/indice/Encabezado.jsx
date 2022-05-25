@@ -29,7 +29,11 @@ const Encabezado = () => {
     display: 'flex',
     flexDirection: 'column',
     '& h1': {
-      fontSize: { xs: 'calc(1rem + 3.58vw)', lg: 'calc(1rem + 2.8vw)' },
+      fontSize: {
+        xs: 'calc(1rem + 4.9vw)',
+        sm: 'calc(1rem + 3.58vw)',
+        lg: 'calc(1rem + 2.8vw)'
+      },
       textAlignLast: { xs: 'center', sm: 'unset' },
       mt: 0,
       mb: 0,
@@ -38,7 +42,7 @@ const Encabezado = () => {
       textUnderlineOffset: '2px'
     },
     '& sub': {
-      fontSize: 'calc(0.8rem + 1vw)',
+      fontSize: { xs: 'calc(0.85rem + 1vw)', sm: 'calc(0.8rem + 1vw)' },
       fontFamily: 'Assistant',
       fontWeight: 300,
       alignSelf: 'center'

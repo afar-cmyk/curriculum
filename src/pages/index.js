@@ -30,9 +30,10 @@ export default function index() {
 let contenedorPrincipal = {
   backgroundColor: '#0d0d0d',
   py: { xs: '37.5px', md: '107.5px', lg: '75px' },
-  px: { xs: '60px', md: '215px', lg: '20vw', xl: '30vw' },
+  px: { xs: '6vw', md: '215px', lg: '20vw', xl: '30vw' },
+  // px: { xs: '60px', md: '215px', lg: '20vw', xl: '30vw' },
   minHeight: '100vh',
-  minWidth: 'fit-content',
+  // minWidth: 'fit-content',
   boxSizing: 'border-box',
   blockSize: 'auto'
 }
