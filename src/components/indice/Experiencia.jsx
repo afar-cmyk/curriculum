@@ -8,7 +8,7 @@ const Experiencia = () => {
 
   let envolturaExperiencia = {
     minWidth: 'fit-content',
-    '& h3': {
+    '& h2': {
       color: '#f2f2f2',
       textDecoration: `underline ${colorPrincipal}`,
       textUnderlineOffset: '2px',
@@ -16,7 +16,7 @@ const Experiencia = () => {
       mt: 0,
       mb: { xs: '10px', lg: '15px' }
     },
-    '& h4': {
+    '& h3': {
       fontWeight: 700,
       fontSize: { xs: '1.08em', lg: '1.23em' },
       color: '#f2f2f2',
@@ -55,7 +55,7 @@ const Experiencia = () => {
         className='experiencia'
         sx={{ ...envolturaExperiencia }}
       >
-        <h3>Experiencia Laboral</h3>
+        <h2>Experiencia Laboral</h2>
         <Box component='div' sx={{ ...contenedorExperiencia }}>
           <div className='experiencias'>
             <FechaTitulo fecha='2020' empresa='Grupo Editorial Norma' />
@@ -82,7 +82,7 @@ const Experiencia = () => {
               <li>
                 <p>
                   Postproducción de videos para la marca Beckett Simonon que
-                  serian utilizados para campañas publicitarias
+                  serían utilizados para campañas publicitarias.
                 </p>
               </li>
             </Box>
@@ -150,7 +150,7 @@ const FechaTitulo = (props) => {
     <>
       <div style={{ ...envolturaTitulo }}>
         <p className='experiencia-fecha'>{fecha}</p>
-        <h4>{empresa}</h4>
+        <h3>{empresa}</h3>
       </div>
     </>
   )

@@ -30,7 +30,7 @@ const Encabezado = () => {
     flexDirection: 'column',
     '& h1': {
       fontSize: {
-        xs: 'calc(1rem + 4.9vw)',
+        xs: 'calc(1rem + 4.65vw)',
         sm: 'calc(1rem + 3.58vw)',
         lg: 'calc(1rem + 2.8vw)'
       },

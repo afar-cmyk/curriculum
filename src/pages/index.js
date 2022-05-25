@@ -7,14 +7,18 @@ import Acerca from '../components/indice/Acerca'
 import Estudios from '../components/indice/Estudios'
 import HabilidadesTecnicas from '../components/indice/HabilidadesTecnicas'
 import Experiencia from '../components/indice/Experiencia'
+import SEO from '../components/SEO'
 
 export default function index() {
   return (
     <>
+      <SEO
+        title='Curriculum'
+        description='Este es mi curriculum vitae version PWA'
+      />
       <Box component='main' sx={{ ...contenedorPrincipal }}>
         <ColoresProvider>
           <Encabezado />
-
           <article>
             <Acerca />
             <Estudios />

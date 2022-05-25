@@ -7,7 +7,7 @@ const Acerca = () => {
 
   let contenedorAcerca = {
     mb: { xs: '27px', md: '30px', lg: '45px' },
-    '& h3': {
+    '& h2': {
       color: '#f2f2f2',
       textDecoration: `underline ${colorPrincipal}`,
       textUnderlineOffset: '2px',
@@ -27,7 +27,7 @@ const Acerca = () => {
   }
   return (
     <Box component='section' className='acerca' sx={{ ...contenedorAcerca }}>
-      <h3>Sobre Mí</h3>
+      <h2>Sobre Mí</h2>
       <p>
         <strong>Diseñador UI/UX</strong>, <strong>editor de videos</strong> y
         <strong> fotógrafo</strong>, programador de software utilizando JAVA y

@@ -8,7 +8,7 @@ const Estudios = () => {
   let envolturaEstudios = {
     mb: { xs: '46px', md: '48px', lg: '45px' },
     minWidth: 'fit-content',
-    '& h3': {
+    '& h2': {
       color: '#f2f2f2',
       textDecoration: `underline ${colorPrincipal}`,
       textUnderlineOffset: '2px',
@@ -24,7 +24,7 @@ const Estudios = () => {
         className='formacion'
         sx={{ ...envolturaEstudios }}
       >
-        <h3>Formación Académica</h3>
+        <h2>Formación Académica</h2>
         <Box
           component='div'
           sx={{
@@ -70,11 +70,11 @@ const TarjetaEstudios = (props) => {
     marginRight: 0,
     maxWidth: { xs: '290px', sm: '325px', md: '374px' },
     '&:hover': { border: 'solid 1px #11c3db96' },
-    '& h4': {
+    '& h3': {
       width: 'fit-content',
       fontWeight: 700,
       lineHeight: 'calc(0.9ex / 0.32)',
-      fontSize: { xs: '1.04em', sm: '1.06em', xl: '1.13em' },
+      fontSize: { xs: '1.02em', sm: '1.05em', xl: '1.13em' },
       color: '#f2f2f2',
       m: 0
     },
@@ -89,7 +89,7 @@ const TarjetaEstudios = (props) => {
   return (
     <>
       <Box component='div' sx={{ ...contenedorTarjeta }}>
-        <h4>{titulo}</h4>
+        <h3>{titulo}</h3>
         <p>{organizacion}</p>
         <p>{fecha}</p>
       </Box>

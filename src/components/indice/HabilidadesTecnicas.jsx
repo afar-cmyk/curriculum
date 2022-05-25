@@ -11,7 +11,7 @@ const HabilidadesTecnicas = () => {
     flexDirection: 'column',
     width: { lg: '100%' },
     mb: { xs: '42px', md: '48px', lg: '45px' },
-    '& h3': {
+    '& h2': {
       color: '#f2f2f2',
       textDecoration: `underline ${colorPrincipal}`,
       textUnderlineOffset: '2px',
@@ -59,7 +59,7 @@ const HabilidadesTecnicas = () => {
         className='habilidades'
         sx={{ ...seccionHabilidades }}
       >
-        <h3>Habilidades Tecnicas</h3>
+        <h2>Habilidades Tecnicas</h2>
         <div style={{ ...envolturaHabilidades }}>
           {listaHabilidades.map((datos, index) => {
             const { habilidad, puntuacion } = datos
@@ -67,6 +67,7 @@ const HabilidadesTecnicas = () => {
               <div key={index} style={{ ...contenedorHabilidades }}>
                 {habilidad}
                 <LinearProgress
+                  aria-label={`habilidad ${habilidad}`}
                   variant='determinate'
                   value={puntuacion}
                   sx={{ ...barraProgreso }}
