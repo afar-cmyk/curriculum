@@ -80,13 +80,13 @@ const Seo = ({ description, lang, meta, title }) => {
   )
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: `es`,
   meta: [],
   description: ``
 }
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   lang: PropTypes.string,
