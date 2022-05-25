@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import metaImage from '../images/twitter-test.jpg'
+import metaImage from '../images/redes-twitter.jpg'
 
 const Seo = ({ description, lang, meta, title, image }) => {
   const { site } = useStaticQuery(
