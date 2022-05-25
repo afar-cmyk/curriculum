@@ -8,7 +8,7 @@ module.exports = {
     twitterUserName: '@Afar_CMYK',
     keywords:
       'gatsby, react, javascript, gatsby-background-image, curriculum, netlify',
-    image: 'twitter.jpg',
+    image: '/twitter.jpg',
     pathPrefix: '/curriculum'
   },
   plugins: [
