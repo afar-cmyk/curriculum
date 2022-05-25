@@ -26,8 +26,6 @@ const Seo = ({ description, lang, meta, title, image }) => {
   const keywords = site.siteMetadata.keywords
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-
-  console.log(finalImage)
   return (
     <Helmet
       htmlAttributes={{
