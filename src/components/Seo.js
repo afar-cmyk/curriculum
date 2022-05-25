@@ -15,15 +15,19 @@ const Seo = ({ description, lang, meta, title, image }) => {
             author
             keywords
             image
+            siteUrl
           }
         }
       }
     `
   )
   const siteImage = image || metaImage
+  const finalImage = `${site.siteMetadata.siteUrl}${siteImage}`
   const keywords = site.siteMetadata.keywords
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+
+  console.log(finalImage)
   return (
     <Helmet
       htmlAttributes={{
@@ -54,7 +58,7 @@ const Seo = ({ description, lang, meta, title, image }) => {
         },
         {
           property: `og:image`,
-          content: siteImage
+          content: finalImage
         },
         {
           name: `twitter:card`,
@@ -62,7 +66,7 @@ const Seo = ({ description, lang, meta, title, image }) => {
         },
         {
           name: `twitter:image`,
-          content: siteImage
+          content: finalImage
         },
         {
           name: `twitter:creator`,

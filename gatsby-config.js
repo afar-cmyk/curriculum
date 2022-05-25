@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://andresfelipe.netlify.app',
+    siteUrl: 'https://andresfelipe.netlify.app/',
     title: 'Andrés Felipe Alvarez',
     description: 'Curriculum vitae and portfolio of Andrés Alvarez.',
     url: 'https: / /andresfelipe.netlify.app',
