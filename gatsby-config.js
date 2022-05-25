@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/curriculum',
   siteMetadata: {
     siteUrl: 'https://andresfelipe.netlify.app/',
     title: 'Andrés Felipe Alvarez',
@@ -8,8 +9,7 @@ module.exports = {
     twitterUserName: '@Afar_CMYK',
     keywords:
       'gatsby, react, javascript, gatsby-background-image, curriculum, netlify',
-    image: 'src/images/twitter.jpg',
-    pathPrefix: '/curriculum'
+    image: 'src/images/twitter.jpg'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
