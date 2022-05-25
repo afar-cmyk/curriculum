@@ -13,8 +13,8 @@ export default function index() {
   return (
     <>
       <Seo
-        title='Curriculum'
-        description='Este es mi curriculum vitae version PWA'
+        title='Curriculum Vitae'
+        description='Este es mi curriculum vitae en version PWA!'
       />
       <Box component='main' sx={{ ...contenedorPrincipal }}>
         <ColoresProvider>
