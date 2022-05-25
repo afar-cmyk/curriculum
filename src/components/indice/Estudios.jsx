@@ -74,7 +74,7 @@ const TarjetaEstudios = (props) => {
       width: 'fit-content',
       fontWeight: 700,
       lineHeight: 'calc(0.9ex / 0.32)',
-      fontSize: { xs: '1.02em', sm: '1.05em', xl: '1.13em' },
+      fontSize: { xs: '1em', sm: '1.05em', xl: '1.13em' },
       color: '#f2f2f2',
       m: 0
     },
