@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import imagenTwitter from '../static/images/twitter.jpg'
 
 const SEO = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
@@ -19,7 +20,7 @@ const SEO = ({ description, lang, meta, title }) => {
       }
     `
   )
-  const image = site.siteMetadata.image
+  const image = imagenTwitter
   const keywords = site.siteMetadata.keywords
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
