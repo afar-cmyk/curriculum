@@ -39,7 +39,6 @@ const Experiencia = () => {
   let contenidoExperiencia = {
     margin: 0,
     pl: '22px',
-    // width: { xs: '100%' },
     listStyle: 'square',
     '& li:not(:last-child)': {
       mb: '10px'

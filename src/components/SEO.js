@@ -3,17 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-// siteMetadata: {
-//   siteUrl: 'https://andresfelipe.netlify.app',
-//   title: 'Curriculum Andrés Felipe Alvarez',
-//   description: 'Curriculum vitae and portfolio of Andrés Alvarez.',
-//   url: 'https: / /andresfelipe.netlify.app',
-//   author: '@Afar_CMYK',
-//   twitterUserName: '@Afar_CMYK',
-//   keywords:
-//     'gatsby, react, javascript, gatsby-background-image, curriculum, netlify',
-//   pathPrefix: '/curriculum'
-
 const SEO = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
     graphql`
