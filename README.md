@@ -9,3 +9,11 @@ Responsive curriculum vitae development in GatsbyJS, React and Material UI, host
 <br/><br/>
 `spanish`<br/>
 Desarrollo del curriculum vitae responsive en GatsbyJS, React y Material UI, alojado en Netlify y GitHub pages.
+
+<hr>
+
+### Netlify
+https://andresfelipe.netlify.app/
+
+### GitHub Pages
+https://afar-cmyk.github.io/curriculum/
