@@ -42,23 +42,6 @@ h2 {
   text-decoration: underline #11c3db96;
 }
 
-.experiencia-fecha {
-  text-align: center;
-  width: fit-content;
-  padding-left: 14px;
-  padding-right: 14px;
-  border-radius: 16px;
-  font-size: 14px;
-  font-weight: 700;
-  background-color: #4aabc980;
-  margin: 0px;
-  color: #f2f2f2;
-}
-
-.experiencias:hover .experiencia-fecha {
-  background-color: #11c3db96;
-}
-
 @keyframes pulso {
   0% {
     transform: scale(0.99);
