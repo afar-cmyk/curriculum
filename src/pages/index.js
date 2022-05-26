@@ -5,8 +5,8 @@ import { ColoresProvider } from '../components/indice/ColoresContext'
 import Encabezado from '../components/indice/Encabezado'
 import Contacto from '../components/indice/Contacto'
 import Acerca from '../components/indice/Acerca'
-import Estudios from '../components/indice/Estudios'
-import HabilidadesTecnicas from '../components/indice/HabilidadesTecnicas'
+import Formacion from '../components/indice/Formacion'
+import Habilidades from '../components/indice/Habilidades'
 import Experiencia from '../components/indice/Experiencia'
 import Seo from '../components/Seo'
 
@@ -20,12 +20,11 @@ export default function index() {
       <Box component='main' sx={{ ...contenedorPrincipal }}>
         <ColoresProvider>
           <Encabezado />
-
           <article>
             <Contacto />
             <Acerca />
-            <Estudios />
-            <HabilidadesTecnicas />
+            <Formacion />
+            <Habilidades />
             <Experiencia />
           </article>
         </ColoresProvider>
