@@ -51,7 +51,7 @@ module.exports = {
         workboxConfig: {
           runtimeCaching: [
             {
-              urlPattern: /(\.js$|\.css$|\.woff$|\.woff2$|\.svg$)/,
+              urlPattern: /(\.css$|\.woff$|\.woff2$|\.svg$)/,
               handler: `StaleWhileRevalidate`
             }
           ]
