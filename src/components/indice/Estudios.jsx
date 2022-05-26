@@ -30,7 +30,7 @@ const Estudios = () => {
           sx={{
             display: 'grid',
             gridTemplateColumns: {
-              xs: 'repeat(auto-fill, minmax(340px, 1fr))'
+              xs: 'repeat(auto-fill, minmax(316px, 1fr))'
             },
             gridGap: '20px',
             boxSizing: 'border-box'
@@ -64,24 +64,27 @@ const Estudios = () => {
 
 const TarjetaEstudios = (props) => {
   let contenedorTarjeta = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     border: 'solid 1px #11c3db26',
     borderRadius: '8px',
     p: '12px',
     marginRight: 0,
-    maxWidth: { xs: '290px', sm: '325px', md: '374px' },
+    // maxWidth: { xs: '290px', sm: '325px', md: '374px' },
     '&:hover': { border: 'solid 1px #11c3db96' },
     '& h3': {
       width: 'fit-content',
       fontWeight: 700,
       lineHeight: 'calc(0.9ex / 0.32)',
-      fontSize: { xs: '1em', sm: '1.05em', xl: '1.13em' },
+      fontSize: { xs: '1em', sm: '1.05em', xl: '1em' },
       color: '#f2f2f2',
       m: 0
     },
     '& p': {
       width: 'fit-content',
       m: 0,
-      fontSize: { xs: '16px', lg: '1.1em', xl: '1.1em' }
+      fontSize: { xs: '16px', lg: '1.1em', xl: '1em' }
     }
   }
 

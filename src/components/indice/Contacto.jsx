@@ -43,7 +43,7 @@ const Contacto = () => {
           sx={{
             display: 'grid',
             gridTemplateColumns: {
-              xs: 'repeat(auto-fill, minmax(340px, 1fr))'
+              xs: 'repeat(auto-fill, minmax(316px, 1fr))'
             },
             gridGap: '15px',
             boxSizing: 'border-box'
