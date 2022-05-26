@@ -139,7 +139,6 @@ const TarjetaEstudios = (props) => {
     borderRadius: '8px',
     p: '12px',
     marginRight: 0,
-    // maxWidth: { xs: '290px', sm: '325px', md: '374px' },
     '&:hover': { border: 'solid 1px #11c3db96' },
     '& h3': {
       width: 'fit-content',

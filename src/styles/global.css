@@ -38,6 +38,10 @@ h2 {
   text-decoration: underline #11c3db96;
 }
 
+.informacion:hover h2 {
+  text-decoration: underline #11c3db96;
+}
+
 .experiencia-fecha {
   text-align: center;
   width: fit-content;
