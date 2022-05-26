@@ -77,51 +77,54 @@ const Contacto = () => {
           >
             <Chip
               size='small'
+              clickable={true}
               label='GitHub'
-              icon={<GitHub sx={{ ...estilosIconos }} />}
-              sx={{
-                px: '6px',
-                fontSize: '13px',
-                backgroundColor: 'rgba(255, 255, 255, 0.16)',
-                color: '#cccccc'
-              }}
+              component='a'
+              referrerPolicy='origin'
+              rel='external'
+              target='_blank'
+              href='https://github.com/afar-cmyk'
+              icon={<GitHub />}
+              sx={{ ...estilosChip }}
             />
             <Chip
               size='small'
+              clickable={true}
               label='Instagram'
-              icon={<Instagram sx={{ ...estilosIconos }} />}
-              sx={{
-                px: '6px',
-                fontSize: '13px',
-                backgroundColor: 'rgba(255, 255, 255, 0.16)',
-                color: '#cccccc'
-              }}
+              component='a'
+              referrerPolicy='origin'
+              rel='external'
+              target='_blank'
+              href='https://www.instagram.com/afarvf'
+              icon={<Instagram />}
+              sx={{ ...estilosChip }}
             />
             <Chip
               size='small'
+              clickable={true}
               label='Twitter'
-              icon={<Twitter sx={{ ...estilosIconos }} />}
-              sx={{
-                px: '6px',
-                fontSize: '13px',
-                backgroundColor: 'rgba(255, 255, 255, 0.16)',
-                color: '#cccccc'
-              }}
+              component='a'
+              referrerPolicy='origin'
+              rel='external'
+              target='_blank'
+              href='https://twitter.com/Afar_CMYK'
+              icon={<Twitter />}
+              sx={{ ...estilosChip }}
             />
             <Chip
               size='small'
+              clickable={true}
               label='YouTube'
-              icon={<YouTube sx={{ ...estilosIconos }} />}
-              sx={{
-                px: '6px',
-                fontSize: '13px',
-                backgroundColor: 'rgba(255, 255, 255, 0.16)',
-                color: '#cccccc'
-              }}
+              component='a'
+              referrerPolicy='origin'
+              rel='external'
+              target='_blank'
+              href='https://www.youtube.com/channel/UC9iF8etFCL3Jugfm1VlTiQw/videos'
+              icon={<YouTube />}
+              sx={{ ...estilosChip }}
             />
           </div>
         </span>
-        {/* </div> */}
       </Box>
     </>
   )
@@ -165,8 +168,21 @@ const TarjetaEstudios = (props) => {
   )
 }
 
-let estilosIconos = {
-  fontSize: '2em'
+let estilosChip = {
+  px: '6px',
+  fontSize: '13px',
+  backgroundColor: 'rgba(255, 255, 255, 0.16)',
+  color: '#cccccc',
+  '& .MuiChip-icon': {
+    fontSize: '1.5em'
+  },
+  '&:hover .MuiChip-icon': {
+    color: '#f2f2f2'
+  },
+  '&:hover': {
+    backgroundColor: '#388994',
+    color: '#f2f2f2'
+  }
 }
 
 export default Contacto
