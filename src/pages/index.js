@@ -3,6 +3,7 @@ import '../styles/global.css'
 import { Box } from '@mui/material'
 import { ColoresProvider } from '../components/indice/ColoresContext'
 import Encabezado from '../components/indice/Encabezado'
+import Contacto from '../components/indice/Contacto'
 import Acerca from '../components/indice/Acerca'
 import Estudios from '../components/indice/Estudios'
 import HabilidadesTecnicas from '../components/indice/HabilidadesTecnicas'
@@ -19,7 +20,9 @@ export default function index() {
       <Box component='main' sx={{ ...contenedorPrincipal }}>
         <ColoresProvider>
           <Encabezado />
+
           <article>
+            <Contacto />
             <Acerca />
             <Estudios />
             <HabilidadesTecnicas />
