@@ -12,7 +12,7 @@ const HabilidadesTecnicas = () => {
     width: { lg: '100%' },
     mb: { xs: '42px', md: '48px', lg: '45px' },
     '& h2': {
-      color: '#f2f2f2',
+      color: '#bfbfbf',
       textDecoration: `underline ${colorPrincipal}`,
       textUnderlineOffset: '2px',
       fontSize: { xs: '25px', sm: '30px', lg: '2em' },

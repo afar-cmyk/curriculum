@@ -11,7 +11,7 @@ const Contacto = () => {
     mb: { xs: '46px', md: '48px', lg: '45px' },
     minWidth: 'fit-content',
     '& h2': {
-      color: '#f2f2f2',
+      color: '#bfbfbf',
       textDecoration: `underline ${colorPrincipal}`,
       textUnderlineOffset: '2px',
       fontSize: { xs: '25px', sm: '30px', lg: '2em' },
@@ -43,14 +43,14 @@ const Contacto = () => {
     <>
       <Box
         component='section'
-        className='informacion'
+        className='contacto'
         sx={{ ...envolturaInformacion }}
       >
         <h2>Información Personal</h2>
         <Box component='div' sx={{ ...contenedorContacto }}>
           <TarjetaContacto
             titulo='Nombre Completo'
-            contenido='Andrés Felipe Alvarez Ramirez'
+            contenido='Andrés Felipe Álvarez Ramírez'
           />
           <TarjetaContacto titulo='Telefono' contenido='(+57) 3193880900' />
           <TarjetaContacto

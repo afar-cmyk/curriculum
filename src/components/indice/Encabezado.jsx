@@ -37,7 +37,7 @@ const Encabezado = () => {
       textAlignLast: { xs: 'center', sm: 'unset' },
       mt: 0,
       mb: 0,
-      color: '#f2f2f2',
+      color: '#e6e6e6',
       textDecoration: `underline ${colorPrincipal}`,
       textUnderlineOffset: '2px'
     },
@@ -75,7 +75,7 @@ const Encabezado = () => {
         onKeyDown={() => setEstadoImagen(!estadoImagen)}
       />
       <Box component='div' sx={{ ...contenedorTitulo }}>
-        <h1>Andrés Felipe Alvarez</h1>
+        <h1>Andrés Felipe Álvarez</h1>
         <sub>Tecnólogo en Producción de Multimedia</sub>
       </Box>
     </Box>

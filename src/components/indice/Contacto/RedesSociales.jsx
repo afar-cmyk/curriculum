@@ -26,7 +26,7 @@ const RedesSociales = () => {
     py: '3px',
     fontSize: '13px',
     borderColor: '#11c3db52',
-    color: '#cccccc',
+    color: '#a6a6a6',
     '& .MuiChip-icon': {
       fontSize: '1.3em'
     },

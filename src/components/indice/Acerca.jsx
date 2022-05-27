@@ -8,7 +8,7 @@ const Acerca = () => {
   let contenedorAcerca = {
     mb: { xs: '27px', md: '30px', lg: '45px' },
     '& h2': {
-      color: '#f2f2f2',
+      color: '#bfbfbf',
       textDecoration: `underline ${colorPrincipal}`,
       textUnderlineOffset: '2px',
       fontSize: { xs: '25px', sm: '30px', lg: '2em' },

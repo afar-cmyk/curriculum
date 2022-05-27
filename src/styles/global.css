@@ -19,26 +19,32 @@ h2 {
 }
 
 .titulo:hover h1 {
+  color: #f2f2f2;
+  text-decoration: underline #11c3db96;
+}
+
+.contacto:hover h2 {
+  color: #f2f2f2;
   text-decoration: underline #11c3db96;
 }
 
 .acerca:hover h2 {
+  color: #f2f2f2;
   text-decoration: underline #11c3db96;
 }
 
 .formacion:hover h2 {
+  color: #f2f2f2;
   text-decoration: underline #11c3db96;
 }
 
 .habilidades:hover h2 {
+  color: #f2f2f2;
   text-decoration: underline #11c3db96;
 }
 
 .experiencia:hover h2 {
-  text-decoration: underline #11c3db96;
-}
-
-.informacion:hover h2 {
+  color: #f2f2f2;
   text-decoration: underline #11c3db96;
 }
 
