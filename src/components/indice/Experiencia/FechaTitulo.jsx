@@ -24,7 +24,7 @@ const FechaTitulo = (props) => {
       borderRadius: '16px',
       fontSize: '14px',
       fontWeight: 700,
-      backgroundColor: '#4aabc980',
+      backgroundColor: '#50c5d540',
       m: '0px',
       color: '#f2f2f2'
     }

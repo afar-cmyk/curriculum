@@ -52,7 +52,11 @@ module.exports = {
           runtimeCaching: [
             {
               urlPattern: /(\.woff$|\.woff2$|\.svg$)/,
-              handler: `networkFirst`
+              handler: `StaleWhileRevalidate`
+            },
+            {
+              urlPattern: /(\.js$|\.css$|\.html$)/,
+              handler: `NetworkFirst`
             }
           ]
         }
