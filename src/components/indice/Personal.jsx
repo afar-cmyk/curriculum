@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
-import TarjetaContacto from './Contacto/TarjetaContacto'
-import RedesSociales from './Contacto/RedesSociales'
+import TarjetaContacto from './Personal/TarjetaContacto'
+import RedesSociales from './Personal/RedesSociales'
 
 const Contacto = () => {
   const { colorPrincipal } = React.useContext(ColoresContext)
