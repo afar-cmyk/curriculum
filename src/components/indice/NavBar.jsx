@@ -7,10 +7,21 @@ import curriculum from '../../static/documents/es_curriculum_andres.pdf'
 const NavBar = () => {
   let contenedorIconos = {
     position: 'absolute',
-    top: '1em',
-    left: '1em',
+    marginTop: '1em',
+    paddingLeft: '1em',
+    paddingRight: '1em',
     display: 'flex',
     flexDirection: 'row',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    boxSizing: 'border-box'
+  }
+
+  let seccionAccion = {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
     columnGap: '8px'
   }
 
@@ -28,43 +39,59 @@ const NavBar = () => {
     }
   }
 
+  let seccionIdioma = {
+    display: 'flex'
+  }
+
   return (
     <>
       <div style={{ ...contenedorIconos }}>
-        <IconButton
-          size='small'
-          title='Repositorio en GitHub'
-          aria-label='repositorio en GitHub'
-          href={'https://github.com/afar-cmyk/curriculum'}
-          referrerPolicy='origin'
-          rel='external'
-          target='_blank'
-          sx={{ ...estilosIconos }}
-        >
-          <GitHub />
-        </IconButton>
+        <div style={{ ...seccionAccion }}>
+          <IconButton
+            size='small'
+            title='Repositorio en GitHub'
+            aria-label='repositorio en GitHub'
+            href={'https://github.com/afar-cmyk/curriculum'}
+            referrerPolicy='origin'
+            rel='external'
+            target='_blank'
+            sx={{ ...estilosIconos }}
+          >
+            <GitHub />
+          </IconButton>
 
-        <IconButton
-          size='small'
-          title='Cambiar colores del sitio'
-          aria-label='Cambiar colores del sitio'
-          sx={{ ...estilosIconos }}
-        >
-          <BrightnessMedium />
-        </IconButton>
+          <IconButton
+            size='small'
+            title='Cambiar colores del sitio'
+            aria-label='Cambiar colores del sitio'
+            sx={{ ...estilosIconos }}
+          >
+            <BrightnessMedium />
+          </IconButton>
 
-        <IconButton
-          size='small'
-          title='Descargar Curriculum Vitae'
-          aria-label='Descargar Curriculum Vitae'
-          href={curriculum}
-          referrerPolicy='origin'
-          rel='external'
-          target='_blank'
-          sx={{ ...estilosIconos }}
-        >
-          <Download />
-        </IconButton>
+          <IconButton
+            size='small'
+            title='Descargar Curriculum Vitae'
+            aria-label='Descargar Curriculum Vitae'
+            href={curriculum}
+            referrerPolicy='origin'
+            rel='external'
+            target='_blank'
+            sx={{ ...estilosIconos }}
+          >
+            <Download />
+          </IconButton>
+        </div>
+        {/* Que este icono sea english por defecto para la pagina en español y español para la pagina en ingles */}
+        <div style={{ ...seccionIdioma }}>
+          <Chip
+            variant='outlined'
+            size='small'
+            clickable={true}
+            label='English'
+            sx={{ ...estilosIconos }}
+          />
+        </div>
       </div>
     </>
   )
