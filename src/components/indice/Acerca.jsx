@@ -1,9 +1,10 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
+import textoAcerca from './Acerca/textoAcerca'
 
 const Acerca = () => {
-  const { colorPrincipal } = React.useContext(ColoresContext)
+  const { colorPrincipal, idiomaActual } = React.useContext(ColoresContext)
 
   let contenedorAcerca = {
     mb: { xs: '27px', md: '30px', lg: '45px' },
@@ -27,19 +28,8 @@ const Acerca = () => {
   }
   return (
     <Box component='section' className='acerca' sx={{ ...contenedorAcerca }}>
-      <h2>Sobre Mí</h2>
-      <p>
-        <strong>Diseñador UI/UX</strong>, <strong>editor de videos</strong> y
-        <strong> fotógrafo</strong>, programador de software utilizando JAVA y
-        Python, desarrollador web utilizando ReactJS y JavaScript, llevando un
-        framework de trabajo ágil SCRUM.
-      </p>
-      <br />
-      <p>
-        Nivel de inglés intermedio, trabajo en equipo, proactivo, de rápido
-        aprendizaje con las habilidades que puedan ser requeridas para llevar a
-        cabo las tareas encomendadas.
-      </p>
+      <h2>{textoAcerca[idiomaActual]['encabezado']}</h2>
+      {textoAcerca[idiomaActual]['contenido']}
     </Box>
   )
 }

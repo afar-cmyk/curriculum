@@ -8,8 +8,6 @@ import textoPersonal from './Personal/textoPersonal'
 const Contacto = () => {
   const { colorPrincipal, idiomaActual } = React.useContext(ColoresContext)
 
-  console.log()
-
   let envolturaInformacion = {
     mb: { xs: '46px', md: '48px', lg: '45px' },
     minWidth: 'fit-content',
