@@ -3,9 +3,12 @@ import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
 import TarjetaContacto from './Personal/TarjetaContacto'
 import RedesSociales from './Personal/RedesSociales'
+import textoPersonal from './Personal/textoPersonal'
 
 const Contacto = () => {
-  const { colorPrincipal } = React.useContext(ColoresContext)
+  const { colorPrincipal, idiomaActual } = React.useContext(ColoresContext)
+
+  console.log()
 
   let envolturaInformacion = {
     mb: { xs: '46px', md: '48px', lg: '45px' },
@@ -46,18 +49,24 @@ const Contacto = () => {
         className='contacto'
         sx={{ ...envolturaInformacion }}
       >
-        <h2>Información Personal</h2>
+        <h2>{textoPersonal[idiomaActual]['encabezado']}</h2>
         <Box component='div' sx={{ ...contenedorContacto }}>
           <TarjetaContacto
-            titulo='Nombre Completo'
-            contenido='Andrés Felipe Álvarez Ramírez'
+            titulo={textoPersonal[idiomaActual]['nombre']['titulo']}
+            contenido={textoPersonal[idiomaActual]['nombre']['contenido']}
           />
-          <TarjetaContacto titulo='Teléfono' contenido='(+57) 319 388 0900' />
           <TarjetaContacto
-            titulo='E-Mail'
-            contenido='andres.felipealvarez03@gmail.com'
+            titulo={textoPersonal[idiomaActual]['telefono']['titulo']}
+            contenido={textoPersonal[idiomaActual]['telefono']['contenido']}
           />
-          <TarjetaContacto titulo='Ubicación' contenido='Pereira, Colombia' />
+          <TarjetaContacto
+            titulo={textoPersonal[idiomaActual]['mail']['titulo']}
+            contenido={textoPersonal[idiomaActual]['mail']['contenido']}
+          />
+          <TarjetaContacto
+            titulo={textoPersonal[idiomaActual]['ubicacion']['titulo']}
+            contenido={textoPersonal[idiomaActual]['ubicacion']['contenido']}
+          />
         </Box>
         <span>
           <RedesSociales />

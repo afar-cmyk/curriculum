@@ -1,4 +1,4 @@
-let titulo = 'Andrés Felipe Álvarez'
+const titulo = 'Andrés Felipe Álvarez'
 
 const textoEncabezado = {
   español: {
