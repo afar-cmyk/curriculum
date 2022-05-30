@@ -5,6 +5,8 @@ import ColoresContext from './ColoresContext'
 import curriculum from '../../static/documents/es_curriculum_andres.pdf'
 
 const NavBar = () => {
+  const { manejadorEstadoIdioma, idiomaActual } =
+    React.useContext(ColoresContext)
   let contenedorIconos = {
     position: 'absolute',
     marginTop: '1em',
@@ -85,10 +87,11 @@ const NavBar = () => {
         {/* Que este icono sea english por defecto para la pagina en español y español para la pagina en ingles */}
         <div style={{ ...seccionIdioma }}>
           <Chip
+            onClick={() => manejadorEstadoIdioma()}
             variant='outlined'
             size='small'
             clickable={true}
-            label='English'
+            label={idiomaActual}
             sx={{ ...estilosIconos }}
           />
         </div>

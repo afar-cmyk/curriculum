@@ -11,12 +11,35 @@ export const ColoresProvider = ({ children }) => {
 
   // Color secundario de las barras
   let barrasColorSecundario = '#50c5d540'
+
+  // Variable global para el idioma (Español e Ingles)
+  const [estadoIdioma, setEstadoIdioma] = React.useState(true)
+  const [idiomaActual, setIdiomaActual] = React.useState('')
+
+  const manejadorEstadoIdioma = () => {
+    return setEstadoIdioma(!estadoIdioma)
+  }
+
+  const ponerEspañol = () => {
+    return setIdiomaActual('Español')
+  }
+
+  const ponerIngles = () => {
+    return setIdiomaActual('English')
+  }
+
+  React.useEffect(() => {
+    estadoIdioma ? ponerIngles() : ponerEspañol()
+  }, [estadoIdioma])
+
   return (
     <ColoresContext.Provider
       value={{
         colorPrincipal,
         barrasColorPrincipal,
-        barrasColorSecundario
+        barrasColorSecundario,
+        manejadorEstadoIdioma,
+        idiomaActual
       }}
     >
       {children}

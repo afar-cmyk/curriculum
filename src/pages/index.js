@@ -14,13 +14,13 @@ import NavBar from '../components/indice/NavBar'
 export default function index() {
   return (
     <>
-      <NavBar />
       <Seo
         title='Curriculum Vitae'
         description='Este es mi curriculum vitae en version PWA!'
       />
-      <Box component='main' sx={{ ...contenedorPrincipal }}>
-        <ColoresProvider>
+      <ColoresProvider>
+        <NavBar />
+        <Box component='main' sx={{ ...contenedorPrincipal }}>
           <Encabezado />
           <article>
             <Contacto />
@@ -29,8 +29,8 @@ export default function index() {
             <Habilidades />
             <Experiencia />
           </article>
-        </ColoresProvider>
-      </Box>
+        </Box>
+      </ColoresProvider>
     </>
   )
 }
