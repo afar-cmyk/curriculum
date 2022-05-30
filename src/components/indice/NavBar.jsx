@@ -34,6 +34,10 @@ const NavBar = () => {
           size='small'
           title='Repositorio en GitHub'
           aria-label='repositorio en GitHub'
+          href={'https://github.com/afar-cmyk/curriculum'}
+          referrerPolicy='origin'
+          rel='external'
+          target='_blank'
           sx={{ ...estilosIconos }}
         >
           <GitHub />
