@@ -1,6 +1,11 @@
 import React from 'react'
 import { Chip, IconButton } from '@mui/material'
-import { Download, GitHub, BrightnessMedium } from '@mui/icons-material'
+import {
+  Download,
+  GitHub,
+  BrightnessMedium,
+  Language
+} from '@mui/icons-material'
 import ColoresContext from './ColoresContext'
 import curriculum from '../../static/documents/es_curriculum_andres.pdf'
 
@@ -38,11 +43,29 @@ const NavBar = () => {
     '&:hover': {
       color: '#f2f2f2',
       borderColor: '#11c3db96'
+    },
+    '&:hover .MuiChip-icon': {
+      color: '#f2f2f2'
     }
   }
 
   let seccionIdioma = {
     display: 'flex'
+  }
+
+  let botonIdioma = {
+    ...estilosIconos,
+    fontSize: '0.93em',
+    height: '80%'
+  }
+
+  const textoIdioma = {
+    español: {
+      label: 'English'
+    },
+    ingles: {
+      label: 'Español'
+    }
   }
 
   return (
@@ -88,8 +111,9 @@ const NavBar = () => {
             variant='outlined'
             size='small'
             clickable={true}
-            label={idiomaActual}
-            sx={{ ...estilosIconos }}
+            icon={<Language />}
+            label={textoIdioma[idiomaActual]['label']}
+            sx={{ ...botonIdioma }}
           />
         </div>
       </div>

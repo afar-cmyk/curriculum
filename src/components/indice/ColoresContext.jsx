@@ -14,22 +14,22 @@ export const ColoresProvider = ({ children }) => {
 
   // Variable global para el idioma (Español e Ingles)
   const [estadoIdioma, setEstadoIdioma] = React.useState(true)
-  const [idiomaActual, setIdiomaActual] = React.useState('')
+  const [idiomaActual, setIdiomaActual] = React.useState('español')
 
   const manejadorEstadoIdioma = () => {
     return setEstadoIdioma(!estadoIdioma)
   }
 
   const ponerEspañol = () => {
-    return setIdiomaActual('Español')
+    return setIdiomaActual('español')
   }
 
   const ponerIngles = () => {
-    return setIdiomaActual('English')
+    return setIdiomaActual('ingles')
   }
 
   React.useEffect(() => {
-    estadoIdioma ? ponerIngles() : ponerEspañol()
+    estadoIdioma ? ponerEspañol() : ponerIngles()
   }, [estadoIdioma])
 
   return (
