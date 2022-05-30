@@ -52,7 +52,7 @@ const Contacto = () => {
             titulo='Nombre Completo'
             contenido='Andrés Felipe Álvarez Ramírez'
           />
-          <TarjetaContacto titulo='Telefono' contenido='(+57) 3193880900' />
+          <TarjetaContacto titulo='Teléfono' contenido='(+57) 319 388 0900' />
           <TarjetaContacto
             titulo='E-Mail'
             contenido='andres.felipealvarez03@gmail.com'

@@ -36,7 +36,7 @@ const Acerca = () => {
       </p>
       <br />
       <p>
-        Nivel de ingles intermedio, trabajo en equipo, proactivo, de rápido
+        Nivel de inglés intermedio, trabajo en equipo, proactivo, de rápido
         aprendizaje con las habilidades que puedan ser requeridas para llevar a
         cabo las tareas encomendadas.
       </p>
