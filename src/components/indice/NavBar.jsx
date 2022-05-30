@@ -61,7 +61,6 @@ const NavBar = () => {
           >
             <GitHub />
           </IconButton>
-
           <IconButton
             size='small'
             title='Cambiar colores del sitio'
@@ -70,7 +69,6 @@ const NavBar = () => {
           >
             <BrightnessMedium />
           </IconButton>
-
           <IconButton
             size='small'
             title='Descargar Curriculum Vitae'
@@ -84,7 +82,6 @@ const NavBar = () => {
             <Download />
           </IconButton>
         </div>
-        {/* Que este icono sea english por defecto para la pagina en español y español para la pagina en ingles */}
         <div style={{ ...seccionIdioma }}>
           <Chip
             onClick={() => manejadorEstadoIdioma()}

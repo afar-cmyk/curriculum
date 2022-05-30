@@ -39,7 +39,8 @@ export const ColoresProvider = ({ children }) => {
         barrasColorPrincipal,
         barrasColorSecundario,
         manejadorEstadoIdioma,
-        idiomaActual
+        idiomaActual,
+        estadoIdioma
       }}
     >
       {children}

@@ -5,7 +5,9 @@ import logo from '../../images/logo.svg'
 import ColoresContext from './ColoresContext'
 
 const Encabezado = () => {
-  const { colorPrincipal } = React.useContext(ColoresContext)
+  const { colorPrincipal, estadoIdioma } = React.useContext(ColoresContext)
+
+  let idioma = estadoIdioma
 
   const [estadoImagen, setEstadoImagen] = React.useState(true)
   const [imagenActual, setImagenActual] = React.useState(logo)
@@ -20,6 +22,9 @@ const Encabezado = () => {
     setImagenActual(foto)
     setAnimacionActual('unset')
   }
+
+  let subtituloEspanol = 'Tecnólogo en Producción de Multimedia'
+  let subtituloIngles = 'Digital Multimedia Producer'
 
   React.useEffect(() => {
     estadoImagen ? estadoLogo() : estadoFoto()
@@ -65,6 +70,8 @@ const Encabezado = () => {
     }
   }
 
+  console.log(idioma)
+
   return (
     <Box component='header' className='titulo' sx={{ ...envolturaTitulos }}>
       <Box
@@ -76,7 +83,7 @@ const Encabezado = () => {
       />
       <Box component='div' sx={{ ...contenedorTitulo }}>
         <h1>Andrés Felipe Álvarez</h1>
-        <sub>Tecnólogo en Producción de Multimedia</sub>
+        <sub>{idioma ? subtituloEspanol : subtituloIngles}</sub>
       </Box>
     </Box>
   )
