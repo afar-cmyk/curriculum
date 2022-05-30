@@ -2,6 +2,7 @@ import React from 'react'
 import { Chip, IconButton } from '@mui/material'
 import { Download, GitHub, BrightnessMedium } from '@mui/icons-material'
 import ColoresContext from './ColoresContext'
+import curriculum from '../../static/documents/es_curriculum_andres.pdf'
 
 const NavBar = () => {
   let contenedorIconos = {
@@ -54,8 +55,12 @@ const NavBar = () => {
 
         <IconButton
           size='small'
-          title='Descargar Curriculum'
+          title='Descargar Curriculum Vitae'
           aria-label='Descargar Curriculum Vitae'
+          href={curriculum}
+          referrerPolicy='origin'
+          rel='external'
+          target='_blank'
           sx={{ ...estilosIconos }}
         >
           <Download />
