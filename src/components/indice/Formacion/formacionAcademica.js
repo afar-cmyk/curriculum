@@ -7,7 +7,7 @@ const español = [
   },
   {
     id: 'multPro',
-    titulo: 'Tecnólogo en Producción de Multimedia',
+    titulo: 'Tecnología en Producción Multimedial',
     organizacion: 'SENA Unigermana',
     fecha: '2019'
   },
@@ -36,7 +36,7 @@ const ingles = [
   },
   {
     id: 'multPro',
-    titulo: 'Technologist on Multimedia Production',
+    titulo: 'A.S Degree in Multimedia Production',
     organizacion: 'SENA Unigermana',
     fecha: '2019'
   },
