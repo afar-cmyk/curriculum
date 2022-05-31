@@ -10,7 +10,7 @@ import ColoresContext from './ColoresContext'
 import curriculum from '../../static/documents/es_curriculum_andres.pdf'
 
 const NavBar = () => {
-  const { manejadorEstadoIdioma, idiomaActual } =
+  const { manejadorEstadoIdioma, idiomaActual, estadoIdioma } =
     React.useContext(ColoresContext)
   let contenedorIconos = {
     position: 'absolute',
@@ -34,7 +34,7 @@ const NavBar = () => {
 
   let estilosIconos = {
     border: 'solid 0.75px',
-    borderColor: '#11c3db52',
+    borderColor: estadoIdioma ? '#11c3db52' : '#a211dbb0',
     color: '#a6a6a6',
     padding: '4px',
     '& .MuiSvgIcon-root': {
@@ -42,7 +42,7 @@ const NavBar = () => {
     },
     '&:hover': {
       color: '#f2f2f2',
-      borderColor: '#11c3db96'
+      borderColor: estadoIdioma ? '#11c3db96' : '#a211db'
     },
     '&:hover .MuiChip-icon': {
       color: '#f2f2f2'
