@@ -1,4 +1,5 @@
 import React from 'react'
+import Seo from '../Seo'
 
 const ColoresContext = React.createContext()
 
@@ -15,17 +16,20 @@ export const ColoresProvider = ({ children }) => {
   // Variable global para el idioma (Español e Ingles)
   const [estadoIdioma, setEstadoIdioma] = React.useState(true)
   const [idiomaActual, setIdiomaActual] = React.useState('español')
+  const [seoIdioma, setSeoIdioma] = React.useState('es')
 
   const manejadorEstadoIdioma = () => {
     return setEstadoIdioma(!estadoIdioma)
   }
 
   const ponerEspañol = () => {
-    return setIdiomaActual('español')
+    setIdiomaActual('español')
+    setSeoIdioma('es')
   }
 
   const ponerIngles = () => {
-    return setIdiomaActual('ingles')
+    setIdiomaActual('ingles')
+    setSeoIdioma('en')
   }
 
   React.useEffect(() => {
@@ -43,6 +47,11 @@ export const ColoresProvider = ({ children }) => {
         estadoIdioma
       }}
     >
+      <Seo
+        title='Curriculum Vitae'
+        description='Este es mi curriculum vitae en version PWA!'
+        lang={seoIdioma}
+      />
       {children}
     </ColoresContext.Provider>
   )
