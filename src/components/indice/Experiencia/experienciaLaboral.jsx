@@ -82,7 +82,7 @@ const ingles = [
     fecha: '2018',
     funciones: [
       <p>
-        Video Post-production for the Beckett Simonon brand, used in advertising
+        Video Post-production for the Beckett Simonon brand, used on advertising
         campaigns.
       </p>
     ]
@@ -111,7 +111,7 @@ const ingles = [
     funciones: [
       <p>
         Video Post-production for different brands, using the Adobe CC Suite to
-        edit, colorize and compose the content, used in advertising campaigns.
+        edit, colorize and compose the content, used on advertising campaigns.
       </p>,
       <p>Video transcoding in FFMPEG.</p>
     ]
