@@ -1,4 +1,4 @@
-const listaEstudios = [
+const español = [
   {
     id: 'misiTic',
     titulo: 'Diplomado en Programación de Software',
@@ -7,7 +7,7 @@ const listaEstudios = [
   },
   {
     id: 'multPro',
-    titulo: 'Tecnología en Producción de Multimedia',
+    titulo: 'Tecnólogo en Producción de Multimedia',
     organizacion: 'SENA Unigermana',
     fecha: '2019'
   },
@@ -27,4 +27,38 @@ const listaEstudios = [
   }
 ]
 
-export default listaEstudios
+const ingles = [
+  {
+    id: 'misiTic',
+    titulo: 'Diplomate in Software Programming',
+    organizacion: 'UTP / MisiónTIC 2022',
+    fecha: '2021'
+  },
+  {
+    id: 'multPro',
+    titulo: 'Technologist on Multimedia Production',
+    organizacion: 'SENA Unigermana',
+    fecha: '2019'
+  },
+
+  {
+    id: 'fotoNat',
+    titulo: 'Diplomate in Nature Photography',
+    organizacion: 'Universidad Nacional de Colombia',
+    fecha: '2019'
+  },
+
+  {
+    id: 'fotoAva',
+    titulo: 'Diplomate in Advanced Photography',
+    organizacion: 'Escuela de Fotografía del Valle',
+    fecha: '2015'
+  }
+]
+
+const encabezado = {
+  español: 'Formación Académica',
+  ingles: 'Education'
+}
+
+export { español, ingles, encabezado }

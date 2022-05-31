@@ -3,7 +3,7 @@ const titulo = 'Andrés Felipe Álvarez'
 const textoEncabezado = {
   español: {
     titulo: titulo,
-    subtitulo: 'Tecnólogo en Producción de Multimedia'
+    subtitulo: 'Diseñador de Contenido Multimedia'
   },
   ingles: {
     titulo: titulo,
