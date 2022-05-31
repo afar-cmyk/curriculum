@@ -2,10 +2,13 @@ import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from '../ColoresContext'
 import FechaTitulo from './FechaTitulo'
-import listaExperiencia from './experienciaLaboral'
+import { español, ingles } from './experienciaLaboral'
 
 const ContenedorExperiencia = () => {
-  const { barrasColorPrincipal } = React.useContext(ColoresContext)
+  const { barrasColorPrincipal, estadoIdioma } =
+    React.useContext(ColoresContext)
+
+  const listaExperiencia = estadoIdioma ? español : ingles
 
   let experiencias = {
     display: 'flex',

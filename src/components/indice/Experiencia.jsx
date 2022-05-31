@@ -4,7 +4,7 @@ import ColoresContext from './ColoresContext'
 import ContenedorExperiencia from './Experiencia/ContenedorExperiencia'
 
 const Experiencia = () => {
-  const { colorPrincipal } = React.useContext(ColoresContext)
+  const { colorPrincipal, idiomaActual } = React.useContext(ColoresContext)
 
   let envolturaExperiencia = {
     minWidth: 'fit-content',
@@ -23,6 +23,12 @@ const Experiencia = () => {
       m: 0
     }
   }
+
+  const encabezado = {
+    español: 'Experiencia Laboral',
+    ingles: 'Work Experience'
+  }
+
   return (
     <>
       <Box
@@ -30,7 +36,7 @@ const Experiencia = () => {
         className='experiencia'
         sx={{ ...envolturaExperiencia }}
       >
-        <h2>Experiencia Laboral</h2>
+        <h2>{encabezado[idiomaActual]}</h2>
         <ContenedorExperiencia />
       </Box>
     </>

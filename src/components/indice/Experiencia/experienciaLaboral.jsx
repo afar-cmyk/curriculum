@@ -1,8 +1,8 @@
 import React from 'react'
 
-const listaExperiencia = [
+const español = [
   {
-    id: 'norma',
+    id: 'norma-es',
     empresa: 'Grupo Editorial Norma',
     fecha: '2020',
     funciones: [
@@ -18,7 +18,7 @@ const listaExperiencia = [
     ]
   },
   {
-    id: 'magenta',
+    id: 'magenta-es',
     empresa: 'Magenta Estudios',
     fecha: '2018',
     funciones: [
@@ -29,7 +29,7 @@ const listaExperiencia = [
     ]
   },
   {
-    id: 'hac',
+    id: 'hac-es',
     empresa: 'HAC Promotor de Artistas',
     fecha: '2016',
     funciones: [
@@ -45,7 +45,7 @@ const listaExperiencia = [
     ]
   },
   {
-    id: 'xfilms',
+    id: 'xfilms-es',
     empresa: 'XFilms S.A.S',
     fecha: '2015',
     funciones: [
@@ -59,4 +59,63 @@ const listaExperiencia = [
   }
 ]
 
-export default listaExperiencia
+const ingles = [
+  {
+    id: 'norma-en',
+    empresa: 'Grupo Editorial Norma',
+    fecha: '2020',
+    funciones: [
+      <p>
+        Design templates for digital projects in the Netex LearningMaker
+        platform, using HTML and CSS to adjust the content based on the
+        guidelines and scripts provided by the design area.
+      </p>,
+      <p>
+        Review and tweaking of activities for students in HTML, MATLAB and
+        LaTeX.
+      </p>
+    ]
+  },
+  {
+    id: 'magenta-en',
+    empresa: 'Magenta Estudios',
+    fecha: '2018',
+    funciones: [
+      <p>
+        Video Post-production for the Beckett Simonon brand, used in advertising
+        campaigns.
+      </p>
+    ]
+  },
+  {
+    id: 'hac-en',
+    empresa: 'HAC Promotor de Artistas',
+    fecha: '2016',
+    funciones: [
+      <p>Update of the old corporate image.</p>,
+      <p>Design of advertising material for social media campaigns.</p>,
+      <p>
+        Production and post-production of videos and photographs for social
+        media campaigns.
+      </p>,
+      <p>
+        Development of daily reports for the songs played in radio stations,
+        using the extracted XML data.
+      </p>
+    ]
+  },
+  {
+    id: 'xfilms-en',
+    empresa: 'XFilms S.A.S',
+    fecha: '2015',
+    funciones: [
+      <p>
+        Video Post-production for different brands, using the Adobe CC Suite to
+        edit, colorize and compose the content, used in advertising campaigns.
+      </p>,
+      <p>Video transcoding in FFMPEG.</p>
+    ]
+  }
+]
+
+export { español, ingles }
