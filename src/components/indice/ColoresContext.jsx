@@ -13,6 +13,18 @@ export const ColoresProvider = ({ children }) => {
   // Color secundario de las barras
   let barrasColorSecundario = '#50c5d540'
 
+  // Color para los titulos H2
+  let titulosH2Base = {
+    '& h2': {
+      color: '#cccccc',
+      textDecoration: `underline ${colorPrincipal}`,
+      textUnderlineOffset: '2px',
+      fontSize: { xs: '25px', sm: '30px', lg: '2em' },
+      mt: 0,
+      mb: { xs: '10px', lg: '15px' }
+    }
+  }
+
   // Variable global para el idioma (Español e Ingles)
   const [estadoIdioma, setEstadoIdioma] = React.useState(true)
   const [idiomaActual, setIdiomaActual] = React.useState('español')
@@ -44,7 +56,8 @@ export const ColoresProvider = ({ children }) => {
         barrasColorSecundario,
         manejadorEstadoIdioma,
         idiomaActual,
-        estadoIdioma
+        estadoIdioma,
+        titulosH2Base
       }}
     >
       <Seo

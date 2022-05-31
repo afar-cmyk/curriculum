@@ -4,18 +4,11 @@ import ColoresContext from './ColoresContext'
 import textoAcerca from './Acerca/textoAcerca'
 
 const Acerca = () => {
-  const { colorPrincipal, idiomaActual } = React.useContext(ColoresContext)
+  const { idiomaActual, titulosH2Base } = React.useContext(ColoresContext)
 
   let contenedorAcerca = {
     mb: { xs: '27px', md: '30px', lg: '45px' },
-    '& h2': {
-      color: '#bfbfbf',
-      textDecoration: `underline ${colorPrincipal}`,
-      textUnderlineOffset: '2px',
-      fontSize: { xs: '25px', sm: '30px', lg: '2em' },
-      mt: 0,
-      mb: { xs: '10px', lg: '15px' }
-    },
+    ...titulosH2Base,
     '& p': {
       lineHeight: 'calc(1ex / 0.32)',
       width: { lg: '100%' },

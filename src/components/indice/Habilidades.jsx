@@ -4,10 +4,10 @@ import ColoresContext from './ColoresContext'
 
 const HabilidadesTecnicas = () => {
   const {
-    colorPrincipal,
     barrasColorPrincipal,
     barrasColorSecundario,
-    idiomaActual
+    idiomaActual,
+    titulosH2Base
   } = React.useContext(ColoresContext)
 
   let seccionHabilidades = {
@@ -15,15 +15,7 @@ const HabilidadesTecnicas = () => {
     flexDirection: 'column',
     width: { lg: '100%' },
     mb: { xs: '42px', md: '48px', lg: '45px' },
-    '& h2': {
-      color: '#bfbfbf',
-      textDecoration: `underline ${colorPrincipal}`,
-      textUnderlineOffset: '2px',
-      fontSize: { xs: '25px', sm: '30px', lg: '2em' },
-      mt: 0,
-      mb: { xs: '10px', lg: '15px' },
-      height: 'fit-content'
-    }
+    ...titulosH2Base
   }
 
   let envolturaHabilidades = {

@@ -5,7 +5,7 @@ import { español, ingles, encabezado } from './Formacion/formacionAcademica'
 import TarjetaEstudios from './Formacion/TarjetaEstudios'
 
 const Estudios = () => {
-  const { colorPrincipal, estadoIdioma, idiomaActual } =
+  const { estadoIdioma, idiomaActual, titulosH2Base } =
     React.useContext(ColoresContext)
 
   const formacionAcademica = estadoIdioma ? español : ingles
@@ -13,14 +13,7 @@ const Estudios = () => {
   let envolturaEstudios = {
     mb: { xs: '46px', md: '48px', lg: '45px' },
     minWidth: 'fit-content',
-    '& h2': {
-      color: '#bfbfbf',
-      textDecoration: `underline ${colorPrincipal}`,
-      textUnderlineOffset: '2px',
-      fontSize: { xs: '25px', sm: '30px', lg: '2em' },
-      mt: 0,
-      mb: { xs: '10px', lg: '15px' }
-    }
+    ...titulosH2Base
   }
 
   let contenedorEstudios = {
