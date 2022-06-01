@@ -12,17 +12,17 @@ const TarjetaEstudios = (props) => {
     marginRight: 0,
     '&:hover': { border: 'solid 1px #11c3db96' },
     '&:hover h3': { color: '#f2f2f2' },
-    '&:hover p': { color: '#cccccc' },
+    '&:hover p': { color: '#d4d4d4' },
     '& h3': {
       width: 'fit-content',
       fontWeight: 700,
       lineHeight: 'calc(0.9ex / 0.32)',
       fontSize: { xs: '1em', sm: '1.05em', xl: '1em' },
-      color: '#a6a6a6',
+      color: '#d9d9d9',
       m: 0
     },
     '& p': {
-      color: '#a6a6a6',
+      color: '#bfbfbf',
       width: 'fit-content',
       m: 0,
       fontSize: { xs: '16px', lg: '1.1em', xl: '1em' }
