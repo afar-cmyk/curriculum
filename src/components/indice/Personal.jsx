@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
-import TarjetaContacto from './Personal/TarjetaContacto'
+import TarjetaPersonal from './Personal/TarjetaPersonal'
 import RedesSociales from './Personal/RedesSociales'
 import esquemaTextos from './Personal/textoPersonal'
 
@@ -14,17 +14,7 @@ const Contacto = () => {
   let envolturaInformacion = {
     mb: { xs: '46px', md: '48px', lg: '45px' },
     minWidth: 'fit-content',
-    ...titulosH2Base,
-    '& span h3': {
-      fontWeight: 700,
-      fontSize: { xs: '1.125em', lg: '1.2em' },
-      color: '#f2f2f2',
-      m: 0
-    },
-    '& span p': {
-      m: 0,
-      fontSize: { xs: '1.125em', lg: '1.2em' }
-    }
+    ...titulosH2Base
   }
 
   let contenedorContacto = {
@@ -48,7 +38,7 @@ const Contacto = () => {
           {textoContenidos.map((datos) => {
             const { titulo, contenido } = datos
             return (
-              <TarjetaContacto
+              <TarjetaPersonal
                 key={`info-${titulo}`}
                 titulo={titulo}
                 contenido={contenido}
