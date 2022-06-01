@@ -3,10 +3,13 @@ import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
 import TarjetaContacto from './Personal/TarjetaContacto'
 import RedesSociales from './Personal/RedesSociales'
-import textoPersonal from './Personal/textoPersonal'
+import esquemaTextos from './Personal/textoPersonal'
 
 const Contacto = () => {
   const { idiomaActual, titulosH2Base } = React.useContext(ColoresContext)
+
+  const { encabezado: textoEncabezado, valores: textoContenidos } =
+    esquemaTextos[idiomaActual]
 
   let envolturaInformacion = {
     mb: { xs: '46px', md: '48px', lg: '45px' },
@@ -40,24 +43,18 @@ const Contacto = () => {
         className='contacto'
         sx={{ ...envolturaInformacion }}
       >
-        <h2>{textoPersonal[idiomaActual]['encabezado']}</h2>
+        <h2>{textoEncabezado}</h2>
         <Box component='div' sx={{ ...contenedorContacto }}>
-          <TarjetaContacto
-            titulo={textoPersonal[idiomaActual]['nombre']['titulo']}
-            contenido={textoPersonal[idiomaActual]['nombre']['contenido']}
-          />
-          <TarjetaContacto
-            titulo={textoPersonal[idiomaActual]['telefono']['titulo']}
-            contenido={textoPersonal[idiomaActual]['telefono']['contenido']}
-          />
-          <TarjetaContacto
-            titulo={textoPersonal[idiomaActual]['mail']['titulo']}
-            contenido={textoPersonal[idiomaActual]['mail']['contenido']}
-          />
-          <TarjetaContacto
-            titulo={textoPersonal[idiomaActual]['ubicacion']['titulo']}
-            contenido={textoPersonal[idiomaActual]['ubicacion']['contenido']}
-          />
+          {textoContenidos.map((datos) => {
+            const { titulo, contenido } = datos
+            return (
+              <TarjetaContacto
+                key={`info-${titulo}`}
+                titulo={titulo}
+                contenido={contenido}
+              />
+            )
+          })}
         </Box>
         <span>
           <RedesSociales />
