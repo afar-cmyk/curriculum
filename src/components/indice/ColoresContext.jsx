@@ -68,21 +68,31 @@ export const ColoresProvider = ({ children }) => {
   const esquemaTema = {
     oscuro: {
       fondo: '#0d0d0d',
+      nombre: '#e6e6e6',
+      nombreHover: '#f2f2f2',
+      nombreSub: '#cccccc',
       titulos: '#0d0d0d',
       titulosHover: '',
       textos: '#cccccc',
       textosHover: '',
       bordes: '',
-      bordesHover: ''
+      bordesHover: '',
+      underline: '#4aabc980',
+      underlineHover: '#11c3db96'
     },
     claro: {
       fondo: '#f2f2f2',
-      titulos: '#0d0d0d',
-      titulosHover: '',
+      nombre: '#222222',
+      nombreHover: '#000000',
+      nombreSub: '#4d4d4d',
+      titulos: '#222222',
+      titulosHover: '#000000',
       textos: '#222222',
       textosHover: '',
       bordes: '',
-      bordesHover: ''
+      bordesHover: '',
+      underline: '#4aabc9cc',
+      underlineHover: '#11c3db'
     }
   }
 

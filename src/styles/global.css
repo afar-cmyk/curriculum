@@ -18,10 +18,10 @@ h2 {
   font-family: 'Source Sans Pro';
 }
 
-.titulos:hover h1 {
+/* .titulos:hover h1 {
   color: #f2f2f2;
   text-decoration: underline #11c3db96;
-}
+} */
 
 .titulos:hover h2 {
   color: #f2f2f2;

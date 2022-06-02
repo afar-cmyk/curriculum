@@ -6,7 +6,11 @@ import ColoresContext from './ColoresContext'
 import textoEncabezado from './Encabezado/textoEncabezado'
 
 const Encabezado = () => {
-  const { colorPrincipal, idiomaActual } = React.useContext(ColoresContext)
+  const { idiomaActual, temaActual, esquemaTema } =
+    React.useContext(ColoresContext)
+
+  const { nombre, nombreSub, nombreHover, underline, underlineHover } =
+    esquemaTema[temaActual]
 
   const [estadoImagen, setEstadoImagen] = React.useState(true)
   const [imagenActual, setImagenActual] = React.useState(logo)
@@ -38,15 +42,16 @@ const Encabezado = () => {
       textAlignLast: { xs: 'center', sm: 'unset' },
       mt: 0,
       mb: 0,
-      color: '#e6e6e6',
-      textDecoration: `underline ${colorPrincipal}`,
+      color: nombre,
+      textDecoration: `underline ${underline}`,
       textUnderlineOffset: '2px'
     },
     '& sub': {
       fontSize: { xs: 'calc(0.85rem + 1vw)', sm: 'calc(0.8rem + 1vw)' },
       fontFamily: 'Assistant',
       fontWeight: 300,
-      alignSelf: 'center'
+      alignSelf: 'center',
+      color: nombreSub
     }
   }
 
@@ -63,6 +68,10 @@ const Encabezado = () => {
       width: { xs: 'calc(110px + 10vw)', lg: 'calc(110px + 8vw)' },
       cursor: 'pointer',
       animationName: animacionActual
+    },
+    '&:hover h1': {
+      color: nombreHover,
+      textDecoration: `underline ${underlineHover}`
     }
   }
 
