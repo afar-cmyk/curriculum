@@ -3,17 +3,16 @@ import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
 import { español, ingles, encabezado } from './Formacion/formacionAcademica'
 import TarjetaEstudios from './Formacion/TarjetaEstudios'
+import TituloSeccion from './TituloSeccion'
 
 const Estudios = () => {
-  const { estadoIdioma, idiomaActual, titulosH2Base } =
-    React.useContext(ColoresContext)
+  const { estadoIdioma, idiomaActual } = React.useContext(ColoresContext)
 
   const formacionAcademica = estadoIdioma ? español : ingles
 
   let envolturaEstudios = {
     mb: { xs: '46px', md: '48px', lg: '45px' },
-    minWidth: 'fit-content',
-    ...titulosH2Base
+    minWidth: 'fit-content'
   }
 
   let contenedorEstudios = {
@@ -28,10 +27,10 @@ const Estudios = () => {
     <>
       <Box
         component='section'
-        className='formacion'
+        className='titulos formacion'
         sx={{ ...envolturaEstudios }}
       >
-        <h2>{encabezado[idiomaActual]}</h2>
+        <TituloSeccion titulo={encabezado[idiomaActual]} />
         <Box component='div' sx={{ ...contenedorEstudios }}>
           {formacionAcademica.map((datos) => {
             const { id, titulo, organizacion, fecha } = datos

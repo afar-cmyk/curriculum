@@ -2,13 +2,13 @@ import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
 import textoAcerca from './Acerca/textoAcerca'
+import TituloSeccion from './TituloSeccion'
 
 const Acerca = () => {
-  const { idiomaActual, titulosH2Base } = React.useContext(ColoresContext)
+  const { idiomaActual } = React.useContext(ColoresContext)
 
   let contenedorAcerca = {
     mb: { xs: '27px', md: '30px', lg: '45px' },
-    ...titulosH2Base,
     '& p': {
       lineHeight: 'calc(1ex / 0.32)',
       width: { lg: '100%' },
@@ -20,8 +20,12 @@ const Acerca = () => {
     }
   }
   return (
-    <Box component='section' className='acerca' sx={{ ...contenedorAcerca }}>
-      <h2>{textoAcerca[idiomaActual]['encabezado']}</h2>
+    <Box
+      component='section'
+      className='titulos acerca'
+      sx={{ ...contenedorAcerca }}
+    >
+      <TituloSeccion titulo={textoAcerca[idiomaActual]['encabezado']} />
       {textoAcerca[idiomaActual]['contenido']}
     </Box>
   )

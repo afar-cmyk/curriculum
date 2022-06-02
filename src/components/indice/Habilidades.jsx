@@ -1,21 +1,17 @@
 import React from 'react'
 import { Box, LinearProgress } from '@mui/material'
 import ColoresContext from './ColoresContext'
+import TituloSeccion from './TituloSeccion'
 
 const HabilidadesTecnicas = () => {
-  const {
-    barrasColorPrincipal,
-    barrasColorSecundario,
-    idiomaActual,
-    titulosH2Base
-  } = React.useContext(ColoresContext)
+  const { barrasColorPrincipal, barrasColorSecundario, idiomaActual } =
+    React.useContext(ColoresContext)
 
   let seccionHabilidades = {
     display: 'flex',
     flexDirection: 'column',
     width: { lg: '100%' },
-    mb: { xs: '42px', md: '48px', lg: '45px' },
-    ...titulosH2Base
+    mb: { xs: '42px', md: '48px', lg: '45px' }
   }
 
   let envolturaHabilidades = {
@@ -57,10 +53,10 @@ const HabilidadesTecnicas = () => {
     <>
       <Box
         component='section'
-        className='habilidades'
+        className='titulos habilidades'
         sx={{ ...seccionHabilidades }}
       >
-        <h2>{encabezado[idiomaActual]}</h2>
+        <TituloSeccion titulo={encabezado[idiomaActual]} />
         <div style={{ ...envolturaHabilidades }}>
           {listaHabilidades.map((datos, index) => {
             const { habilidad, puntuacion } = datos

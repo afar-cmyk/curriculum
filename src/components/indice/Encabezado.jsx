@@ -67,7 +67,11 @@ const Encabezado = () => {
   }
 
   return (
-    <Box component='header' className='titulo' sx={{ ...envolturaTitulos }}>
+    <Box
+      component='header'
+      className='titulos nombre'
+      sx={{ ...envolturaTitulos }}
+    >
       <Box
         component='img'
         alt='foto de perfil'

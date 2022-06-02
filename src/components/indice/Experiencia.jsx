@@ -2,13 +2,13 @@ import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
 import ContenedorExperiencia from './Experiencia/ContenedorExperiencia'
+import TituloSeccion from './TituloSeccion'
 
 const Experiencia = () => {
-  const { idiomaActual, titulosH2Base } = React.useContext(ColoresContext)
+  const { idiomaActual } = React.useContext(ColoresContext)
 
   let envolturaExperiencia = {
     minWidth: 'fit-content',
-    ...titulosH2Base,
     '& h3': {
       fontWeight: 700,
       fontSize: { xs: '1.08em', lg: '1.23em' },
@@ -26,10 +26,10 @@ const Experiencia = () => {
     <>
       <Box
         component='section'
-        className='experiencia'
+        className='titulos experiencia'
         sx={{ ...envolturaExperiencia }}
       >
-        <h2>{encabezado[idiomaActual]}</h2>
+        <TituloSeccion titulo={encabezado[idiomaActual]} />
         <ContenedorExperiencia />
       </Box>
     </>

@@ -4,17 +4,17 @@ import ColoresContext from './ColoresContext'
 import TarjetaPersonal from './Personal/TarjetaPersonal'
 import RedesSociales from './Personal/RedesSociales'
 import esquemaTextos from './Personal/textoPersonal'
+import TituloSeccion from './TituloSeccion'
 
 const Contacto = () => {
-  const { idiomaActual, titulosH2Base } = React.useContext(ColoresContext)
+  const { idiomaActual } = React.useContext(ColoresContext)
 
   const { encabezado: textoEncabezado, valores: textoContenidos } =
     esquemaTextos[idiomaActual]
 
   let envolturaInformacion = {
     mb: { xs: '46px', md: '48px', lg: '45px' },
-    minWidth: 'fit-content',
-    ...titulosH2Base
+    minWidth: 'fit-content'
   }
 
   let contenedorContacto = {
@@ -30,10 +30,10 @@ const Contacto = () => {
     <>
       <Box
         component='section'
-        className='contacto'
+        className='titulos personal'
         sx={{ ...envolturaInformacion }}
       >
-        <h2>{textoEncabezado}</h2>
+        <TituloSeccion titulo={textoEncabezado} />
         <Box component='div' sx={{ ...contenedorContacto }}>
           {textoContenidos.map((datos) => {
             const { titulo, contenido } = datos
