@@ -3,9 +3,13 @@ import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
 import ContenedorExperiencia from './Experiencia/ContenedorExperiencia'
 import TituloSeccion from './TituloSeccion'
+import esquemaTextos from './Experiencia/textoExperiencia'
 
 const Experiencia = () => {
   const { idiomaActual } = React.useContext(ColoresContext)
+
+  const { encabezado: textoEncabezado, valores: textoContenidos } =
+    esquemaTextos[idiomaActual]
 
   let envolturaExperiencia = {
     minWidth: 'fit-content',
@@ -17,11 +21,6 @@ const Experiencia = () => {
     }
   }
 
-  const encabezado = {
-    español: 'Experiencia Laboral',
-    ingles: 'Work Experience'
-  }
-
   return (
     <>
       <Box
@@ -29,8 +28,8 @@ const Experiencia = () => {
         className='titulos experiencia'
         sx={{ ...envolturaExperiencia }}
       >
-        <TituloSeccion titulo={encabezado[idiomaActual]} />
-        <ContenedorExperiencia />
+        <TituloSeccion titulo={textoEncabezado} />
+        <ContenedorExperiencia valores={textoContenidos} />
       </Box>
     </>
   )

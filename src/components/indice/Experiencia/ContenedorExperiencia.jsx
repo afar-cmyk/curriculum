@@ -2,13 +2,11 @@ import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from '../ColoresContext'
 import FechaTitulo from './FechaTitulo'
-import { español, ingles } from './experienciaLaboral'
 
-const ContenedorExperiencia = () => {
-  const { barrasColorPrincipal, estadoIdioma } =
-    React.useContext(ColoresContext)
+const ContenedorExperiencia = (props) => {
+  const { barrasColorPrincipal } = React.useContext(ColoresContext)
 
-  const listaExperiencia = estadoIdioma ? español : ingles
+  const experienciaLaboral = props.valores
 
   let experiencias = {
     display: 'flex',
@@ -42,21 +40,21 @@ const ContenedorExperiencia = () => {
 
   return (
     <Box className='experiencias' component='div' sx={{ ...experiencias }}>
-      {listaExperiencia.map((datos) => {
-        const { id, empresa, fecha, funciones } = datos
+      {experienciaLaboral.map((datos) => {
+        const { id, titulo, fecha, contenido } = datos
         return (
           <Box
             className={`experiencia-${id}`}
             key={`div-${id}`}
             sx={{ ...tituloHover }}
           >
-            <FechaTitulo key={`titulo-${id}`} fecha={fecha} empresa={empresa} />
+            <FechaTitulo key={`titulo-${id}`} fecha={fecha} empresa={titulo} />
             <Box
               key={`ul-${id}`}
               component='ul'
               sx={{ ...contenidoExperiencia }}
             >
-              {funciones.map((contenido, index) => {
+              {contenido.map((contenido, index) => {
                 return <li key={`li-${id}-${index}`}>{contenido}</li>
               })}
             </Box>
