@@ -1,11 +1,14 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
-import textoAcerca from './Acerca/textoAcerca'
+import esquemaTextos from './Acerca/textoAcerca'
 import TituloSeccion from './TituloSeccion'
 
 const Acerca = () => {
   const { idiomaActual } = React.useContext(ColoresContext)
+
+  const { encabezado: textoEncabezado, valores: textoContenidos } =
+    esquemaTextos[idiomaActual]
 
   let contenedorAcerca = {
     mb: { xs: '27px', md: '30px', lg: '45px' },
@@ -25,8 +28,11 @@ const Acerca = () => {
       className='titulos acerca'
       sx={{ ...contenedorAcerca }}
     >
-      <TituloSeccion titulo={textoAcerca[idiomaActual]['encabezado']} />
-      {textoAcerca[idiomaActual]['contenido']}
+      <TituloSeccion titulo={textoEncabezado} />
+      {textoContenidos.map((datos) => {
+        const { contenido } = datos
+        return contenido
+      })}
     </Box>
   )
 }

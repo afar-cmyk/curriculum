@@ -61,4 +61,25 @@ const encabezado = {
   ingles: 'Education'
 }
 
+// const esquemaTextos = {
+//   español: {
+//     encabezado: 'string',
+//     valores: [
+//       {
+//         titulo: 'string',
+//         contenido: 'string'
+//       }
+//     ]
+//   },
+//   ingles: {
+//     encabezado: 'string',
+//     valores: [
+//       {
+//         titulo: 'string',
+//         contenido: 'string'
+//       }
+//     ]
+//   }
+// }
+
 export { español, ingles, encabezado }
