@@ -1,14 +1,15 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
-import { español, ingles, encabezado } from './Formacion/formacionAcademica'
-import TarjetaEstudios from './Formacion/TarjetaEstudios'
+import esquemaTextos from './Formacion/textoFormacion'
+import TarjetaFormacion from './Formacion/TarjetaFormacion'
 import TituloSeccion from './TituloSeccion'
 
 const Estudios = () => {
-  const { estadoIdioma, idiomaActual } = React.useContext(ColoresContext)
+  const { idiomaActual } = React.useContext(ColoresContext)
 
-  const formacionAcademica = estadoIdioma ? español : ingles
+  const { encabezado: textoEncabezado, valores: textoContenidos } =
+    esquemaTextos[idiomaActual]
 
   let envolturaEstudios = {
     mb: { xs: '46px', md: '48px', lg: '45px' },
@@ -30,12 +31,12 @@ const Estudios = () => {
         className='titulos formacion'
         sx={{ ...envolturaEstudios }}
       >
-        <TituloSeccion titulo={encabezado[idiomaActual]} />
+        <TituloSeccion titulo={textoEncabezado} />
         <Box component='div' sx={{ ...contenedorEstudios }}>
-          {formacionAcademica.map((datos) => {
+          {textoContenidos.map((datos) => {
             const { id, titulo, organizacion, fecha } = datos
             return (
-              <TarjetaEstudios
+              <TarjetaFormacion
                 key={id}
                 titulo={titulo}
                 organizacion={organizacion}
