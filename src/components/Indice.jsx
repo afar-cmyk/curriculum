@@ -12,7 +12,8 @@ import NavBar from '../components/indice/NavBar'
 
 const Indice = () => {
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
-  const { fondo, textos } = esquemaTema[temaActual]
+  const { fondo, textos, titulosHover, underlineHover } =
+    esquemaTema[temaActual]
 
   let contenedorPrincipal = {
     backgroundColor: fondo,
@@ -27,11 +28,9 @@ const Indice = () => {
     '& strong': {
       color: textos
     },
-    '& h1': {
-      color: textos
-    },
-    '& h2': {
-      color: textos
+    '& .titulos:hover h2': {
+      color: titulosHover,
+      textDecoration: `underline ${underlineHover}`
     }
   }
   return (
