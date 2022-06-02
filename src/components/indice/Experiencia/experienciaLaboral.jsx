@@ -119,3 +119,24 @@ const ingles = [
 ]
 
 export { español, ingles }
+
+// let esquemaTextos = {
+//   español: {
+//     encabezado: 'string',
+//     valores: [
+//       {
+//         titulo: 'string',
+//         contenido: 'string'
+//       }
+//     ]
+//   },
+//   ingles: {
+//     encabezado: 'string',
+//     valores: [
+//       {
+//         titulo: 'string',
+//         contenido: 'string'
+//       }
+//     ]
+//   }
+// }

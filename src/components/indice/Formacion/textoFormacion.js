@@ -1,4 +1,4 @@
-const esquemaTextos = {
+let esquemaTextos = {
   español: {
     encabezado: 'Formación Académica',
     valores: [

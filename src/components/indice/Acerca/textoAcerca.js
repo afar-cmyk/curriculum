@@ -1,6 +1,6 @@
 import React from 'react'
 
-const esquemaTextos = {
+let esquemaTextos = {
   español: {
     encabezado: 'Acerca de mí',
     valores: [

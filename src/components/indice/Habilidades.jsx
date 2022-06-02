@@ -1,11 +1,15 @@
 import React from 'react'
-import { Box, LinearProgress } from '@mui/material'
+import { Box } from '@mui/material'
 import ColoresContext from './ColoresContext'
 import TituloSeccion from './TituloSeccion'
+import esquemaTextos from './Habilidades/textoHabilidades'
+import BarrasHabilidades from './Habilidades/BarrasHabilidades'
 
 const HabilidadesTecnicas = () => {
-  const { barrasColorPrincipal, barrasColorSecundario, idiomaActual } =
-    React.useContext(ColoresContext)
+  const { idiomaActual } = React.useContext(ColoresContext)
+
+  const { encabezado: textoEncabezado, valores: textoContenidos } =
+    esquemaTextos[idiomaActual]
 
   let seccionHabilidades = {
     display: 'flex',
@@ -34,21 +38,6 @@ const HabilidadesTecnicas = () => {
     height: 'fit-content'
   }
 
-  let barraProgreso = {
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: barrasColorSecundario,
-    '& span': { borderRadius: 5, backgroundColor: barrasColorPrincipal },
-    '&:hover span': {
-      backgroundColor: '#4abac9e6'
-    }
-  }
-
-  const encabezado = {
-    español: 'Habilidades Tecnicas',
-    ingles: 'Technical Skills'
-  }
-
   return (
     <>
       <Box
@@ -56,19 +45,14 @@ const HabilidadesTecnicas = () => {
         className='titulos habilidades'
         sx={{ ...seccionHabilidades }}
       >
-        <TituloSeccion titulo={encabezado[idiomaActual]} />
+        <TituloSeccion titulo={textoEncabezado} />
         <div style={{ ...envolturaHabilidades }}>
-          {listaHabilidades.map((datos, index) => {
-            const { habilidad, puntuacion } = datos
+          {textoContenidos.map((datos, index) => {
+            const { titulo, contenido } = datos
             return (
               <div key={index} style={{ ...contenedorHabilidades }}>
-                {habilidad}
-                <LinearProgress
-                  aria-label={`habilidad ${habilidad}`}
-                  variant='determinate'
-                  value={puntuacion}
-                  sx={{ ...barraProgreso }}
-                />
+                {titulo}
+                <BarrasHabilidades titulo={titulo} cantidad={contenido} />
               </div>
             )
           })}
@@ -77,77 +61,5 @@ const HabilidadesTecnicas = () => {
     </>
   )
 }
-
-let listaHabilidades = [
-  {
-    habilidad: 'JavaScript',
-    puntuacion: 65
-  },
-  {
-    habilidad: 'ReactJS',
-    puntuacion: 65
-  },
-  {
-    habilidad: 'Python',
-    puntuacion: 50
-  },
-  {
-    habilidad: 'Java',
-    puntuacion: 40
-  },
-  {
-    habilidad: 'MYSQL',
-    puntuacion: 40
-  },
-  {
-    habilidad: 'GraphQL',
-    puntuacion: 40
-  },
-  {
-    habilidad: 'Figma',
-    puntuacion: 80
-  },
-  {
-    habilidad: 'Adobe Premiere Pro',
-    puntuacion: 85
-  },
-  {
-    habilidad: 'Adobe Media Enconder',
-    puntuacion: 75
-  },
-  {
-    habilidad: 'Adobe Photoshop',
-    puntuacion: 70
-  },
-  {
-    habilidad: 'Adobe Illustrator',
-    puntuacion: 65
-  },
-  {
-    habilidad: 'Adobe After Effects',
-    puntuacion: 50
-  }
-]
-
-// const esquemaTextos = {
-//   español: {
-//     encabezado: 'string',
-//     valores: [
-//       {
-//         titulo: 'string',
-//         contenido: 'string'
-//       }
-//     ]
-//   },
-//   ingles: {
-//     encabezado: 'string',
-//     valores: [
-//       {
-//         titulo: 'string',
-//         contenido: 'string'
-//       }
-//     ]
-//   }
-// }
 
 export default HabilidadesTecnicas
