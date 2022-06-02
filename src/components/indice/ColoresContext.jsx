@@ -44,9 +44,47 @@ export const ColoresProvider = ({ children }) => {
     setSeoIdioma('en')
   }
 
+  // Estado del tema claro
+  const [estadoTema, setEstadoTema] = React.useState(true)
+  const [temaActual, setTemaActual] = React.useState('oscuro')
+
+  const manejadorEstadoTema = () => {
+    return setEstadoTema(!estadoTema)
+  }
+
+  const ponerTemaOscuro = () => {
+    setTemaActual('oscuro')
+  }
+
+  const ponerTemaClaro = () => {
+    setTemaActual('claro')
+  }
+
   React.useEffect(() => {
     estadoIdioma ? ponerEspañol() : ponerIngles()
-  }, [estadoIdioma])
+    estadoTema ? ponerTemaOscuro() : ponerTemaClaro()
+  }, [estadoIdioma, estadoTema])
+
+  const esquemaTema = {
+    oscuro: {
+      fondo: '#0d0d0d',
+      titulos: '#0d0d0d',
+      titulosHover: '',
+      textos: '#cccccc',
+      textosHover: '',
+      bordes: '',
+      bordesHover: ''
+    },
+    claro: {
+      fondo: '#f2f2f2',
+      titulos: '#0d0d0d',
+      titulosHover: '',
+      textos: '#222222',
+      textosHover: '',
+      bordes: '',
+      bordesHover: ''
+    }
+  }
 
   return (
     <ColoresContext.Provider
@@ -57,7 +95,10 @@ export const ColoresProvider = ({ children }) => {
         manejadorEstadoIdioma,
         idiomaActual,
         estadoIdioma,
-        titulosH2Base
+        titulosH2Base,
+        esquemaTema,
+        temaActual,
+        manejadorEstadoTema
       }}
     >
       <Seo

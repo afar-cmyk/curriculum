@@ -10,8 +10,12 @@ import ColoresContext from './ColoresContext'
 import curriculum from '../../static/documents/es_curriculum_andres.pdf'
 
 const NavBar = () => {
-  const { manejadorEstadoIdioma, idiomaActual, estadoIdioma } =
-    React.useContext(ColoresContext)
+  const {
+    manejadorEstadoIdioma,
+    idiomaActual,
+    estadoIdioma,
+    manejadorEstadoTema
+  } = React.useContext(ColoresContext)
   let contenedorIconos = {
     position: 'absolute',
     marginTop: '1em',
@@ -85,6 +89,7 @@ const NavBar = () => {
             <GitHub />
           </IconButton>
           <IconButton
+            onClick={() => manejadorEstadoTema()}
             size='small'
             title='Cambiar colores del sitio'
             aria-label='Cambiar colores del sitio'
