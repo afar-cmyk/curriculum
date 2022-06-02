@@ -8,16 +8,11 @@ import Acerca from '../components/indice/Acerca'
 import Formacion from '../components/indice/Formacion'
 import Habilidades from '../components/indice/Habilidades'
 import Experiencia from '../components/indice/Experiencia'
-// import Seo from '../components/Seo'
 import NavBar from '../components/indice/NavBar'
 
 export default function index() {
   return (
     <>
-      {/* <Seo
-        title='Curriculum Vitae'
-        description='Este es mi curriculum vitae en version PWA!'
-      /> */}
       <ColoresProvider>
         <NavBar />
         <Box component='main' sx={{ ...contenedorPrincipal }}>
