@@ -9,8 +9,6 @@ const RedesSociales = () => {
   const { botones, botonesHover, botonesBackground, bordes, bordesHover } =
     esquemaTema[temaActual]
 
-  console.log(botonesBackground)
-
   const listaRedes = [
     {
       red: 'GitHub',

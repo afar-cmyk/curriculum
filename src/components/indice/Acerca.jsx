@@ -5,7 +5,10 @@ import esquemaTextos from './Acerca/textoAcerca'
 import TituloSeccion from './TituloSeccion'
 
 const Acerca = () => {
-  const { idiomaActual } = React.useContext(ColoresContext)
+  const { idiomaActual, temaActual, esquemaTema } =
+    React.useContext(ColoresContext)
+
+  const { textos, textosHover } = esquemaTema[temaActual]
 
   const { encabezado: textoEncabezado, valores: textoContenidos } =
     esquemaTextos[idiomaActual]
@@ -16,10 +19,11 @@ const Acerca = () => {
       lineHeight: 'calc(1ex / 0.32)',
       width: { lg: '100%' },
       fontSize: { xs: '1.125em', lg: '1.2em' },
-      m: 0
+      m: 0,
+      color: textos
     },
-    '& strong': {
-      color: '#f2f2f2'
+    '&:hover p': {
+      color: textosHover
     }
   }
   return (

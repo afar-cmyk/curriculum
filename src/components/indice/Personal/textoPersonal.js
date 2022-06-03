@@ -41,7 +41,7 @@ let esquemaTextos = {
         contenido: email
       },
       {
-        titulo: 'Ubicación',
+        titulo: 'Location',
         contenido: ubicacion
       }
     ]
