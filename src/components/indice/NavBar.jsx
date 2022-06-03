@@ -14,8 +14,14 @@ const NavBar = () => {
     manejadorEstadoIdioma,
     idiomaActual,
     estadoIdioma,
-    manejadorEstadoTema
+    manejadorEstadoTema,
+    esquemaTema,
+    temaActual
   } = React.useContext(ColoresContext)
+
+  const { botones, botonesHover, botonesBackground, bordes, bordesHover } =
+    esquemaTema[temaActual]
+
   let contenedorIconos = {
     position: 'absolute',
     marginTop: '1em',
@@ -38,18 +44,19 @@ const NavBar = () => {
 
   let estilosIconos = {
     border: 'solid 0.75px',
-    borderColor: estadoIdioma ? '#11c3db52' : '#a211dbb0',
-    color: '#a6a6a6',
+    borderColor: bordes,
+    color: botones,
     padding: '4px',
     '& .MuiSvgIcon-root': {
       fontSize: '1.2em'
     },
-    '&:hover': {
-      color: '#f2f2f2',
-      borderColor: estadoIdioma ? '#11c3db96' : '#a211db'
+    '&&:hover': {
+      color: botonesHover,
+      borderColor: bordesHover,
+      backgroundColor: botonesBackground
     },
     '&:hover .MuiChip-icon': {
-      color: '#f2f2f2'
+      color: botonesHover
     }
   }
 
@@ -60,7 +67,13 @@ const NavBar = () => {
   let botonIdioma = {
     ...estilosIconos,
     fontSize: '0.93em',
-    height: '80%'
+    height: '80%',
+    '& .MuiSvgIcon-root': {
+      color: estadoIdioma ? '#168d9c' : '#9c1660'
+    },
+    '&:hover .MuiSvgIcon-root': {
+      color: estadoIdioma ? '#0bb9d0' : '#d00b78 '
+    }
   }
 
   const textoIdioma = {
