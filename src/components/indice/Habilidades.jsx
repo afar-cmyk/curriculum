@@ -6,7 +6,10 @@ import esquemaTextos from './Habilidades/textoHabilidades'
 import BarrasHabilidades from './Habilidades/BarrasHabilidades'
 
 const HabilidadesTecnicas = () => {
-  const { idiomaActual } = React.useContext(ColoresContext)
+  const { idiomaActual, temaActual, esquemaTema } =
+    React.useContext(ColoresContext)
+
+  const { textosBold } = esquemaTema[temaActual]
 
   const { encabezado: textoEncabezado, valores: textoContenidos } =
     esquemaTextos[idiomaActual]
@@ -32,7 +35,7 @@ const HabilidadesTecnicas = () => {
     gap: '3px',
     fontSize: { xs: '16px', lg: '1.2em' },
     fontWeight: 300,
-    color: '#f2f2f2',
+    color: textosBold,
     marginBottom: '6px',
     width: '47%',
     height: 'fit-content'

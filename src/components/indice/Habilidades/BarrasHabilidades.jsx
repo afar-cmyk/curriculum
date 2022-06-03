@@ -3,18 +3,20 @@ import { LinearProgress } from '@mui/material'
 import ColoresContext from '../ColoresContext'
 
 const BarrasHabilidades = (props) => {
-  const { barrasColorPrincipal, barrasColorSecundario } =
-    React.useContext(ColoresContext)
+  const { esquemaTema, temaActual } = React.useContext(ColoresContext)
+
+  const { barrasPrincipal, barrasPrincipalHover, barrasSecundario } =
+    esquemaTema[temaActual]
 
   const { titulo, cantidad } = props
 
   let barraProgreso = {
     height: 10,
     borderRadius: 5,
-    backgroundColor: barrasColorSecundario,
-    '& span': { borderRadius: 5, backgroundColor: barrasColorPrincipal },
+    backgroundColor: barrasSecundario,
+    '& span': { borderRadius: 5, backgroundColor: barrasPrincipal },
     '&:hover span': {
-      backgroundColor: '#4abac9e6'
+      backgroundColor: barrasPrincipalHover
     }
   }
   return (

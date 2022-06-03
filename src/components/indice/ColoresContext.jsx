@@ -86,7 +86,10 @@ export const ColoresProvider = ({ children }) => {
       underlineHover: '#11c3db96',
       botones: '#a6a6a6',
       botonesHover: '#f2f2f2',
-      botonesBackground: '#ffffff0a'
+      botonesBackground: '#ffffff0a',
+      barrasPrincipal: '#4abac9b3',
+      barrasPrincipalHover: '#4abac9e6',
+      barrasSecundario: '#50c5d540'
     },
     claro: {
       fondo: '#f2f2f2',
@@ -108,7 +111,10 @@ export const ColoresProvider = ({ children }) => {
       underlineHover: '#11c3db',
       botones: '#595959',
       botonesHover: '#0d0d0d',
-      botonesBackground: '#ffffff66'
+      botonesBackground: '#ffffff66',
+      barrasPrincipal: '#11c3db',
+      barrasPrincipalHover: '#06cbe5',
+      barrasSecundario: '#50c5d540'
     }
   }
 
