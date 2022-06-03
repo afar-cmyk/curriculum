@@ -73,7 +73,7 @@ export const ColoresProvider = ({ children }) => {
       nombreSub: '#cccccc',
       titulos: '#cccccc',
       titulosHover: '#f2f2f2',
-      tarjetaTitulo: '#d9d9d9',
+      tarjetaTitulo: '#bfbfbf',
       tarjetaTituloHover: '#d9d9d9',
       tarjetaParrafo: '#bfbfbf',
       tarjetaParrafoHover: '#d4d4d4',
@@ -89,7 +89,9 @@ export const ColoresProvider = ({ children }) => {
       botonesBackground: '#ffffff0a',
       barrasPrincipal: '#4abac9b3',
       barrasPrincipalHover: '#4abac9e6',
-      barrasSecundario: '#50c5d540'
+      barrasSecundario: '#50c5d540',
+      fechas: '#50c5d540',
+      fechasHover: '#24828fe0'
     },
     claro: {
       fondo: '#f2f2f2',
@@ -114,7 +116,9 @@ export const ColoresProvider = ({ children }) => {
       botonesBackground: '#ffffff66',
       barrasPrincipal: '#11c3db',
       barrasPrincipalHover: '#06cbe5',
-      barrasSecundario: '#50c5d540'
+      barrasSecundario: '#50c5d540',
+      fechas: '#50c5d5a0',
+      fechasHover: '#11c3dbcc'
     }
   }
 

@@ -1,9 +1,15 @@
 import React from 'react'
 import { Box } from '@mui/material'
+import ColoresContext from '../ColoresContext'
 
 const FechaTitulo = (props) => {
   const { fecha, empresa } = props
 
+  const { esquemaTema, temaActual } = React.useContext(ColoresContext)
+
+  const { fechas, tarjetaTitulo } = esquemaTema[temaActual]
+
+  //barrasSecundario
   let envolturaTitulo = {
     display: 'flex',
     flexDirection: 'row',
@@ -14,7 +20,7 @@ const FechaTitulo = (props) => {
     '& h3': {
       fontWeight: 700,
       fontSize: { xs: '1.08em', lg: '1.23em' },
-      color: '#f2f2f2',
+      color: tarjetaTitulo,
       m: 0
     },
     '& div': {
@@ -24,9 +30,9 @@ const FechaTitulo = (props) => {
       borderRadius: '16px',
       fontSize: '14px',
       fontWeight: 700,
-      backgroundColor: '#50c5d540',
+      backgroundColor: fechas,
       m: '0px',
-      color: '#f2f2f2'
+      color: tarjetaTitulo
     }
   }
 

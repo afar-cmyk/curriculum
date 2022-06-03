@@ -4,9 +4,12 @@ import ColoresContext from '../ColoresContext'
 import FechaTitulo from './FechaTitulo'
 
 const ContenedorExperiencia = (props) => {
-  const { barrasColorPrincipal } = React.useContext(ColoresContext)
+  const { esquemaTema, temaActual } = React.useContext(ColoresContext)
 
   const experienciaLaboral = props.valores
+
+  const { textos, textosHover, tarjetaTituloHover, fechasHover } =
+    esquemaTema[temaActual]
 
   let experiencias = {
     display: 'flex',
@@ -24,17 +27,25 @@ const ContenedorExperiencia = (props) => {
       mb: '10px'
     },
     '& li::marker': {
-      color: barrasColorPrincipal
+      color: fechasHover
     },
     '& p': {
       m: 0,
-      fontSize: { xs: '16px', lg: '1.2em' }
+      fontSize: { xs: '16px', lg: '1.2em' },
+      color: textos
     }
   }
 
   let tituloHover = {
     '&:hover .experiencia-fecha': {
-      backgroundColor: '#11c3db96'
+      backgroundColor: fechasHover,
+      color: tarjetaTituloHover
+    },
+    '&:hover h3': {
+      color: tarjetaTituloHover
+    },
+    '&:hover li p': {
+      color: textosHover
     }
   }
 
