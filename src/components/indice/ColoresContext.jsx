@@ -73,12 +73,19 @@ export const ColoresProvider = ({ children }) => {
       nombreSub: '#cccccc',
       titulos: '#cccccc',
       titulosHover: '#f2f2f2',
+      tarjetaTitulo: '#d9d9d9',
+      tarjetaTituloHover: '#d9d9d9',
+      tarjetaParrafo: '#bfbfbf',
+      tarjetaParrafoHover: '#d4d4d4',
       textos: '#cccccc',
       textosHover: '',
-      bordes: '',
-      bordesHover: '',
+      bordes: '#11c3db26',
+      bordesHover: '#11c3db96',
       underline: '#4aabc980',
-      underlineHover: '#11c3db96'
+      underlineHover: '#11c3db96',
+      botones: '#a6a6a6',
+      botonesHover: '#f2f2f2',
+      botonesBackground: '#ffffff0a'
     },
     claro: {
       fondo: '#f2f2f2',
@@ -87,12 +94,19 @@ export const ColoresProvider = ({ children }) => {
       nombreSub: '#4d4d4d',
       titulos: '#4d4d4d',
       titulosHover: '#000000',
+      tarjetaTitulo: '#4d4d4d',
+      tarjetaTituloHover: '#000000',
+      tarjetaParrafo: '#222222',
+      tarjetaParrafoHover: '#0d0d0d',
       textos: '#222222',
       textosHover: '',
-      bordes: '',
-      bordesHover: '',
+      bordes: '#11c3db4d',
+      bordesHover: '#11c3db',
       underline: '#4aabc9cc',
-      underlineHover: '#11c3db'
+      underlineHover: '#11c3db',
+      botones: '#595959',
+      botonesHover: '#0d0d0d',
+      botonesBackground: '#ffffff66'
     }
   }
 

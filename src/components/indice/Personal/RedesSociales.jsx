@@ -1,8 +1,16 @@
 import React from 'react'
 import { Chip } from '@mui/material'
 import { GitHub, WhatsApp, LinkedIn } from '@mui/icons-material'
+import ColoresContext from '../ColoresContext'
 
 const RedesSociales = () => {
+  const { temaActual, esquemaTema } = React.useContext(ColoresContext)
+
+  const { botones, botonesHover, botonesBackground, bordes, bordesHover } =
+    esquemaTema[temaActual]
+
+  console.log(botonesBackground)
+
   const listaRedes = [
     {
       red: 'GitHub',
@@ -25,18 +33,18 @@ const RedesSociales = () => {
     px: '6px',
     py: '3px',
     fontSize: '13px',
-    borderColor: '#11c3db52',
-    color: '#a6a6a6',
+    borderColor: bordes,
+    color: botones,
     '& .MuiChip-icon': {
       fontSize: '1.3em'
     },
     '&:hover .MuiChip-icon': {
-      color: '#f2f2f2'
+      color: botonesHover
     },
-    '&:hover': {
-      borderColor: '#11c3db96',
-      backgroundColor: '#388994',
-      color: '#f2f2f2'
+    '&&:hover': {
+      borderColor: bordesHover,
+      backgroundColor: botonesBackground,
+      color: botonesHover
     }
   }
 
