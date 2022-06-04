@@ -33,7 +33,7 @@ h2 {
   }
 }
 
-.titulo img {
+.nombre img {
   animation-name: pulso;
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);

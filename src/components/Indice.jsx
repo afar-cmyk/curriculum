@@ -1,5 +1,4 @@
 import React from 'react'
-import '../styles/global.css'
 import { Box } from '@mui/material'
 import ColoresContext from '../components/indice/ColoresContext'
 import Encabezado from '../components/indice/Encabezado'
