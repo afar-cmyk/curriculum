@@ -1,44 +1,17 @@
 import React from 'react'
 import { Box } from '@mui/material'
-// import foto from '../../images/foto.jpg'
 import ImagenLogo from './Encabezado/ImagenLogo'
-// import imagenlogo from '../../images/logo.svg'
 import ColoresContext from './ColoresContext'
 import textoEncabezado from './Encabezado/textoEncabezado'
-// import ComponenteLogo from './Encabezado/LogoSVG'
 
 const Encabezado = () => {
   const { idiomaActual, temaActual, esquemaTema } =
     React.useContext(ColoresContext)
 
-  const {
-    nombre,
-    nombreSub,
-    nombreHover,
-    underline,
-    underlineHover
-    // fondo,
-    // logo,
-    // logoHover
-  } = esquemaTema[temaActual]
+  const { nombre, nombreSub, nombreHover, underline, underlineHover } =
+    esquemaTema[temaActual]
 
-  // const [estadoImagen, setEstadoImagen] = React.useState(true)
-  // const [imagenActual, setImagenActual] = React.useState(imagenlogo)
-  // const [animacionActual, setAnimacionActual] = React.useState('pulso')
-
-  // const estadoLogo = () => {
-  //   // setImagenActual(imagenlogo)
-  //   setAnimacionActual('pulso')
-  // }
-
-  // const estadoFoto = () => {
-  //   // setImagenActual(foto)
-  //   setAnimacionActual('unset')
-  // }
-
-  // React.useEffect(() => {
-  //   estadoImagen ? estadoLogo() : estadoFoto()
-  // }, [estadoImagen])
+  const { titulo, subtitulo } = textoEncabezado[idiomaActual]
 
   let contenedorTitulo = {
     display: 'flex',
@@ -73,12 +46,6 @@ const Encabezado = () => {
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
     mb: { xs: '45px', md: '75px', lg: '75px' },
-    '& img': {
-      borderRadius: '50%',
-      width: { xs: 'calc(110px + 10vw)', lg: 'calc(110px + 8vw)' },
-      cursor: 'pointer'
-      // animationName: animacionActual
-    },
     '&:hover h1': {
       color: nombreHover,
       textDecoration: `underline ${underlineHover}`
@@ -93,8 +60,8 @@ const Encabezado = () => {
     >
       <ImagenLogo />
       <Box component='div' sx={{ ...contenedorTitulo }}>
-        <h1>{textoEncabezado[idiomaActual]['titulo']}</h1>
-        <sub>{textoEncabezado[idiomaActual]['subtitulo']}</sub>
+        <h1>{titulo}</h1>
+        <sub>{subtitulo}</sub>
       </Box>
     </Box>
   )

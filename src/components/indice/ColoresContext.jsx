@@ -92,8 +92,7 @@ export const ColoresProvider = ({ children }) => {
       barrasSecundario: '#50c5d540',
       fechas: '#50c5d540',
       fechasHover: '#24828fe0',
-      logo: '#11c3dbb0',
-      logoHover: '#11c3dbd0'
+      logo: '#11c3dbd0'
     },
     claro: {
       fondo: '#f2f2f2',
@@ -121,8 +120,7 @@ export const ColoresProvider = ({ children }) => {
       barrasSecundario: '#50c5d540',
       fechas: '#50c5d5a0',
       fechasHover: '#11c3dbcc',
-      logo: '#4aabc9cc',
-      logoHover: '#11c3db'
+      logo: '#11c3db'
     }
   }
 

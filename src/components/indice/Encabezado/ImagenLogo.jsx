@@ -9,7 +9,7 @@ const ImagenLogo = () => {
 
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
 
-  const { fondo, logo, logoHover } = esquemaTema[temaActual]
+  const { fondo, logo } = esquemaTema[temaActual]
 
   return (
     <Box
@@ -24,7 +24,10 @@ const ImagenLogo = () => {
         backgroundSize: 'cover',
         borderRadius: '50%',
         backgroundColor: fondo,
-        padding: 'calc(20px + 0.5vw)'
+        padding: 'calc(20px + 0.5vw)',
+        animationName: estadoImagen ? 'pulso' : 'unset',
+        cursor: 'pointer',
+        borderWidth: 0
       }}
     >
       <LogoSVG
@@ -33,28 +36,9 @@ const ImagenLogo = () => {
           color: estadoImagen ? logo : 'transparent',
           fontSize: 'calc(110px + 4.5vw)',
           position: 'relative',
-          bottom: '0.5vw',
-          '&:hover': {
-            color: estadoImagen ? logoHover : 'transparent'
-          }
+          bottom: '0.5vw'
         }}
       />
-      {/* {estadoImagen ? (
-        <ComponenteLogo
-          sx={{
-            // display: 'none',
-            color: estadoImagen ? logo : 'transparent',
-            fontSize: 'calc(110px + 4.5vw)',
-            position: 'relative',
-            bottom: '0.5vw',
-            '&:hover': {
-              color: logoHover
-            }
-          }}
-        />
-      ) : (
-        <img component='img' alt='foto de perfil' src={foto} />
-      )} */}
     </Box>
   )
 }
