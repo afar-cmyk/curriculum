@@ -1,34 +1,44 @@
 import React from 'react'
 import { Box } from '@mui/material'
-import foto from '../../images/foto.jpg'
-import logo from '../../images/logo.svg'
+// import foto from '../../images/foto.jpg'
+import ImagenLogo from './Encabezado/ImagenLogo'
+// import imagenlogo from '../../images/logo.svg'
 import ColoresContext from './ColoresContext'
 import textoEncabezado from './Encabezado/textoEncabezado'
+// import ComponenteLogo from './Encabezado/LogoSVG'
 
 const Encabezado = () => {
   const { idiomaActual, temaActual, esquemaTema } =
     React.useContext(ColoresContext)
 
-  const { nombre, nombreSub, nombreHover, underline, underlineHover } =
-    esquemaTema[temaActual]
+  const {
+    nombre,
+    nombreSub,
+    nombreHover,
+    underline,
+    underlineHover
+    // fondo,
+    // logo,
+    // logoHover
+  } = esquemaTema[temaActual]
 
-  const [estadoImagen, setEstadoImagen] = React.useState(true)
-  const [imagenActual, setImagenActual] = React.useState(logo)
-  const [animacionActual, setAnimacionActual] = React.useState('pulso')
+  // const [estadoImagen, setEstadoImagen] = React.useState(true)
+  // const [imagenActual, setImagenActual] = React.useState(imagenlogo)
+  // const [animacionActual, setAnimacionActual] = React.useState('pulso')
 
-  const estadoLogo = () => {
-    setImagenActual(logo)
-    setAnimacionActual('pulso')
-  }
+  // const estadoLogo = () => {
+  //   // setImagenActual(imagenlogo)
+  //   setAnimacionActual('pulso')
+  // }
 
-  const estadoFoto = () => {
-    setImagenActual(foto)
-    setAnimacionActual('unset')
-  }
+  // const estadoFoto = () => {
+  //   // setImagenActual(foto)
+  //   setAnimacionActual('unset')
+  // }
 
-  React.useEffect(() => {
-    estadoImagen ? estadoLogo() : estadoFoto()
-  }, [estadoImagen])
+  // React.useEffect(() => {
+  //   estadoImagen ? estadoLogo() : estadoFoto()
+  // }, [estadoImagen])
 
   let contenedorTitulo = {
     display: 'flex',
@@ -66,8 +76,8 @@ const Encabezado = () => {
     '& img': {
       borderRadius: '50%',
       width: { xs: 'calc(110px + 10vw)', lg: 'calc(110px + 8vw)' },
-      cursor: 'pointer',
-      animationName: animacionActual
+      cursor: 'pointer'
+      // animationName: animacionActual
     },
     '&:hover h1': {
       color: nombreHover,
@@ -81,13 +91,7 @@ const Encabezado = () => {
       className='titulos nombre'
       sx={{ ...envolturaTitulos }}
     >
-      <Box
-        component='img'
-        alt='foto de perfil'
-        src={imagenActual}
-        onClick={() => setEstadoImagen(!estadoImagen)}
-        onKeyDown={() => setEstadoImagen(!estadoImagen)}
-      />
+      <ImagenLogo />
       <Box component='div' sx={{ ...contenedorTitulo }}>
         <h1>{textoEncabezado[idiomaActual]['titulo']}</h1>
         <sub>{textoEncabezado[idiomaActual]['subtitulo']}</sub>
