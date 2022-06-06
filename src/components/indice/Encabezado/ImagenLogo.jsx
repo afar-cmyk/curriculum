@@ -15,6 +15,8 @@ const ImagenLogo = () => {
     <Box
       className='contenedor-logo-foto'
       component='button'
+      type='button'
+      aria-label='Logo y Foto'
       onClick={() => setEstadoImagen(!estadoImagen)}
       onKeyDown={() => setEstadoImagen(!estadoImagen)}
       sx={{
