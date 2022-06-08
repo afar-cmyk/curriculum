@@ -102,8 +102,10 @@ const NavBar = () => {
         <div style={{ ...seccionAccion }}>
           <IconButton
             size='small'
-            title='Repositorio en GitHub'
-            aria-label='repositorio en GitHub'
+            title={estadoIdioma ? 'Repositorio en GitHub' : 'GitHub repository'}
+            aria-label={
+              estadoIdioma ? 'Repositorio en GitHub' : 'GitHub repository'
+            }
             href={'https://github.com/afar-cmyk/curriculum'}
             referrerPolicy='origin'
             rel='external'
@@ -115,8 +117,12 @@ const NavBar = () => {
           <IconButton
             onClick={() => manejadorEstadoTema()}
             size='small'
-            title='Cambiar colores del sitio'
-            aria-label='Cambiar colores del sitio'
+            title={
+              estadoIdioma ? 'Cambiar colores del sitio' : 'Switch theme color'
+            }
+            aria-label={
+              estadoIdioma ? 'Cambiar colores del sitio' : 'Switch theme color'
+            }
             sx={{ ...estilosIconos }}
           >
             <BrightnessMedium />
