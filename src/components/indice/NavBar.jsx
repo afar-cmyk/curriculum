@@ -7,7 +7,8 @@ import {
   Language
 } from '@mui/icons-material'
 import ColoresContext from './ColoresContext'
-import curriculum from '../../static/documents/es_curriculum_andres.pdf'
+import curriculumES from '../../static/documents/es_curriculum_andres.pdf'
+import curriculumEN from '../../static/documents/en_curriculum_andres.pdf'
 
 const NavBar = () => {
   const {
@@ -64,6 +65,16 @@ const NavBar = () => {
     display: 'flex'
   }
 
+  let botonDescarga = {
+    ...estilosIconos,
+    '& .MuiSvgIcon-root': {
+      color: estadoIdioma ? '#168d9c' : '#9c1660'
+    },
+    '&:hover .MuiSvgIcon-root': {
+      color: estadoIdioma ? '#0bb9d0' : '#d00b78 '
+    }
+  }
+
   let botonIdioma = {
     ...estilosIconos,
     fontSize: '0.93em',
@@ -112,13 +123,21 @@ const NavBar = () => {
           </IconButton>
           <IconButton
             size='small'
-            title='Descargar Curriculum Vitae'
-            aria-label='Descargar Curriculum Vitae'
-            href={curriculum}
+            title={
+              estadoIdioma
+                ? 'Descargar Curriculum Vitae'
+                : 'Download Curriculum Vitae'
+            }
+            aria-label={
+              estadoIdioma
+                ? 'Descargar Curriculum Vitae'
+                : 'Download Curriculum Vitae'
+            }
+            href={estadoIdioma ? curriculumES : curriculumEN}
             referrerPolicy='origin'
             rel='external'
             target='_blank'
-            sx={{ ...estilosIconos }}
+            sx={{ ...botonDescarga }}
           >
             <Download />
           </IconButton>
