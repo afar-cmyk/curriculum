@@ -13,6 +13,7 @@ const Experiencia = () => {
 
   let envolturaExperiencia = {
     minWidth: 'fit-content',
+    mb: { xs: '42px', md: '48px', lg: '45px' },
     '& h3': {
       fontWeight: 700,
       fontSize: { xs: '1.08em', lg: '1.23em' },

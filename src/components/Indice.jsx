@@ -8,6 +8,7 @@ import Formacion from '../components/indice/Formacion'
 import Habilidades from '../components/indice/Habilidades'
 import Experiencia from '../components/indice/Experiencia'
 import NavBar from '../components/indice/NavBar'
+import Portafolio from './indice/Portafolio'
 
 const Indice = () => {
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
@@ -43,6 +44,7 @@ const Indice = () => {
           <Formacion />
           <Habilidades />
           <Experiencia />
+          <Portafolio />
         </article>
       </Box>
     </>
