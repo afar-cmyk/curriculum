@@ -3,6 +3,7 @@ import { Box } from '@mui/material'
 import TituloSeccion from './TituloSeccion'
 import ColoresContext from './ColoresContext'
 import esquemaTextos from './Portafolio/textoPortafolio'
+import ContenedorPortafolio from './Portafolio/ContenedorPortafolio'
 
 const Portafolio = () => {
   const { idiomaActual } = React.useContext(ColoresContext)
@@ -24,7 +25,7 @@ const Portafolio = () => {
         sx={{ ...envolturaPortafolio }}
       >
         <TituloSeccion titulo={textoEncabezado} />
-        Coming Soon...
+        <ContenedorPortafolio />
       </Box>
     </>
   )
