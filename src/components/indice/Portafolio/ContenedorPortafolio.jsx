@@ -38,17 +38,22 @@ const ContenedorPortafolio = () => {
     '& h3': {
       width: 'fit-content',
       fontWeight: 700,
-      lineHeight: 'calc(0.9ex / 0.32)',
-      fontSize: { xs: '1em', sm: '1.05em', xl: '1em' },
+      // lineHeight: 'calc(1ex / 0.42);',
+      fontSize: '1.2em',
       color: tarjetaTitulo,
-      m: 0
+      mt: 0,
+      mb: '0.2em',
+      ml: '1rem',
+      mr: 0
     },
     '&:hover h3': { color: tarjetaTituloHover },
     '& p': {
+      fontSize: { xs: '16px', lg: '1.1em', xl: '1em' },
       color: tarjetaParrafo,
       width: 'fit-content',
-      m: 0,
-      fontSize: { xs: '16px', lg: '1.1em', xl: '1em' }
+      my: 0,
+      ml: '1rem',
+      mr: 0
     },
     '&:hover p': { color: tarjetaParrafoHover }
   }
@@ -74,6 +79,26 @@ const ContenedorPortafolio = () => {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center'
+    // '& h3': {
+    //   fontSize: '1.3em'
+    // }
+  }
+
+  let contenedorCategoria = {
+    borderRadius: '0.3em',
+    backgroundColor: '#333333',
+    width: 'fit-content',
+    paddingLeft: '0.5em',
+    paddingRight: '0.5em',
+    border: `solid 1px ${bordes}`,
+    fontSize: '0.8em'
+  }
+
+  let envolturaCategorias = {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '0.8em',
+    marginLeft: '1rem'
   }
 
   return (
@@ -81,37 +106,41 @@ const ContenedorPortafolio = () => {
       <Box component='div' sx={{ ...tarjeta }}>
         <div className='imagen' style={{ ...tarjetaImagen }} />
         <div className='info' style={{ ...tarjetaInfo }}>
-          <p style={{ marginLeft: '1em' }}>{'Curriculum & Portfolio'}</p>
-          <p style={{ marginLeft: '1em' }}>
-            {'Desarrollo'}, {'Diseño'}
-          </p>
+          <h3>{'Curriculum & Portfolio'}</h3>
+          <div style={{ ...envolturaCategorias }}>
+            <div style={{ ...contenedorCategoria }}>Desarrollo</div>
+            <div style={{ ...contenedorCategoria }}>Diseño</div>
+          </div>
         </div>
       </Box>
       <Box component='div' sx={{ ...tarjeta }}>
         <div className='imagen' style={{ ...tarjetaImagen }} />
         <div className='info' style={{ ...tarjetaInfo }}>
-          <p style={{ marginLeft: '1em' }}>{'Rayo Neón'}</p>
-          <p style={{ marginLeft: '1em' }}>
-            {'Desarrollo'}, {'Diseño'}
-          </p>
+          <h3>{'Rayo Neón'}</h3>
+          <div style={{ ...envolturaCategorias }}>
+            <div style={{ ...contenedorCategoria }}>Desarrollo</div>
+            <div style={{ ...contenedorCategoria }}>Diseño</div>
+          </div>
         </div>
       </Box>
       <Box component='div' sx={{ ...tarjeta }}>
         <div className='imagen' style={{ ...tarjetaImagen }} />
         <div className='info' style={{ ...tarjetaInfo }}>
-          <p style={{ marginLeft: '1em' }}>{'Bibliotech web'}</p>
-          <p style={{ marginLeft: '1em' }}>
-            {'Desarrollo'}, {'Diseño'}
-          </p>
+          <h3>{'Bibliotech web'}</h3>
+          <div style={{ ...envolturaCategorias }}>
+            <div style={{ ...contenedorCategoria }}>Desarrollo</div>
+            <div style={{ ...contenedorCategoria }}>Diseño</div>
+          </div>
         </div>
       </Box>
       <Box component='div' sx={{ ...tarjeta }}>
         <div className='imagen' style={{ ...tarjetaImagen }} />
         <div className='info' style={{ ...tarjetaInfo }}>
-          <p style={{ marginLeft: '1em' }}>{'BTC2COP Bot'}</p>
-          <p style={{ marginLeft: '1em' }}>
-            {'Desarrollo'}, {'Diseño'}
-          </p>
+          <h3>{'BTC2COP Bot'}</h3>
+          <div style={{ ...envolturaCategorias }}>
+            <div style={{ ...contenedorCategoria }}>Desarrollo</div>
+            <div style={{ ...contenedorCategoria }}>Diseño</div>
+          </div>
         </div>
       </Box>
     </Box>
