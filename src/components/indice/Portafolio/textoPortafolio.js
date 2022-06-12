@@ -13,11 +13,11 @@ let esquemaTextos = {
         titulo: 'Curriculum & Portfolio',
         imagen: placeholder,
         categoria: ['Desarrollo', 'Diseño'],
+        url: 'https://andresfelipe.netlify.app/',
+        repositorio: 'https://github.com/afar-cmyk/curriculum',
         contenido: {
           estado: 'Activo',
           fecha: '2022',
-          url: 'https://andresfelipe.netlify.app/',
-          repositorio: 'https://github.com/afar-cmyk/curriculum',
           descripcion: [
             <React.Fragment key='es-desc-curri'>
               <p>
@@ -40,11 +40,11 @@ let esquemaTextos = {
         titulo: 'Rayo Neón',
         imagen: placeholder,
         categoria: ['Desarrollo', 'Diseño'],
+        url: 'https://url.com/',
+        repositorio: 'https://url.com/',
         contenido: {
           estado: 'Activo',
           fecha: '2022',
-          url: 'https://url.com/',
-          repositorio: 'https://url.com/',
           descripcion: [
             <React.Fragment key='es-desc-rayo'>
               <p>
@@ -68,11 +68,11 @@ let esquemaTextos = {
         titulo: 'Bibliotech web',
         imagen: placeholder,
         categoria: ['Desarrollo', 'Diseño'],
+        url: 'https://url.com/',
+        repositorio: 'https://url.com/',
         contenido: {
           estado: 'Finalizado',
           fecha: '2021',
-          url: 'https://url.com/',
-          repositorio: 'https://url.com/',
           descripcion: [
             <React.Fragment key='es-desc-bibl'>
               <p>
@@ -96,11 +96,11 @@ let esquemaTextos = {
         titulo: 'BTC 2 COP Bot',
         imagen: placeholder,
         categoria: ['Desarrollo', 'Diseño'],
+        url: 'https://url.com/',
+        repositorio: 'https://url.com/',
         contenido: {
           estado: 'Activo',
           fecha: '2022',
-          url: 'https://url.com/',
-          repositorio: 'https://url.com/',
           descripcion: [
             <React.Fragment key='es-desc-btc2'>
               <p>
@@ -130,11 +130,11 @@ let esquemaTextos = {
         titulo: 'Curriculum & Portfolio',
         imagen: placeholder,
         categoria: ['Development', 'Design'],
+        url: 'https://andresfelipe.netlify.app/',
+        repositorio: 'https://github.com/afar-cmyk/curriculum',
         contenido: {
           estado: 'Activo',
           fecha: '2022',
-          url: 'https://andresfelipe.netlify.app/',
-          repositorio: 'https://github.com/afar-cmyk/curriculum',
           descripcion: [
             <React.Fragment key='en-desc-curri'>
               <p>
@@ -157,11 +157,11 @@ let esquemaTextos = {
         titulo: 'Rayo Neón',
         imagen: placeholder,
         categoria: ['Development', 'Design'],
+        url: 'https://url.com/',
+        repositorio: 'https://url.com/',
         contenido: {
           estado: 'Activo',
           fecha: '2022',
-          url: 'https://url.com/',
-          repositorio: 'https://url.com/',
           descripcion: [
             <React.Fragment key='en-desc-rayo'>
               <p>
@@ -185,11 +185,11 @@ let esquemaTextos = {
         titulo: 'Bibliotech web',
         imagen: placeholder,
         categoria: ['Development', 'Design'],
+        url: 'https://url.com/',
+        repositorio: 'https://url.com/',
         contenido: {
           estado: 'Finalizado',
           fecha: '2021',
-          url: 'https://url.com/',
-          repositorio: 'https://url.com/',
           descripcion: [
             <React.Fragment key='en-desc-bibl'>
               <p>
@@ -213,11 +213,11 @@ let esquemaTextos = {
         titulo: 'BTC2COP Bot',
         imagen: placeholder,
         categoria: ['Development', 'Design'],
+        url: 'https://url.com/',
+        repositorio: 'https://url.com/',
         contenido: {
           estado: 'Activo',
           fecha: '2022',
-          url: 'https://url.com/',
-          repositorio: 'https://url.com/',
           descripcion: [
             <React.Fragment key='en-desc-btc2'>
               <p>
