@@ -27,8 +27,12 @@ const CategoriasTarjeta = (props) => {
 
   return (
     <div style={{ ...envolturaCategorias }}>
-      {categorias.map((categoria) => {
-        return <div style={{ ...contenedorCategoria }}>{categoria}</div>
+      {categorias.map((categoria, index) => {
+        return (
+          <div key={`cat-${index}`} style={{ ...contenedorCategoria }}>
+            {categoria}
+          </div>
+        )
       })}
     </div>
   )

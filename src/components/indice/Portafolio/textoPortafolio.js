@@ -1,7 +1,7 @@
 import React from 'react'
 import placeholder from '../../../images/redes-logo.jpg'
 
-// Categorias: Desarrollo, Diseño, Edición de Video, Fotografia, Exposicion
+// categoria: Desarrollo, Diseño, Edición de Video, Fotografia, Exposicion
 // categories: Development, Design, Video editing, Photography, Exhibition
 
 let esquemaTextos = {
@@ -9,10 +9,11 @@ let esquemaTextos = {
     encabezado: 'Portafolio',
     valores: [
       {
+        id: 'curri-es',
         titulo: 'Curriculum & Portfolio',
+        imagen: placeholder,
+        categoria: ['Desarrollo', 'Diseño'],
         contenido: {
-          imagen: placeholder,
-          categoria: ['Desarrollo', 'Diseño'],
           estado: 'Activo',
           fecha: '2022',
           url: 'https://andresfelipe.netlify.app/',
@@ -35,10 +36,11 @@ let esquemaTextos = {
         }
       },
       {
+        id: 'rayo-es',
         titulo: 'Rayo Neón',
+        imagen: placeholder,
+        categoria: ['Desarrollo', 'Diseño'],
         contenido: {
-          imagen: placeholder,
-          categoria: ['Desarrollo', 'Diseño'],
           estado: 'Activo',
           fecha: '2022',
           url: 'https://url.com/',
@@ -62,10 +64,11 @@ let esquemaTextos = {
         }
       },
       {
+        id: 'bibl-es',
         titulo: 'Bibliotech web',
+        imagen: placeholder,
+        categoria: ['Desarrollo', 'Diseño'],
         contenido: {
-          imagen: placeholder,
-          categoria: ['Desarrollo', 'Diseño'],
           estado: 'Finalizado',
           fecha: '2021',
           url: 'https://url.com/',
@@ -89,10 +92,11 @@ let esquemaTextos = {
         }
       },
       {
-        titulo: 'BTC2COP Bot',
+        id: 'btc2-es',
+        titulo: 'BTC 2 COP Bot',
+        imagen: placeholder,
+        categoria: ['Desarrollo', 'Diseño'],
         contenido: {
-          imagen: placeholder,
-          categoria: ['Desarrollo', 'Diseño'],
           estado: 'Activo',
           fecha: '2022',
           url: 'https://url.com/',
@@ -122,10 +126,11 @@ let esquemaTextos = {
     encabezado: 'Portfolio',
     valores: [
       {
+        id: 'curri-en',
         titulo: 'Curriculum & Portfolio',
+        imagen: placeholder,
+        categoria: ['Development', 'Design'],
         contenido: {
-          imagen: placeholder,
-          categoria: ['Development', 'Design'],
           estado: 'Activo',
           fecha: '2022',
           url: 'https://andresfelipe.netlify.app/',
@@ -148,10 +153,11 @@ let esquemaTextos = {
         }
       },
       {
+        id: 'rayo-en',
         titulo: 'Rayo Neón',
+        imagen: placeholder,
+        categoria: ['Development', 'Design'],
         contenido: {
-          imagen: placeholder,
-          categoria: ['Development', 'Design'],
           estado: 'Activo',
           fecha: '2022',
           url: 'https://url.com/',
@@ -175,10 +181,11 @@ let esquemaTextos = {
         }
       },
       {
+        id: 'bibl-en',
         titulo: 'Bibliotech web',
+        imagen: placeholder,
+        categoria: ['Development', 'Design'],
         contenido: {
-          imagen: placeholder,
-          categoria: ['Development', 'Design'],
           estado: 'Finalizado',
           fecha: '2021',
           url: 'https://url.com/',
@@ -202,10 +209,11 @@ let esquemaTextos = {
         }
       },
       {
+        id: 'btc2-en',
         titulo: 'BTC2COP Bot',
+        imagen: placeholder,
+        categoria: ['Development', 'Design'],
         contenido: {
-          imagen: placeholder,
-          categoria: ['Development', 'Design'],
           estado: 'Activo',
           fecha: '2022',
           url: 'https://url.com/',

@@ -8,7 +8,8 @@ import ContenedorPortafolio from './Portafolio/ContenedorPortafolio'
 const Portafolio = () => {
   const { idiomaActual } = React.useContext(ColoresContext)
 
-  const { encabezado: textoEncabezado } = esquemaTextos[idiomaActual]
+  const { encabezado: textoEncabezado, valores: textoContenidos } =
+    esquemaTextos[idiomaActual]
 
   let envolturaPortafolio = {
     display: 'flex',
@@ -25,7 +26,7 @@ const Portafolio = () => {
         sx={{ ...envolturaPortafolio }}
       >
         <TituloSeccion titulo={textoEncabezado} />
-        <ContenedorPortafolio />
+        <ContenedorPortafolio valores={textoContenidos} />
       </Box>
     </>
   )
