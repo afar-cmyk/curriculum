@@ -2,6 +2,7 @@ import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from '../ColoresContext'
 import placeholder from '../../../images/redes-logo.jpg'
+import MiniaturaTarjeta from './MiniaturaTarjeta'
 
 const ContenedorPortafolio = () => {
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
@@ -59,20 +60,6 @@ const ContenedorPortafolio = () => {
     '&:hover p': { color: tarjetaParrafoHover }
   }
 
-  let tarjetaImagen = {
-    width: '100%',
-    minHeight: '60%',
-    backgroundImage: `url(${placeholder})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundColor: '#6a6a6a',
-    borderTopLeftRadius: 'inherit',
-    borderTopRightRadius: 'inherit',
-    borderBottomRightRadius: 0,
-    borderBottomLeftRadius: 0
-  }
-
   let tarjetaInfo = {
     width: '100%',
     minHeight: '40%',
@@ -109,7 +96,7 @@ const ContenedorPortafolio = () => {
   return (
     <Box component='div' sx={{ ...contenedor }}>
       <Box component='div' sx={{ ...tarjeta }}>
-        <div className='imagen' style={{ ...tarjetaImagen }} />
+        <MiniaturaTarjeta imagen={placeholder} />
         <div className='info' style={{ ...tarjetaInfo }}>
           <h3>{'Curriculum & Portfolio'}</h3>
           <div style={{ ...envolturaCategorias }}>
@@ -119,7 +106,7 @@ const ContenedorPortafolio = () => {
         </div>
       </Box>
       <Box component='div' sx={{ ...tarjeta }}>
-        <div className='imagen' style={{ ...tarjetaImagen }} />
+        <MiniaturaTarjeta imagen={placeholder} />
         <div className='info' style={{ ...tarjetaInfo }}>
           <h3>{'Rayo Neón'}</h3>
           <div style={{ ...envolturaCategorias }}>
@@ -129,7 +116,7 @@ const ContenedorPortafolio = () => {
         </div>
       </Box>
       <Box component='div' sx={{ ...tarjeta }}>
-        <div className='imagen' style={{ ...tarjetaImagen }} />
+        <MiniaturaTarjeta imagen={placeholder} />
         <div className='info' style={{ ...tarjetaInfo }}>
           <h3>{'Bibliotech web'}</h3>
           <div style={{ ...envolturaCategorias }}>
@@ -139,7 +126,7 @@ const ContenedorPortafolio = () => {
         </div>
       </Box>
       <Box component='div' sx={{ ...tarjeta }}>
-        <div className='imagen' style={{ ...tarjetaImagen }} />
+        <MiniaturaTarjeta imagen={placeholder} />
         <div className='info' style={{ ...tarjetaInfo }}>
           <h3>{'BTC 2 COP Bot'}</h3>
           <div style={{ ...envolturaCategorias }}>
