@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import ColoresContext from '../ColoresContext'
+import placeholder from '../../../images/redes-logo.jpg'
 
 const ContenedorPortafolio = () => {
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
@@ -24,7 +25,7 @@ const ContenedorPortafolio = () => {
   }
 
   let tarjeta = {
-    height: '12em',
+    height: '10em',
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'nowrap',
@@ -39,7 +40,7 @@ const ContenedorPortafolio = () => {
       width: 'fit-content',
       fontWeight: 700,
       // lineHeight: 'calc(1ex / 0.42);',
-      fontSize: '1.2em',
+      fontSize: '1.1em',
       color: tarjetaTitulo,
       mt: 0,
       mb: '0.2em',
@@ -61,6 +62,10 @@ const ContenedorPortafolio = () => {
   let tarjetaImagen = {
     width: '100%',
     minHeight: '60%',
+    backgroundImage: `url(${placeholder})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
     backgroundColor: '#6a6a6a',
     borderTopLeftRadius: 'inherit',
     borderTopRightRadius: 'inherit',
@@ -136,7 +141,7 @@ const ContenedorPortafolio = () => {
       <Box component='div' sx={{ ...tarjeta }}>
         <div className='imagen' style={{ ...tarjetaImagen }} />
         <div className='info' style={{ ...tarjetaInfo }}>
-          <h3>{'BTC2COP Bot'}</h3>
+          <h3>{'BTC 2 COP Bot'}</h3>
           <div style={{ ...envolturaCategorias }}>
             <div style={{ ...contenedorCategoria }}>Desarrollo</div>
             <div style={{ ...contenedorCategoria }}>Diseño</div>
