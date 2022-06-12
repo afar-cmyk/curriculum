@@ -2,7 +2,7 @@ import React from 'react'
 import ColoresContext from '../ColoresContext'
 
 const CategoriasTarjeta = (props) => {
-  const { categoria } = props
+  const { categorias } = props
 
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
 
@@ -27,7 +27,9 @@ const CategoriasTarjeta = (props) => {
 
   return (
     <div style={{ ...envolturaCategorias }}>
-      <div style={{ ...contenedorCategoria }}>{categoria}</div>
+      {categorias.map((categoria) => {
+        return <div style={{ ...contenedorCategoria }}>{categoria}</div>
+      })}
     </div>
   )
 }

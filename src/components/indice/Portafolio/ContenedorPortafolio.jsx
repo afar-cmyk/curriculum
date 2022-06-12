@@ -3,6 +3,7 @@ import { Box } from '@mui/material'
 import ColoresContext from '../ColoresContext'
 import placeholder from '../../../images/redes-logo.jpg'
 import MiniaturaTarjeta from './MiniaturaTarjeta'
+import InfoTarjeta from './InfoTarjeta'
 
 const ContenedorPortafolio = () => {
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
@@ -60,80 +61,34 @@ const ContenedorPortafolio = () => {
     '&:hover p': { color: tarjetaParrafoHover }
   }
 
-  let tarjetaInfo = {
-    width: '100%',
-    minHeight: '40%',
-    backgroundColor: '#1a1a1a',
-    borderTopLeftRadius: 0,
-    borderTopRightRadius: 0,
-    borderBottomRightRadius: 'inherit',
-    borderBottomLeftRadius: 'inherit',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center'
-    // '& h3': {
-    //   fontSize: '1.3em'
-    // }
-  }
-
-  let contenedorCategoria = {
-    borderRadius: '0.3em',
-    backgroundColor: '#333333',
-    width: 'fit-content',
-    paddingLeft: '0.5em',
-    paddingRight: '0.5em',
-    border: `solid 1px ${bordes}`,
-    fontSize: '0.8em'
-  }
-
-  let envolturaCategorias = {
-    display: 'flex',
-    flexDirection: 'row',
-    gap: '0.8em',
-    marginLeft: '1rem'
-  }
+  let categoriaPrueba = ['Hola', 'Mundo']
 
   return (
     <Box component='div' sx={{ ...contenedor }}>
       <Box component='div' sx={{ ...tarjeta }}>
         <MiniaturaTarjeta imagen={placeholder} />
-        <div className='info' style={{ ...tarjetaInfo }}>
-          <h3>{'Curriculum & Portfolio'}</h3>
-          <div style={{ ...envolturaCategorias }}>
-            <div style={{ ...contenedorCategoria }}>Desarrollo</div>
-            <div style={{ ...contenedorCategoria }}>Diseño</div>
-          </div>
-        </div>
+        <InfoTarjeta
+          titulo={'Curriculum & Portfolio'}
+          listaCategorias={categoriaPrueba}
+        />
       </Box>
       <Box component='div' sx={{ ...tarjeta }}>
         <MiniaturaTarjeta imagen={placeholder} />
-        <div className='info' style={{ ...tarjetaInfo }}>
-          <h3>{'Rayo Neón'}</h3>
-          <div style={{ ...envolturaCategorias }}>
-            <div style={{ ...contenedorCategoria }}>Desarrollo</div>
-            <div style={{ ...contenedorCategoria }}>Diseño</div>
-          </div>
-        </div>
+        <InfoTarjeta titulo={'Rayo Neón'} listaCategorias={categoriaPrueba} />
       </Box>
       <Box component='div' sx={{ ...tarjeta }}>
         <MiniaturaTarjeta imagen={placeholder} />
-        <div className='info' style={{ ...tarjetaInfo }}>
-          <h3>{'Bibliotech web'}</h3>
-          <div style={{ ...envolturaCategorias }}>
-            <div style={{ ...contenedorCategoria }}>Desarrollo</div>
-            <div style={{ ...contenedorCategoria }}>Diseño</div>
-          </div>
-        </div>
+        <InfoTarjeta
+          titulo={'Bibliotech web'}
+          listaCategorias={categoriaPrueba}
+        />
       </Box>
       <Box component='div' sx={{ ...tarjeta }}>
         <MiniaturaTarjeta imagen={placeholder} />
-        <div className='info' style={{ ...tarjetaInfo }}>
-          <h3>{'BTC 2 COP Bot'}</h3>
-          <div style={{ ...envolturaCategorias }}>
-            <div style={{ ...contenedorCategoria }}>Desarrollo</div>
-            <div style={{ ...contenedorCategoria }}>Diseño</div>
-          </div>
-        </div>
+        <InfoTarjeta
+          titulo={'BTC 2 COP Bot'}
+          listaCategorias={categoriaPrueba}
+        />
       </Box>
     </Box>
   )
