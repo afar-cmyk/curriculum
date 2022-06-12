@@ -35,17 +35,14 @@ const TarjetaPortafolio = (props) => {
       color: tarjetaTitulo,
       mt: 0,
       mb: '0.2em',
-      ml: '1rem',
-      mr: 0
+      mx: 0
     },
     '&:hover h3': { color: tarjetaTituloHover },
     '& p': {
       fontSize: { xs: '16px', lg: '1.1em', xl: '1em' },
       color: tarjetaParrafo,
       width: 'fit-content',
-      my: 0,
-      ml: '1rem',
-      mr: 0
+      m: 0
     },
     '&:hover p': { color: tarjetaParrafoHover }
   }

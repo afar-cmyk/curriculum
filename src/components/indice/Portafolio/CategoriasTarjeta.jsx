@@ -6,19 +6,18 @@ const CategoriasTarjeta = (props) => {
 
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
 
-  const { bordes, tarjetasCategorias, tarjetasCategoriasTexto } =
+  const { bordes, botonesBackground, tarjetasCategoriasTexto } =
     esquemaTema[temaActual]
 
   let envolturaCategorias = {
     display: 'flex',
     flexDirection: 'row',
-    gap: '0.8em',
-    marginLeft: '1rem'
+    gap: '0.8em'
   }
 
   let contenedorCategoria = {
     borderRadius: '0.3em',
-    backgroundColor: tarjetasCategorias,
+    backgroundColor: botonesBackground,
     width: 'fit-content',
     paddingLeft: '0.5em',
     paddingRight: '0.5em',
