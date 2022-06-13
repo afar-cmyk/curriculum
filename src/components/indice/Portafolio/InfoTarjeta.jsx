@@ -8,7 +8,7 @@ const InfoTarjeta = (props) => {
   const { titulo, listaCategorias } = props
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
 
-  const { bordes, bordesHover, botones, botonesHover, botonesBackground } =
+  const { bordes, bordesHover, botones, botonesHover, fondo, botonesBackground } =
     esquemaTema[temaActual]
 
   let contenedorInfo = {
@@ -44,15 +44,16 @@ const InfoTarjeta = (props) => {
 
   let estilosIconos = {
     border: 'solid 0.75px',
-    borderColor: bordes,
+    borderColor: bordesHover,
     color: botones,
     padding: '4px',
+    backgroundColor: fondo,
     '& .MuiSvgIcon-root': {
       fontSize: '1.3em'
     },
     '&&:hover': {
       color: botonesHover,
-      borderColor: bordesHover,
+      borderColor: bordes,
       backgroundColor: botonesBackground
     },
     '&:hover .MuiChip-icon': {
