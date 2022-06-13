@@ -1,21 +1,13 @@
 import React from 'react'
 import ColoresContext from '../ColoresContext'
 import CategoriasTarjeta from './CategoriasTarjeta'
-import { IconButton } from '@mui/material'
-import { Link, GitHub } from '@mui/icons-material'
+import EnlacesTarjeta from './EnlacesTarjeta'
 
 const InfoTarjeta = (props) => {
   const { titulo, listaCategorias, listaEnlaces } = props
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
 
-  const {
-    bordes,
-    bordesHover,
-    botones,
-    botonesHover,
-    fondo,
-    botonesBackground
-  } = esquemaTema[temaActual]
+  const { botonesBackground } = esquemaTema[temaActual]
 
   let contenedorInfo = {
     width: '100%',
@@ -38,67 +30,13 @@ const InfoTarjeta = (props) => {
     marginLeft: '1rem'
   }
 
-  let botonesEnlaces = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    width: '40%',
-    marginRight: '1rem',
-    gap: '0.6em'
-  }
-
-  let estilosIconos = {
-    border: 'solid 0.75px',
-    borderColor: bordesHover,
-    color: botones,
-    padding: '4px',
-    backgroundColor: fondo,
-    '& .MuiSvgIcon-root': {
-      fontSize: '1.3em'
-    },
-    '&&:hover': {
-      color: botonesHover,
-      borderColor: bordes,
-      backgroundColor: botonesBackground
-    },
-    '&:hover .MuiChip-icon': {
-      color: botonesHover
-    }
-  }
-
   return (
     <div className='info' style={{ ...contenedorInfo }}>
       <div style={{ ...informacionBasica }}>
         <h3>{titulo}</h3>
         <CategoriasTarjeta categorias={listaCategorias} />
       </div>
-      <div style={{ ...botonesEnlaces }}>
-        <IconButton
-          size='small'
-          title={'enlace'}
-          aria-label={'enlace'}
-          href={'https://www.google.com'}
-          referrerPolicy='origin'
-          rel='external'
-          target='_blank'
-          sx={{ ...estilosIconos }}
-        >
-          <Link />
-        </IconButton>
-        <IconButton
-          size='small'
-          title={'repositorio'}
-          aria-label={'repositorio'}
-          href={'https://www.github.com'}
-          referrerPolicy='origin'
-          rel='external'
-          target='_blank'
-          sx={{ ...estilosIconos }}
-        >
-          <GitHub />
-        </IconButton>
-      </div>
+      <EnlacesTarjeta enlaces={listaEnlaces} />
     </div>
   )
 }
