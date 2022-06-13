@@ -17,13 +17,14 @@ const ContenedorPortafolio = (props) => {
   return (
     <Box component='div' sx={{ ...contenedor }}>
       {valoresPortafolio.map((datos) => {
-        const { id, titulo, imagen, categoria } = datos
+        const { id, titulo, imagen, categorias, enlaces } = datos
         return (
           <TarjetaPortafolio
             key={id}
             titulo={titulo}
             imagen={imagen}
-            categorias={categoria}
+            categorias={categorias}
+            enlaces={enlaces}
           />
         )
       })}

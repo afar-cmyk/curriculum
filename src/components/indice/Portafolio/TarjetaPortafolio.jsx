@@ -16,7 +16,7 @@ const TarjetaPortafolio = (props) => {
     tarjetaParrafoHover
   } = esquemaTema[temaActual]
 
-  const { imagen, titulo, categorias } = props
+  const { imagen, titulo, categorias, enlaces } = props
 
   let estilosTarjeta = {
     height: '10em',
@@ -50,7 +50,11 @@ const TarjetaPortafolio = (props) => {
   return (
     <Box component='div' sx={{ ...estilosTarjeta }}>
       <MiniaturaTarjeta imagen={imagen} />
-      <InfoTarjeta titulo={titulo} listaCategorias={categorias} />
+      <InfoTarjeta
+        titulo={titulo}
+        listaCategorias={categorias}
+        listaEnlaces={enlaces}
+      />
     </Box>
   )
 }

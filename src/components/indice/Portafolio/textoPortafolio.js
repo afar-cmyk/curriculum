@@ -1,7 +1,7 @@
 import React from 'react'
 import placeholder from '../../../images/redes-logo.jpg'
 
-// categoria: Desarrollo, Diseño, Edición de Video, Fotografia, Exposicion
+// categorias: Desarrollo, Diseño, Edición de Video, Fotografia, Exposicion
 // categories: Development, Design, Video editing, Photography, Exhibition
 
 let esquemaTextos = {
@@ -12,9 +12,11 @@ let esquemaTextos = {
         id: 'curri-es',
         titulo: 'Curriculum & Portfolio',
         imagen: placeholder,
-        categoria: ['Desarrollo', 'Diseño'],
-        url: 'https://andresfelipe.netlify.app/',
-        repositorio: 'https://github.com/afar-cmyk/curriculum',
+        categorias: ['Desarrollo', 'Diseño'],
+        enlaces: {
+          url: 'https://andresfelipe.netlify.app/',
+          repositorio: 'https://github.com/afar-cmyk/curriculum'
+        },
         contenido: {
           estado: 'Activo',
           fecha: '2022',
@@ -39,9 +41,8 @@ let esquemaTextos = {
         id: 'rayo-es',
         titulo: 'Rayo Neón',
         imagen: placeholder,
-        categoria: ['Desarrollo', 'Diseño'],
-        url: 'https://url.com/',
-        repositorio: 'https://url.com/',
+        categorias: ['Desarrollo', 'Diseño'],
+        enlaces: { url: 'https://url.com/', repositorio: 'https://url.com/' },
         contenido: {
           estado: 'Activo',
           fecha: '2022',
@@ -67,9 +68,8 @@ let esquemaTextos = {
         id: 'bibl-es',
         titulo: 'Bibliotech web',
         imagen: placeholder,
-        categoria: ['Desarrollo', 'Diseño'],
-        url: 'https://url.com/',
-        repositorio: 'https://url.com/',
+        categorias: ['Desarrollo', 'Diseño'],
+        enlaces: { url: 'https://url.com/', repositorio: 'https://url.com/' },
         contenido: {
           estado: 'Finalizado',
           fecha: '2021',
@@ -95,9 +95,8 @@ let esquemaTextos = {
         id: 'btc2-es',
         titulo: 'BTC 2 COP Bot',
         imagen: placeholder,
-        categoria: ['Desarrollo', 'Diseño'],
-        url: 'https://url.com/',
-        repositorio: 'https://url.com/',
+        categorias: ['Desarrollo', 'Diseño'],
+        enlaces: { url: 'https://url.com/', repositorio: 'https://url.com/' },
         contenido: {
           estado: 'Activo',
           fecha: '2022',
@@ -129,9 +128,11 @@ let esquemaTextos = {
         id: 'curri-en',
         titulo: 'Curriculum & Portfolio',
         imagen: placeholder,
-        categoria: ['Development', 'Design'],
-        url: 'https://andresfelipe.netlify.app/',
-        repositorio: 'https://github.com/afar-cmyk/curriculum',
+        categorias: ['Development', 'Design'],
+        enlaces: {
+          url: 'https://andresfelipe.netlify.app/',
+          repositorio: 'https://github.com/afar-cmyk/curriculum'
+        },
         contenido: {
           estado: 'Activo',
           fecha: '2022',
@@ -156,9 +157,8 @@ let esquemaTextos = {
         id: 'rayo-en',
         titulo: 'Rayo Neón',
         imagen: placeholder,
-        categoria: ['Development', 'Design'],
-        url: 'https://url.com/',
-        repositorio: 'https://url.com/',
+        categorias: ['Development', 'Design'],
+        enlaces: { url: 'https://url.com/', repositorio: 'https://url.com/' },
         contenido: {
           estado: 'Activo',
           fecha: '2022',
@@ -184,9 +184,8 @@ let esquemaTextos = {
         id: 'bibl-en',
         titulo: 'Bibliotech web',
         imagen: placeholder,
-        categoria: ['Development', 'Design'],
-        url: 'https://url.com/',
-        repositorio: 'https://url.com/',
+        categorias: ['Development', 'Design'],
+        enlaces: { url: 'https://url.com/', repositorio: 'https://url.com/' },
         contenido: {
           estado: 'Finalizado',
           fecha: '2021',
@@ -212,9 +211,8 @@ let esquemaTextos = {
         id: 'btc2-en',
         titulo: 'BTC2COP Bot',
         imagen: placeholder,
-        categoria: ['Development', 'Design'],
-        url: 'https://url.com/',
-        repositorio: 'https://url.com/',
+        categorias: ['Development', 'Design'],
+        enlaces: { url: 'https://url.com/', repositorio: 'https://url.com/' },
         contenido: {
           estado: 'Activo',
           fecha: '2022',

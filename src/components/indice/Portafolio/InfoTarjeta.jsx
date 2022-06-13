@@ -5,11 +5,17 @@ import { IconButton } from '@mui/material'
 import { Link, GitHub } from '@mui/icons-material'
 
 const InfoTarjeta = (props) => {
-  const { titulo, listaCategorias } = props
+  const { titulo, listaCategorias, listaEnlaces } = props
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
 
-  const { bordes, bordesHover, botones, botonesHover, fondo, botonesBackground } =
-    esquemaTema[temaActual]
+  const {
+    bordes,
+    bordesHover,
+    botones,
+    botonesHover,
+    fondo,
+    botonesBackground
+  } = esquemaTema[temaActual]
 
   let contenedorInfo = {
     width: '100%',
