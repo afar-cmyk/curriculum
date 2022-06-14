@@ -15,8 +15,12 @@ let esquemaTextos = {
         categorias: ['Desarrollo', 'Diseño'],
         enlaces: [
           {
-            url: 'https://andresfelipe.netlify.app/',
-            repositorio: 'https://github.com/afar-cmyk/curriculum'
+            tipo: 'link',
+            url: 'https://andresfelipe.netlify.app/'
+          },
+          {
+            tipo: 'repo',
+            url: 'https://github.com/afar-cmyk/curriculum'
           }
         ],
         contenido: {
@@ -46,8 +50,12 @@ let esquemaTextos = {
         categorias: ['Desarrollo', 'Diseño'],
         enlaces: [
           {
-            url: 'https://rayo-neon.netlify.app/',
-            repositorio: 'https://github.com/afar-cmyk/Rayoneon'
+            tipo: 'link',
+            url: 'https://rayo-neon.netlify.app/'
+          },
+          {
+            tipo: 'repo',
+            url: 'https://github.com/afar-cmyk/Rayoneon'
           }
         ],
         contenido: {
@@ -78,8 +86,12 @@ let esquemaTextos = {
         categorias: ['Desarrollo', 'Diseño'],
         enlaces: [
           {
-            url: 'https://www.bibliotech.biz/',
-            repositorio: 'https://github.com/Bibliotech-DEV/Bibliotech-Web/'
+            tipo: 'link',
+            url: 'https://www.bibliotech.biz/'
+          },
+          {
+            tipo: 'repo',
+            url: 'https://github.com/Bibliotech-DEV/Bibliotech-Web/'
           }
         ],
         contenido: {
@@ -108,7 +120,16 @@ let esquemaTextos = {
         titulo: 'BTC 2 COP Bot',
         imagen: placeholder,
         categorias: ['Desarrollo', 'Diseño'],
-        enlaces: [{ url: '', repositorio: '' }],
+        enlaces: [
+          {
+            tipo: 'link',
+            url: ''
+          },
+          {
+            tipo: 'repo',
+            url: ''
+          }
+        ],
         contenido: {
           estado: 'Activo',
           fecha: '2022',
@@ -143,8 +164,12 @@ let esquemaTextos = {
         categorias: ['Development', 'Design'],
         enlaces: [
           {
-            url: 'https://andresfelipe.netlify.app/',
-            repositorio: 'https://github.com/afar-cmyk/curriculum'
+            tipo: 'link',
+            url: 'https://andresfelipe.netlify.app/'
+          },
+          {
+            tipo: 'repo',
+            url: 'https://github.com/afar-cmyk/curriculum'
           }
         ],
         contenido: {
@@ -174,8 +199,12 @@ let esquemaTextos = {
         categorias: ['Development', 'Design'],
         enlaces: [
           {
-            url: 'https://rayo-neon.netlify.app/',
-            repositorio: 'https://github.com/afar-cmyk/Rayoneon'
+            tipo: 'link',
+            url: 'https://rayo-neon.netlify.app/'
+          },
+          {
+            tipo: 'repo',
+            url: 'https://github.com/afar-cmyk/Rayoneon'
           }
         ],
         contenido: {
@@ -206,8 +235,12 @@ let esquemaTextos = {
         categorias: ['Development', 'Design'],
         enlaces: [
           {
-            url: 'https://www.bibliotech.biz/',
-            repositorio: 'https://github.com/Bibliotech-DEV/Bibliotech-Web/'
+            tipo: 'link',
+            url: 'https://www.bibliotech.biz/'
+          },
+          {
+            tipo: 'repo',
+            url: 'https://github.com/Bibliotech-DEV/Bibliotech-Web/'
           }
         ],
         contenido: {
@@ -236,7 +269,16 @@ let esquemaTextos = {
         titulo: 'BTC 2 COP Bot',
         imagen: placeholder,
         categorias: ['Development', 'Design'],
-        enlaces: [{ url: '', repositorio: '' }],
+        enlaces: [
+          {
+            tipo: 'link',
+            url: ''
+          },
+          {
+            tipo: 'repo',
+            url: ''
+          }
+        ],
         contenido: {
           estado: 'Activo',
           fecha: '2022',

@@ -4,9 +4,10 @@ import { IconButton } from '@mui/material'
 import { Link, GitHub } from '@mui/icons-material'
 
 const EnlacesTarjeta = (props) => {
-  const { enlaces } = props
+  const { titulo, enlaces } = props
 
-  const { temaActual, esquemaTema } = React.useContext(ColoresContext)
+  const { temaActual, esquemaTema, idiomaActual } =
+    React.useContext(ColoresContext)
 
   const {
     bordes,
@@ -46,52 +47,56 @@ const EnlacesTarjeta = (props) => {
     }
   }
 
-  const BotonURL = (props) => {
-    const { enlace } = props
-    return enlace ? (
-      <IconButton
-        size='small'
-        title={'Enlace'}
-        aria-label={'Enlace'}
-        href={enlace}
-        referrerPolicy='origin'
-        rel='external'
-        target='_blank'
-        sx={{ ...estilosIconos }}
-      >
-        <Link />
-      </IconButton>
-    ) : null
-  }
+  const BotonEnlace = (props) => {
+    const { tipo, titulo, enlace } = props
 
-  const BotonRepositorio = (props) => {
-    const { enlace } = props
-    return enlace ? (
-      <IconButton
-        size='small'
-        title={'Repositorio'}
-        aria-label={'Repositorio'}
-        href={enlace}
-        referrerPolicy='origin'
-        rel='external'
-        target='_blank'
-        sx={{ ...estilosIconos }}
-      >
-        <GitHub />
-      </IconButton>
-    ) : null
+    let ponerAriaLabel = {
+      español: {
+        link: `enlace al sitio web de ${titulo}`,
+        repo: `enlace al repositorio de ${titulo}`
+      },
+      ingles: {
+        link: `link to the website of ${titulo}`,
+        repo: `link to the repository of ${titulo}`
+      }
+    }
+
+    let ponerTitulo = {
+      español: {
+        link: `Sitio web de ${titulo}`,
+        repo: `Repositorio de ${titulo}`
+      },
+      ingles: {
+        link: `${titulo}'s website`,
+        repo: `${titulo}'s repository`
+      }
+    }
+
+    return (
+      <>
+        {enlace ? (
+          <IconButton
+            size='small'
+            title={ponerTitulo[idiomaActual][tipo]}
+            aria-label={ponerAriaLabel[idiomaActual][tipo]}
+            href={enlace}
+            referrerPolicy='origin'
+            rel='external'
+            target='_blank'
+            sx={{ ...estilosIconos }}
+          >
+            {tipo === 'repo' ? <GitHub /> : <Link />}
+          </IconButton>
+        ) : null}
+      </>
+    )
   }
 
   return (
     <div style={{ ...botonesEnlaces }}>
       {enlaces.map((datos) => {
-        const { url, repositorio } = datos
-        return (
-          <>
-            <BotonURL enlace={url} />
-            <BotonRepositorio enlace={repositorio} />
-          </>
-        )
+        const { tipo, url } = datos
+        return <BotonEnlace tipo={tipo} titulo={titulo} enlace={url} />
       })}
     </div>
   )

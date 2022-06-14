@@ -36,7 +36,7 @@ const InfoTarjeta = (props) => {
         <h3>{titulo}</h3>
         <CategoriasTarjeta categorias={listaCategorias} />
       </div>
-      <EnlacesTarjeta enlaces={listaEnlaces} />
+      <EnlacesTarjeta titulo={titulo} enlaces={listaEnlaces} />
     </div>
   )
 }
