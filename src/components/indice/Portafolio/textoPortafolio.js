@@ -1,5 +1,4 @@
 import React from 'react'
-import placeholder from '../../../images/redes-logo.jpg'
 
 // categorias: Desarrollo, Diseño, Edición de Video, Fotografia, Exposicion
 // categories: Development, Design, Video editing, Photography, Exhibition
@@ -11,7 +10,7 @@ let esquemaTextos = {
       {
         id: 'curri-es',
         titulo: 'Curriculum & Portfolio',
-        imagen: placeholder,
+        imagen: 'curriculum',
         categorias: ['Desarrollo', 'Diseño'],
         enlaces: [
           {
@@ -46,7 +45,7 @@ let esquemaTextos = {
       {
         id: 'rayo-es',
         titulo: 'Rayo Neón',
-        imagen: placeholder,
+        imagen: 'rayo',
         categorias: ['Desarrollo', 'Diseño'],
         enlaces: [
           {
@@ -82,7 +81,7 @@ let esquemaTextos = {
       {
         id: 'bibl-es',
         titulo: 'Bibliotech web',
-        imagen: placeholder,
+        imagen: 'bibliotech',
         categorias: ['Desarrollo', 'Diseño'],
         enlaces: [
           {
@@ -118,7 +117,7 @@ let esquemaTextos = {
       {
         id: 'btc2-es',
         titulo: 'BTC 2 COP Bot',
-        imagen: placeholder,
+        imagen: 'btc2cop',
         categorias: ['Desarrollo', 'Diseño'],
         enlaces: [
           {
@@ -160,7 +159,7 @@ let esquemaTextos = {
       {
         id: 'curri-en',
         titulo: 'Curriculum & Portfolio',
-        imagen: placeholder,
+        imagen: 'curriculum',
         categorias: ['Development', 'Design'],
         enlaces: [
           {
@@ -195,7 +194,7 @@ let esquemaTextos = {
       {
         id: 'rayo-en',
         titulo: 'Rayo Neón',
-        imagen: placeholder,
+        imagen: 'rayo',
         categorias: ['Development', 'Design'],
         enlaces: [
           {
@@ -231,7 +230,7 @@ let esquemaTextos = {
       {
         id: 'bibl-en',
         titulo: 'Bibliotech web',
-        imagen: placeholder,
+        imagen: 'bibliotech',
         categorias: ['Development', 'Design'],
         enlaces: [
           {
@@ -267,7 +266,7 @@ let esquemaTextos = {
       {
         id: 'btc2-en',
         titulo: 'BTC 2 COP Bot',
-        imagen: placeholder,
+        imagen: 'btc2cop',
         categorias: ['Development', 'Design'],
         enlaces: [
           {

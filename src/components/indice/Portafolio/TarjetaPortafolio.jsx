@@ -48,7 +48,7 @@ const TarjetaPortafolio = (props) => {
 
   return (
     <Box component='div' sx={{ ...estilosTarjeta }}>
-      <MiniaturaTarjeta imagen={imagen} />
+      <MiniaturaTarjeta imagen={imagen} titulo={titulo} />
       <InfoTarjeta
         titulo={titulo}
         listaCategorias={categorias}

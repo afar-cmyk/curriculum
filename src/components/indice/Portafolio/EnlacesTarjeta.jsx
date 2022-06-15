@@ -76,6 +76,7 @@ const EnlacesTarjeta = (props) => {
       <>
         {enlace ? (
           <IconButton
+            key={`boton-${tipo}`}
             size='small'
             title={ponerTitulo[idiomaActual][tipo]}
             aria-label={ponerAriaLabel[idiomaActual][tipo]}
@@ -96,7 +97,14 @@ const EnlacesTarjeta = (props) => {
     <div style={{ ...botonesEnlaces }}>
       {enlaces.map((datos) => {
         const { tipo, url } = datos
-        return <BotonEnlace tipo={tipo} titulo={titulo} enlace={url} />
+        return (
+          <BotonEnlace
+            key={`boton-${tipo}`}
+            tipo={tipo}
+            titulo={titulo}
+            enlace={url}
+          />
+        )
       })}
     </div>
   )
