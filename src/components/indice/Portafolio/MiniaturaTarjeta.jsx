@@ -9,22 +9,22 @@ const MiniaturaTarjeta = (props) => {
     {
       curriculum: file(relativePath: { eq: "curriculum.jpg" }) {
         childImageSharp {
-          gatsbyImageData(quality: 100, formats: WEBP)
+          gatsbyImageData(quality: 100, formats: [AUTO, AVIF])
         }
       }
       rayo: file(relativePath: { eq: "rayo.jpg" }) {
         childImageSharp {
-          gatsbyImageData(quality: 100, formats: WEBP)
+          gatsbyImageData(quality: 100, formats: [AUTO, AVIF])
         }
       }
       bibliotech: file(relativePath: { eq: "bibliotech.jpg" }) {
         childImageSharp {
-          gatsbyImageData(quality: 100, formats: WEBP)
+          gatsbyImageData(quality: 100, formats: [AUTO, AVIF])
         }
       }
       btc2cop: file(relativePath: { eq: "btc2cop.jpg" }) {
         childImageSharp {
-          gatsbyImageData(quality: 100, formats: WEBP)
+          gatsbyImageData(quality: 100, formats: [AUTO, AVIF])
         }
       }
     }
