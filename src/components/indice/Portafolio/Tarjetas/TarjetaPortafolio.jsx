@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@mui/material'
 import MiniaturaTarjeta from './MiniaturaTarjeta'
 import InfoTarjeta from './InfoTarjeta'
-import ColoresContext from '../ColoresContext'
+import ColoresContext from '../../ColoresContext'
 
 const TarjetaPortafolio = (props) => {
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)

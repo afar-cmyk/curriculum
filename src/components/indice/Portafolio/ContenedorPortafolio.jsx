@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@mui/material'
-import TarjetaPortafolio from './TarjetaPortafolio'
+import TarjetaPortafolio from './Tarjetas/TarjetaPortafolio'
 
 const ContenedorPortafolio = (props) => {
   const valoresPortafolio = props.valores

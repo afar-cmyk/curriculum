@@ -1,5 +1,5 @@
 import React from 'react'
-import ColoresContext from '../ColoresContext'
+import ColoresContext from '../../ColoresContext'
 import { IconButton } from '@mui/material'
 import { Link, GitHub } from '@mui/icons-material'
 

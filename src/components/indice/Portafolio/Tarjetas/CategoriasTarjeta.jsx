@@ -1,13 +1,12 @@
 import React from 'react'
-import ColoresContext from '../ColoresContext'
+import ColoresContext from '../../ColoresContext'
 
 const CategoriasTarjeta = (props) => {
   const { categorias } = props
 
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
 
-  const { bordes, fondo, tarjetasCategoriasTexto } =
-    esquemaTema[temaActual]
+  const { bordes, fondo, tarjetasCategoriasTexto } = esquemaTema[temaActual]
 
   let envolturaCategorias = {
     display: 'flex',

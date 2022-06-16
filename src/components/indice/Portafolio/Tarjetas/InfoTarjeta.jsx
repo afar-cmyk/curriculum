@@ -1,5 +1,5 @@
 import React from 'react'
-import ColoresContext from '../ColoresContext'
+import ColoresContext from '../../ColoresContext'
 import CategoriasTarjeta from './CategoriasTarjeta'
 import EnlacesTarjeta from './EnlacesTarjeta'
 
