@@ -39,6 +39,16 @@ export const ColoresProvider = ({ children }) => {
     setTemaActual('claro')
   }
 
+  //  Estado del modal
+  const [abrirModal, setAbrirModal] = React.useState(false)
+
+  const manejadorAbrirModal = () => {
+    setAbrirModal(true)
+  }
+  const manejadorCerrarModal = () => {
+    setAbrirModal(false)
+  }
+
   React.useEffect(() => {
     estadoIdioma ? ponerEspañol() : ponerIngles()
     estadoTema ? ponerTemaOscuro() : ponerTemaClaro()
@@ -117,7 +127,10 @@ export const ColoresProvider = ({ children }) => {
         estadoIdioma,
         esquemaTema,
         temaActual,
-        manejadorEstadoTema
+        manejadorEstadoTema,
+        abrirModal,
+        manejadorAbrirModal,
+        manejadorCerrarModal
       }}
     >
       <Seo

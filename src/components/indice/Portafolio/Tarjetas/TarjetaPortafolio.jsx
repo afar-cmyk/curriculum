@@ -16,7 +16,7 @@ const TarjetaPortafolio = (props) => {
     tarjetaParrafoHover
   } = esquemaTema[temaActual]
 
-  const { imagen, titulo, categorias, enlaces } = props
+  const { imagen, titulo, categorias, enlaces, onClick } = props
 
   let estilosTarjeta = {
     height: '10em',
@@ -26,6 +26,7 @@ const TarjetaPortafolio = (props) => {
     border: `solid 1px ${bordes}`,
     borderRadius: '8px',
     marginRight: 0,
+    cursor: 'pointer',
     '&:hover': { border: `solid 1px ${bordesHover}` },
     '& h3': {
       width: 'fit-content',
@@ -47,14 +48,16 @@ const TarjetaPortafolio = (props) => {
   }
 
   return (
-    <Box component='div' sx={{ ...estilosTarjeta }}>
-      <MiniaturaTarjeta imagen={imagen} titulo={titulo} />
-      <InfoTarjeta
-        titulo={titulo}
-        listaCategorias={categorias}
-        listaEnlaces={enlaces}
-      />
-    </Box>
+    <>
+      <Box component='div' onClick={onClick} sx={{ ...estilosTarjeta }}>
+        <MiniaturaTarjeta imagen={imagen} titulo={titulo} />
+        <InfoTarjeta
+          titulo={titulo}
+          listaCategorias={categorias}
+          listaEnlaces={enlaces}
+        />
+      </Box>
+    </>
   )
 }
 
