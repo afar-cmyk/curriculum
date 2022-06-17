@@ -10,18 +10,19 @@ import Typography from '@mui/material/Typography'
 import ColoresContext from '../ColoresContext'
 
 const ModalPortafolio = (props) => {
-  const { id, titulo, onClose } = props
+  const {
+    id,
+    fecha,
+    estado,
+    titulo,
+    imagen,
+    categorias,
+    enlaces,
+    descripcion,
+    onClose
+  } = props.valores
   const { abrirModal, manejadorCerrarModal } = React.useContext(ColoresContext)
-  // const [abrir, setAbrir] = React.useState(true)
 
-  // const manejadorAbrir = () => {
-  //   setAbrir(true)
-  // }
-  // const manejadorCerrar = () => {
-  //   setAbrir(false)
-  // }
-
-  //abrirModal, manejadorAbrirModal, manejadorCerrarModal
   return (
     <>
       <Dialog
@@ -33,6 +34,7 @@ const ModalPortafolio = (props) => {
           {titulo}
         </ModalTitulo>
         <DialogContent dividers>
+          {descripcion}
           <Typography gutterBottom>
             Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
             dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta

@@ -12,23 +12,16 @@ const ContenedorPortafolio = (props) => {
 
   const [esquemaModal, setEsquemaModal] = React.useState({
     id: '',
+    fecha: '',
+    estado: '',
     titulo: '',
     imagen: '',
     categorias: '',
     enlaces: '',
-    contenido: ''
+    descripcion: ''
   })
 
   console.log(esquemaModal)
-
-  // let esquemaModal = {
-  //   id: '',
-  //   titulo: '',
-  //   imagen: '',
-  //   categorias: '',
-  //   enlaces: '',
-  //   contenido: ''
-  // }
 
   let contenedor = {
     display: 'grid',
@@ -41,19 +34,23 @@ const ContenedorPortafolio = (props) => {
 
   const almacenarDatosTarjeta = (
     id,
+    fecha,
+    estado,
     titulo,
     imagen,
     categorias,
     enlaces,
-    contenido
+    descripcion
   ) => {
     setEsquemaModal({
       id: id,
+      fecha: fecha,
+      estado: estado,
       titulo: titulo,
       imagen: imagen,
       categorias: categorias,
       enlaces: enlaces,
-      contenido: contenido
+      descripcion: descripcion
     })
     manejadorAbrirModal()
   }
@@ -66,7 +63,16 @@ const ContenedorPortafolio = (props) => {
   return (
     <Box component='div' sx={{ ...contenedor }}>
       {valoresPortafolio.map((datos) => {
-        const { id, titulo, imagen, categorias, enlaces, contenido } = datos
+        const {
+          id,
+          fecha,
+          estado,
+          titulo,
+          imagen,
+          categorias,
+          enlaces,
+          descripcion
+        } = datos
         return (
           <React.Fragment key={`tarjeta-${id}`}>
             <TarjetaPortafolio
@@ -78,25 +84,20 @@ const ContenedorPortafolio = (props) => {
               onClick={() =>
                 almacenarDatosTarjeta(
                   id,
+                  fecha,
+                  estado,
                   titulo,
                   imagen,
                   categorias,
                   enlaces,
-                  contenido
+                  descripcion
                 )
               }
             />
           </React.Fragment>
         )
       })}
-      <ModalPortafolio
-        id={`modal-${esquemaModal.id}`}
-        titulo={esquemaModal.titulo}
-        categorias={esquemaModal.categorias}
-        enlaces={esquemaModal.enlaces}
-        contenido={esquemaModal.contenido}
-        onClose={limpiarDatos}
-      />
+      <ModalPortafolio valores={{ ...esquemaModal }} onClose={limpiarDatos} />
     </Box>
   )
 }
