@@ -21,8 +21,6 @@ const ContenedorPortafolio = (props) => {
     descripcion: ''
   })
 
-  console.log(esquemaModal)
-
   let contenedor = {
     display: 'grid',
     gridTemplateColumns: {
@@ -53,11 +51,6 @@ const ContenedorPortafolio = (props) => {
       descripcion: descripcion
     })
     manejadorAbrirModal()
-  }
-
-  const limpiarDatos = () => {
-    setEsquemaModal(esquemaModal)
-    manejadorCerrarModal()
   }
 
   return (
@@ -97,7 +90,10 @@ const ContenedorPortafolio = (props) => {
           </React.Fragment>
         )
       })}
-      <ModalPortafolio valores={{ ...esquemaModal }} onClose={limpiarDatos} />
+      <ModalPortafolio
+        valores={{ ...esquemaModal }}
+        onClose={manejadorCerrarModal}
+      />
     </Box>
   )
 }

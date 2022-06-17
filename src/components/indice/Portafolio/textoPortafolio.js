@@ -30,7 +30,6 @@ let esquemaTextos = {
               Aplicación web progresiva que sirve como hoja de vida y portafolio
               personal.
             </p>
-            <br />
             <p>
               Desarrollo del sitio utilizando <strong>GatsbyJS</strong> y{' '}
               <strong>Material UI</strong>, integrando la mayoria de estilos CSS
@@ -63,7 +62,6 @@ let esquemaTextos = {
               Aplicación web progresiva que sirve portafolio de servicios y
               medio de contacto para la marca Rayo Neón.
             </p>
-            <br />
             <p>
               Desarrollo del sitio utilizando <strong>GatsbyJS</strong> y{' '}
               <strong>Material UI</strong>, integrando la mayoria de estilos CSS
@@ -97,7 +95,6 @@ let esquemaTextos = {
               Sitio web para tipo plantilla para una libreria ficticia llamada
               Bibliotech.
             </p>
-            <br />
             <p>
               Desarrollo del sitio utilizando <strong>VueJS</strong> y{' '}
               <strong>BootstrapVue</strong>, desarrollo del backend en NodeJS y
@@ -132,7 +129,6 @@ let esquemaTextos = {
               API en el sitio web que convierte el valor ingresado en BTC a
               pesos colombianos.
             </p>
-            <br />
             <p>
               Desarrollo del Bot utilizando <strong>NodeJS</strong> y{' '}
               <strong>Ngrook</strong>, webscrapping con{' '}
@@ -171,7 +167,6 @@ let esquemaTextos = {
               Aplicación web progresiva que sirve como hoja de vida y portafolio
               personal.
             </p>
-            <br />
             <p>
               Desarrollo del sitio utilizando <strong>GatsbyJS</strong> y{' '}
               <strong>Material UI</strong>, integrando la mayoria de estilos CSS
@@ -204,7 +199,6 @@ let esquemaTextos = {
               Aplicación web progresiva que sirve portafolio de servicios y
               medio de contacto para la marca Rayo Neón.
             </p>
-            <br />
             <p>
               Desarrollo del sitio utilizando <strong>GatsbyJS</strong> y{' '}
               <strong>Material UI</strong>, integrando la mayoria de estilos CSS
@@ -238,7 +232,6 @@ let esquemaTextos = {
               Sitio web para tipo plantilla para una libreria ficticia llamada
               Bibliotech.
             </p>
-            <br />
             <p>
               Desarrollo del sitio utilizando <strong>VueJS</strong> y{' '}
               <strong>BootstrapVue</strong>, desarrollo del backend en NodeJS y
@@ -273,7 +266,6 @@ let esquemaTextos = {
               API en el sitio web que convierte el valor ingresado en BTC a
               pesos colombianos.
             </p>
-            <br />
             <p>
               Desarrollo del Bot utilizando <strong>NodeJS</strong> y{' '}
               <strong>Ngrook</strong>, webscrapping con{' '}
