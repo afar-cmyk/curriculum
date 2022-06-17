@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '@mui/material/Button'
 import Dialog from '@mui/material/Dialog'
 import DialogTitle from '@mui/material/DialogTitle'
 import DialogContent from '@mui/material/DialogContent'
@@ -30,11 +29,16 @@ const ModalPortafolio = (props) => {
         open={abrirModal}
       >
         <ModalTitulo id={`titulo-modal-${id}`} onClose={manejadorCerrarModal}>
-          {titulo}
+          {titulo} - {fecha} - {estado} - {categorias}
         </ModalTitulo>
-        <DialogContent dividers>{descripcion}</DialogContent>
+        <DialogContent dividers sx={{ display: 'flex' }}>
+          <div style={{ width: '50%' }}>{imagen}</div>
+          <div style={{ width: '50%' }}>{descripcion}</div>
+        </DialogContent>
         <DialogActions>
-          <Button onClick={manejadorCerrarModal}>Save changes</Button>
+          {`Enlaces: ${enlaces ? enlaces[0].url : null} - ${
+            enlaces ? enlaces[1].url : null
+          }`}
         </DialogActions>
       </Dialog>
     </>
