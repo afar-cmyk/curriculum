@@ -76,7 +76,7 @@ let esquemaTextos = {
         id: 'bibl-es',
         fecha: '2021',
         estado: 'Finalizado',
-        titulo: 'Bibliotech web',
+        titulo: 'Bibliotech Web',
         imagen: 'bibliotech',
         categorias: ['Desarrollo', 'Diseño'],
         enlaces: [
@@ -213,7 +213,7 @@ let esquemaTextos = {
         id: 'bibl-en',
         fecha: '2021',
         estado: 'Finalizado',
-        titulo: 'Bibliotech web',
+        titulo: 'Bibliotech Web',
         imagen: 'bibliotech',
         categorias: ['Development', 'Design'],
         enlaces: [

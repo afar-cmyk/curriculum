@@ -97,7 +97,7 @@ const ModalPortafolio = (props) => {
           color: tarjetasCategoriasTexto
         }}
       >
-        Estado del proyecto:
+        Estado:
         <div
           style={{
             borderRadius: '0.3em',
@@ -194,7 +194,7 @@ const ModalPortafolio = (props) => {
           <div style={{ color: '#d9d9d9' }}>
             <h2
               style={{
-                fontSize: '2.2em',
+                fontSize: 'calc(1.5em + 1vw)',
                 marginTop: 0,
                 marginBottom: '0.1em',
                 textAlignLast: 'center',
