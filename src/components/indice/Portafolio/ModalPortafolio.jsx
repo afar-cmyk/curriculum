@@ -29,10 +29,10 @@ const ModalPortafolio = (props) => {
   const TitulosH2 = ({ titulo, colorTitulo }) => {
     let titulos = {
       color: colorTitulo,
-      // fontSize: '1.25rem',
-      fontFamily: 'Source Sans Pro',
-      margin: 0
-      // fontWeight: 700
+      fontSize: '1.4rem',
+      fontFamily: 'Anaheim',
+      margin: 0,
+      fontWeight: 300
     }
     return <h2 style={{ ...titulos }}>{titulo}</h2>
   }
@@ -183,7 +183,7 @@ const ModalPortafolio = (props) => {
           categorias={categorias}
           onClose={manejadorCerrarModal}
         >
-          <TitulosH2 titulo={titulo} colorTitulo={titulos} />
+          <TitulosH2 titulo={'Ficha Tecnica:'} colorTitulo={titulos} />
         </ModalTitulo>
         <DialogContent
           dividers
@@ -192,16 +192,29 @@ const ModalPortafolio = (props) => {
           }}
         >
           <div style={{ color: '#d9d9d9' }}>
+            <h2
+              style={{
+                fontSize: '2.2em',
+                marginTop: 0,
+                marginBottom: '0.1em',
+                textAlignLast: 'center',
+                color: '#f2f2f2'
+              }}
+            >
+              {titulo}
+            </h2>
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
+                justifyContent: 'center',
                 gap: '0.5em'
               }}
             >
               <EstadoActual estado={estado} /> <Fechas fecha={fecha} />
             </div>
+
             {descripcion}
             <Etiquetas etiquetas={categorias} />
             {/* <CategoriasTarjeta categorias={categorias} /> */}
