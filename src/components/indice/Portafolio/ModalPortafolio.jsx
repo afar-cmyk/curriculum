@@ -168,6 +168,15 @@ const ModalPortafolio = (props) => {
         onClose={props.onClose}
         aria-labelledby={`titulo-modal-${id}`}
         open={abrirModal}
+        sx={{
+          '& .MuiDialog-paper': {
+            backgroundColor: '#1a1a1a'
+          },
+          '& 	.MuiDialogContent-root': {
+            borderTop: '1px solid #ffffff1f',
+            borderBottom: '1px solid #ffffff1f'
+          }
+        }}
       >
         <ModalTitulo
           id={`titulo-modal-${id}`}
@@ -176,8 +185,13 @@ const ModalPortafolio = (props) => {
         >
           <TitulosH2 titulo={titulo} colorTitulo={titulos} />
         </ModalTitulo>
-        <DialogContent dividers sx={{ display: 'flex' }}>
-          <div>
+        <DialogContent
+          dividers
+          sx={{
+            display: 'flex'
+          }}
+        >
+          <div style={{ color: '#d9d9d9' }}>
             <div
               style={{
                 display: 'flex',
