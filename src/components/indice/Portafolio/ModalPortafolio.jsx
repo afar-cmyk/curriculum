@@ -20,10 +20,10 @@ const ModalPortafolio = (props) => {
     descripcion
   } = props.valores
 
-  const { abrirModal, manejadorCerrarModal, esquemaTema, temaActual } =
+  const { abrirModal, manejadorCerrarModal, esquemaTema, temaActual, bordes } =
     React.useContext(ColoresContext)
 
-  const { titulos } = esquemaTema[temaActual]
+  const { titulos, fondo, tarjetasCategoriasTexto } = esquemaTema[temaActual]
 
   const TitulosH2 = ({ titulo, colorTitulo }) => {
     let titulos = {
@@ -38,24 +38,81 @@ const ModalPortafolio = (props) => {
 
   const Fechas = ({ fecha }) => {
     return (
-      <>
-        fecha:
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          borderRadius: '0.3em',
+          width: 'fit-content',
+          height: 'fit-content',
+          paddingLeft: '0.5em',
+          paddingRight: '0.5em',
+          paddingTop: '0.2em',
+          paddingBottom: '0.2em',
+          border: `solid 1px ${bordes}`,
+          fontSize: '0.8em',
+          backgroundColor: fondo,
+          color: tarjetasCategoriasTexto
+        }}
+      >
+        Fecha:
         <div
           style={{
             borderRadius: '0.3em',
             width: 'fit-content',
             paddingLeft: '0.5em',
             paddingRight: '0.5em',
-            // border: `solid 1px ${bordes}`,
-            fontSize: '0.8em',
-            backgroundColor: 'red'
-            // color: tarjetasCategoriasTexto,
-            // backgroundColor: fondo
+            border: `solid 1px ${bordes}`,
+            fontSize: '0.73rem',
+            backgroundColor: '#383434',
+            color: tarjetasCategoriasTexto,
+            marginLeft: '0.5em'
           }}
         >
           {fecha}
         </div>
-      </>
+      </div>
+    )
+  }
+
+  const EstadoActual = ({ estado }) => {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          borderRadius: '0.3em',
+          width: 'fit-content',
+          height: 'fit-content',
+          paddingLeft: '0.5em',
+          paddingRight: '0.5em',
+          paddingTop: '0.2em',
+          paddingBottom: '0.2em',
+          border: `solid 1px ${bordes}`,
+          fontSize: '0.8em',
+          backgroundColor: fondo,
+          color: tarjetasCategoriasTexto
+        }}
+      >
+        Estado del proyecto:
+        <div
+          style={{
+            borderRadius: '0.3em',
+            width: 'fit-content',
+            paddingLeft: '0.5em',
+            paddingRight: '0.5em',
+            border: `solid 1px ${bordes}`,
+            fontSize: '0.73rem',
+            backgroundColor: '#383434',
+            color: tarjetasCategoriasTexto,
+            marginLeft: '0.5em'
+          }}
+        >
+          {estado}
+        </div>
+      </div>
     )
   }
 
@@ -75,7 +132,17 @@ const ModalPortafolio = (props) => {
         </ModalTitulo>
         <DialogContent dividers sx={{ display: 'flex' }}>
           <div style={{ width: '50%' }}>
-            {imagen}- {estado} <Fechas fecha={fecha} />
+            {imagen}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: '0.5em'
+              }}
+            >
+              <EstadoActual estado={estado} /> <Fechas fecha={fecha} />
+            </div>
           </div>
           <div style={{ width: '50%' }}>
             {descripcion}
