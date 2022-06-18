@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import ColoresContext from '../ColoresContext'
 import CategoriasTarjeta from './Tarjetas/CategoriasTarjeta'
+import foto from '../../../images/foto.jpg'
 
 const ModalPortafolio = (props) => {
   const {
@@ -116,6 +117,51 @@ const ModalPortafolio = (props) => {
     )
   }
 
+  const Etiquetas = ({ etiquetas }) => {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          borderRadius: '0.3em',
+          width: 'fit-content',
+          height: 'fit-content',
+          paddingLeft: '0.5em',
+          paddingRight: '0.5em',
+          paddingTop: '0.2em',
+          paddingBottom: '0.2em',
+          border: `solid 1px ${bordes}`,
+          fontSize: '0.8em',
+          backgroundColor: fondo,
+          color: tarjetasCategoriasTexto
+        }}
+      >
+        Etiquetas:
+        {etiquetas.map((categoria, indice) => {
+          return (
+            <div
+              key={`categoria-${indice}`}
+              style={{
+                borderRadius: '0.3em',
+                width: 'fit-content',
+                paddingLeft: '0.5em',
+                paddingRight: '0.5em',
+                border: `solid 1px ${bordes}`,
+                fontSize: '0.73rem',
+                backgroundColor: '#383434',
+                color: tarjetasCategoriasTexto,
+                marginLeft: '0.5em'
+              }}
+            >
+              {categoria}
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
   return (
     <>
       <Dialog
@@ -131,8 +177,7 @@ const ModalPortafolio = (props) => {
           <TitulosH2 titulo={titulo} colorTitulo={titulos} />
         </ModalTitulo>
         <DialogContent dividers sx={{ display: 'flex' }}>
-          <div style={{ width: '50%' }}>
-            {imagen}
+          <div>
             <div
               style={{
                 display: 'flex',
@@ -143,10 +188,9 @@ const ModalPortafolio = (props) => {
             >
               <EstadoActual estado={estado} /> <Fechas fecha={fecha} />
             </div>
-          </div>
-          <div style={{ width: '50%' }}>
             {descripcion}
-            <CategoriasTarjeta categorias={categorias} />
+            <Etiquetas etiquetas={categorias} />
+            {/* <CategoriasTarjeta categorias={categorias} /> */}
           </div>
         </DialogContent>
         <DialogActions>
