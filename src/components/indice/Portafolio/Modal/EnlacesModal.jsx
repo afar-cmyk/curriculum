@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconButton } from '@mui/material'
+import { Chip } from '@mui/material'
 import { Link, GitHub } from '@mui/icons-material'
 import ColoresContext from '../../ColoresContext'
 
@@ -11,7 +11,7 @@ const EnlacesModal = (props) => {
 
   const {
     bordes,
-    bordesHover,
+    // bordesHover,
     botones,
     botonesHover,
     fondo,
@@ -21,16 +21,17 @@ const EnlacesModal = (props) => {
   let botonesEnlaces = {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
-    width: '40%',
-    marginRight: '1rem',
-    gap: '0.6em'
+    // width: '40%',
+    // marginRight: '1rem',
+    gap: '1em',
+    color: '#cccccc'
   }
 
   let estilosIconos = {
     border: 'solid 0.75px',
-    borderColor: bordesHover,
+    borderColor: '#11c3db61',
     color: botones,
     padding: '4px',
     backgroundColor: fondo,
@@ -47,8 +48,33 @@ const EnlacesModal = (props) => {
     }
   }
 
+  let botonIdioma = {
+    ...estilosIconos,
+    fontSize: '0.85em',
+    height: '80%',
+    '&:hover .MuiSvgIcon-root': {
+      // color: estadoIdioma ? '#0bb9d0' : '#d00b78 '
+      color: '#0bb9d0'
+    },
+    '& .MuiSvgIcon-root': {
+      fontSize: '1.25em',
+      color: '#168d9c'
+    }
+  }
+
   const BotonEnlace = (props) => {
     const { tipo, titulo, enlace } = props
+
+    let ponerLabel = {
+      español: {
+        link: 'Sitio Web',
+        repo: 'Github'
+      },
+      ingles: {
+        link: 'Website',
+        repo: 'Github'
+      }
+    }
 
     let ponerAriaLabel = {
       español: {
@@ -74,7 +100,31 @@ const EnlacesModal = (props) => {
 
     return (
       <>
-        {enlace ? (
+        <Chip
+          label={ponerLabel[idiomaActual][tipo]}
+          variant='outlined'
+          size='medium'
+          clickable
+          title={ponerTitulo[idiomaActual][tipo]}
+          aria-label={ponerAriaLabel[idiomaActual][tipo]}
+          component='a'
+          href={enlace}
+          referrerPolicy='origin'
+          rel='external'
+          target='_blank'
+          icon={tipo === 'repo' ? <GitHub /> : <Link />}
+          sx={{ ...botonIdioma }}
+        />
+        {/* <Chip
+          label='GitHub'
+          variant='outlined'
+          size='medium'
+          clickable={true}
+          icon={<GitHub />}
+          sx={{ ...botonIdioma }}
+        /> */}
+
+        {/* {enlace ? (
           <IconButton
             key={`boton-${tipo}`}
             size='small'
@@ -88,7 +138,7 @@ const EnlacesModal = (props) => {
           >
             {tipo === 'repo' ? <GitHub /> : <Link />}
           </IconButton>
-        ) : null}
+        ) : null} */}
       </>
     )
   }
@@ -97,10 +147,15 @@ const EnlacesModal = (props) => {
     return enlaces[0]['url'] === '' && enlaces[1]['url'] === ''
   }
 
+  let respuestaEnlacesVacios = {
+    español: 'Aún no hay enlaces que mostrar...',
+    ingles: 'No links to display yet...'
+  }
+
   return (
     <div style={{ ...botonesEnlaces }}>
       {verificarEnlacesVacios(enlaces)
-        ? 'aún no hay enlaces que mostrar...'
+        ? respuestaEnlacesVacios[idiomaActual]
         : enlaces.map((datos) => {
             const { tipo, url } = datos
             return (

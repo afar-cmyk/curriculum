@@ -221,8 +221,8 @@ const ModalPortafolio = (props) => {
             {/* <CategoriasTarjeta categorias={categorias} /> */}
           </div>
         </DialogContent>
-        <DialogActions>
-          <EnlacesModal enlaces={enlaces} />
+        <DialogActions sx={{ m: 0, p: '10px' }}>
+          <EnlacesModal titulo={titulo} enlaces={enlaces} />
           {/* {`Enlaces: ${enlaces ? enlaces[0].url : null} - ${
             enlaces ? enlaces[1].url : null
           }`} */}
@@ -238,7 +238,7 @@ const ModalTitulo = (props) => {
   const { children, onClose } = props
 
   return (
-    <DialogTitle sx={{ m: 0, p: 2 }}>
+    <DialogTitle sx={{ m: 0, p: '10px' }}>
       {children}
       {onClose ? (
         <IconButton
