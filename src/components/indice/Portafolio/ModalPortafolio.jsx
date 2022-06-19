@@ -6,8 +6,8 @@ import DialogActions from '@mui/material/DialogActions'
 import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import ColoresContext from '../ColoresContext'
-import CategoriasTarjeta from './Tarjetas/CategoriasTarjeta'
-import foto from '../../../images/foto.jpg'
+// import CategoriasTarjeta from './Tarjetas/CategoriasTarjeta'
+// import foto from '../../../images/foto.jpg'
 import EnlacesModal from './Modal/EnlacesModal'
 
 const ModalPortafolio = (props) => {
@@ -16,7 +16,7 @@ const ModalPortafolio = (props) => {
     fecha,
     estado,
     titulo,
-    imagen,
+    // imagen,
     categorias,
     enlaces,
     descripcion
@@ -223,9 +223,9 @@ const ModalPortafolio = (props) => {
         </DialogContent>
         <DialogActions>
           <EnlacesModal enlaces={enlaces} />
-          {`Enlaces: ${enlaces ? enlaces[0].url : null} - ${
+          {/* {`Enlaces: ${enlaces ? enlaces[0].url : null} - ${
             enlaces ? enlaces[1].url : null
-          }`}
+          }`} */}
         </DialogActions>
       </Dialog>
     </>
