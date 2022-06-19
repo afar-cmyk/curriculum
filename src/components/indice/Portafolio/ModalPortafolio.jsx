@@ -8,6 +8,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import ColoresContext from '../ColoresContext'
 import CategoriasTarjeta from './Tarjetas/CategoriasTarjeta'
 import foto from '../../../images/foto.jpg'
+import EnlacesModal from './Modal/EnlacesModal'
 
 const ModalPortafolio = (props) => {
   const {
@@ -183,7 +184,7 @@ const ModalPortafolio = (props) => {
           categorias={categorias}
           onClose={manejadorCerrarModal}
         >
-          <TitulosH2 titulo={'Ficha Tecnica:'} colorTitulo={titulos} />
+          <TitulosH2 titulo={'Ficha Tecnica'} colorTitulo={titulos} />
         </ModalTitulo>
         <DialogContent
           dividers
@@ -221,6 +222,7 @@ const ModalPortafolio = (props) => {
           </div>
         </DialogContent>
         <DialogActions>
+          <EnlacesModal enlaces={enlaces} />
           {`Enlaces: ${enlaces ? enlaces[0].url : null} - ${
             enlaces ? enlaces[1].url : null
           }`}
