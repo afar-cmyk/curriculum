@@ -46,7 +46,13 @@ const TarjetaPortafolio = (props) => {
       width: 'fit-content',
       m: 0
     },
-    '&:hover p': { color: tarjetaParrafoHover }
+    '&:hover p': { color: tarjetaParrafoHover },
+    '& .miniatura-tarjeta': {
+      opacity: '0.75'
+    },
+    '&:hover .miniatura-tarjeta': {
+      opacity: '1'
+    }
   }
 
   return (
