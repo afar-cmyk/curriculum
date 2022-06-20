@@ -192,6 +192,8 @@ const ModalPortafolio = (props) => {
     )
   }
 
+  //1px solid #00000080
+
   return (
     <>
       <Dialog
@@ -200,11 +202,13 @@ const ModalPortafolio = (props) => {
         open={abrirModal}
         sx={{
           '& .MuiDialog-paper': {
-            backgroundColor: '#1a1a1a'
+            backgroundColor: '#1a1a1a',
+            boxShadow:
+              '0px 11px 15px -7px hsl(188deg 60% 15% / 16%), 0px 24px 38px 3px hsl(188deg 60% 15% / 14%), 0px 9px 46px 8px hsl(188deg 60% 15% / 12%)'
           },
           '& 	.MuiDialogContent-root': {
-            borderTop: '1px solid #ffffff1f',
-            borderBottom: '1px solid #ffffff1f'
+            borderTop: '1px solid #00000080',
+            borderBottom: '1px solid #00000080'
           }
         }}
       >
@@ -221,7 +225,7 @@ const ModalPortafolio = (props) => {
             display: 'flex'
           }}
         >
-          <div style={{ color: '#d9d9d9' }}>
+          <div style={{ color: '#e0e0e0' }}>
             <h2
               style={{
                 fontSize: 'calc(1.5em + 1vw)',
