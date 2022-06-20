@@ -6,21 +6,11 @@ import DialogActions from '@mui/material/DialogActions'
 import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import ColoresContext from '../ColoresContext'
-// import CategoriasTarjeta from './Tarjetas/CategoriasTarjeta'
-// import foto from '../../../images/foto.jpg'
 import EnlacesModal from './Modal/EnlacesModal'
 
 const ModalPortafolio = (props) => {
-  const {
-    id,
-    fecha,
-    estado,
-    titulo,
-    // imagen,
-    categorias,
-    enlaces,
-    descripcion
-  } = props.valores
+  const { id, fecha, estado, titulo, categorias, enlaces, descripcion } =
+    props.valores
 
   const { abrirModal, manejadorCerrarModal, esquemaTema, temaActual, bordes } =
     React.useContext(ColoresContext)
@@ -197,8 +187,6 @@ const ModalPortafolio = (props) => {
     )
   }
 
-  //1px solid #00000080
-
   return (
     <>
       <Dialog
@@ -234,10 +222,10 @@ const ModalPortafolio = (props) => {
           <div style={{ color: '#e0e0e0' }}>
             <h2
               style={{
-                fontSize: 'calc(1.5em + 1vw)',
+                fontSize: 'calc(1.6em + 1vw)',
                 marginTop: 0,
                 marginBottom: '0.1em',
-                textAlignLast: 'center',
+                textAlign: 'center',
                 color: '#f2f2f2'
               }}
             >
@@ -254,17 +242,12 @@ const ModalPortafolio = (props) => {
             >
               <EstadoActual estado={estado} /> <Fechas fecha={fecha} />
             </div>
-
             {descripcion}
             <Etiquetas etiquetas={categorias} />
-            {/* <CategoriasTarjeta categorias={categorias} /> */}
           </div>
         </DialogContent>
         <DialogActions sx={{ m: 0, py: '10px', px: '24px' }}>
           <EnlacesModal titulo={titulo} enlaces={enlaces} />
-          {/* {`Enlaces: ${enlaces ? enlaces[0].url : null} - ${
-            enlaces ? enlaces[1].url : null
-          }`} */}
         </DialogActions>
       </Dialog>
     </>

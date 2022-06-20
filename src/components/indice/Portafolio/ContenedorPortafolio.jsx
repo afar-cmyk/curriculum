@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@mui/material'
-import TarjetaPortafolio from './Tarjetas/TarjetaPortafolio'
+import TarjetaPortafolio from './TarjetaPortafolio'
 import ModalPortafolio from './ModalPortafolio'
 import ColoresContext from '../ColoresContext'
 

@@ -9,24 +9,14 @@ const EnlacesModal = (props) => {
   const { temaActual, esquemaTema, idiomaActual } =
     React.useContext(ColoresContext)
 
-  const {
-    // bordes,
-    // bordesHover,
-    botones,
-    botonesHover,
-    tarjetasBordes,
-    tarjetasBordesHover
-    // fondo,
-    // botonesBackground
-  } = esquemaTema[temaActual]
+  const { botones, botonesHover, tarjetasBordes, tarjetasBordesHover } =
+    esquemaTema[temaActual]
 
   let botonesEnlaces = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    // width: '40%',
-    // marginRight: '1rem',
     gap: '0.8em',
     color: '#cccccc'
   }
@@ -55,7 +45,6 @@ const EnlacesModal = (props) => {
     fontSize: '0.85em',
     height: '80%',
     '&:hover .MuiSvgIcon-root': {
-      // color: estadoIdioma ? '#0bb9d0' : '#d00b78 '
       color: botonesHover
     },
     '& .MuiSvgIcon-root': {
@@ -117,30 +106,6 @@ const EnlacesModal = (props) => {
           icon={tipo === 'repo' ? <GitHub /> : <Link />}
           sx={{ ...botonIdioma }}
         />
-        {/* <Chip
-          label='GitHub'
-          variant='outlined'
-          size='medium'
-          clickable={true}
-          icon={<GitHub />}
-          sx={{ ...botonIdioma }}
-        /> */}
-
-        {/* {enlace ? (
-          <IconButton
-            key={`boton-${tipo}`}
-            size='small'
-            title={ponerTitulo[idiomaActual][tipo]}
-            aria-label={ponerAriaLabel[idiomaActual][tipo]}
-            href={enlace}
-            referrerPolicy='origin'
-            rel='external'
-            target='_blank'
-            sx={{ ...estilosIconos }}
-          >
-            {tipo === 'repo' ? <GitHub /> : <Link />}
-          </IconButton>
-        ) : null} */}
       </>
     )
   }
