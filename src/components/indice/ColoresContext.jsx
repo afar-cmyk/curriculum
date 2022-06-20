@@ -83,6 +83,8 @@ export const ColoresProvider = ({ children }) => {
       fechasHover: '#24828fe0',
       logo: '#11c3dbd0',
       tarjetas: '#1a1a1a',
+      tarjetasBordes: '#11c3db47',
+      tarjetasBordesHover: '#11c3db96',
       tarjetasCategorias: '#333333',
       tarjetasCategoriasTexto: '#cccccc'
     },
@@ -114,6 +116,8 @@ export const ColoresProvider = ({ children }) => {
       fechasHover: '#11c3dbcc',
       logo: '#11c3db',
       tarjetas: '#e6e6e6',
+      tarjetasBordes: '#11c3db47',
+      tarjetasBordesHover: '#11c3db',
       tarjetasCategorias: '#cccccc',
       tarjetasCategoriasTexto: '#333333'
     }

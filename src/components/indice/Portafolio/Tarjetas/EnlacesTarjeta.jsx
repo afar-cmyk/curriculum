@@ -12,6 +12,8 @@ const EnlacesTarjeta = (props) => {
   const {
     bordes,
     bordesHover,
+    tarjetasBordes,
+    tarjetasBordesHover,
     botones,
     botonesHover,
     fondo,
@@ -30,7 +32,7 @@ const EnlacesTarjeta = (props) => {
 
   let estilosIconos = {
     border: 'solid 0.75px',
-    borderColor: bordesHover,
+    borderColor: tarjetasBordes,
     color: botones,
     padding: '4px',
     backgroundColor: fondo,
@@ -39,7 +41,7 @@ const EnlacesTarjeta = (props) => {
     },
     '&&:hover': {
       color: botonesHover,
-      borderColor: bordes,
+      borderColor: tarjetasBordesHover,
       backgroundColor: botonesBackground
     },
     '&:hover .MuiChip-icon': {

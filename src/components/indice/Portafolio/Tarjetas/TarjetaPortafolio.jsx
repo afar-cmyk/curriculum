@@ -10,6 +10,8 @@ const TarjetaPortafolio = (props) => {
   const {
     bordes,
     bordesHover,
+    tarjetasBordes,
+    tarjetasBordesHover,
     tarjetaTitulo,
     tarjetaTituloHover,
     tarjetaParrafo,
@@ -23,11 +25,11 @@ const TarjetaPortafolio = (props) => {
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'nowrap',
-    border: `solid 1px ${bordes}`,
+    border: `solid 1px ${tarjetasBordes}`,
     borderRadius: '8px',
     marginRight: 0,
     cursor: 'pointer',
-    '&:hover': { border: `solid 1px ${bordesHover}` },
+    '&:hover': { border: `solid 1px ${tarjetasBordesHover}` },
     '& h3': {
       width: 'fit-content',
       fontWeight: 700,

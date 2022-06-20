@@ -14,6 +14,8 @@ const EnlacesModal = (props) => {
     // bordesHover,
     botones,
     botonesHover,
+    tarjetasBordes,
+    tarjetasBordesHover,
     fondo,
     botonesBackground
   } = esquemaTema[temaActual]
@@ -25,23 +27,23 @@ const EnlacesModal = (props) => {
     alignItems: 'center',
     // width: '40%',
     // marginRight: '1rem',
-    gap: '1em',
+    gap: '0.8em',
     color: '#cccccc'
   }
 
   let estilosIconos = {
     border: 'solid 0.75px',
-    borderColor: '#11c3db61',
+    borderColor: tarjetasBordes,
     color: botones,
     padding: '4px',
-    backgroundColor: fondo,
+    backgroundColor: '#00000040',
     '& .MuiSvgIcon-root': {
       fontSize: '1.3em'
     },
     '&&:hover': {
       color: botonesHover,
-      borderColor: bordes,
-      backgroundColor: botonesBackground
+      borderColor: tarjetasBordesHover,
+      backgroundColor: '#00000000'
     },
     '&:hover .MuiChip-icon': {
       color: botonesHover
@@ -54,11 +56,11 @@ const EnlacesModal = (props) => {
     height: '80%',
     '&:hover .MuiSvgIcon-root': {
       // color: estadoIdioma ? '#0bb9d0' : '#d00b78 '
-      color: '#0bb9d0'
+      color: botonesHover
     },
     '& .MuiSvgIcon-root': {
       fontSize: '1.25em',
-      color: '#168d9c'
+      color: botones
     }
   }
 
@@ -68,11 +70,11 @@ const EnlacesModal = (props) => {
     let ponerLabel = {
       español: {
         link: 'Sitio Web',
-        repo: 'Github'
+        repo: 'GitHub'
       },
       ingles: {
         link: 'Website',
-        repo: 'Github'
+        repo: 'GitHub'
       }
     }
 

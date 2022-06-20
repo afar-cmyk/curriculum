@@ -25,7 +25,8 @@ const ModalPortafolio = (props) => {
   const { abrirModal, manejadorCerrarModal, esquemaTema, temaActual, bordes } =
     React.useContext(ColoresContext)
 
-  const { titulos, fondo, tarjetasCategoriasTexto } = esquemaTema[temaActual]
+  const { botones, botonesHover, titulos, fondo, tarjetasCategoriasTexto } =
+    esquemaTema[temaActual]
 
   const TitulosH2 = ({ titulo, colorTitulo }) => {
     let titulos = {
@@ -54,7 +55,7 @@ const ModalPortafolio = (props) => {
           paddingBottom: '0.2em',
           border: `solid 1px ${bordes}`,
           fontSize: '0.8em',
-          backgroundColor: fondo,
+          backgroundColor: '#00000040',
           color: tarjetasCategoriasTexto
         }}
       >
@@ -94,7 +95,7 @@ const ModalPortafolio = (props) => {
           paddingBottom: '0.2em',
           border: `solid 1px ${bordes}`,
           fontSize: '0.8em',
-          backgroundColor: fondo,
+          backgroundColor: '#00000040',
           color: tarjetasCategoriasTexto
         }}
       >
@@ -134,7 +135,7 @@ const ModalPortafolio = (props) => {
           paddingBottom: '0.2em',
           border: `solid 1px ${bordes}`,
           fontSize: '0.8em',
-          backgroundColor: fondo,
+          backgroundColor: '#00000040',
           color: tarjetasCategoriasTexto
         }}
       >
@@ -160,6 +161,34 @@ const ModalPortafolio = (props) => {
           )
         })}
       </div>
+    )
+  }
+
+  const ModalTitulo = (props) => {
+    const { children, onClose } = props
+
+    return (
+      <DialogTitle sx={{ m: 0, py: '10px', px: '24px' }}>
+        {children}
+        {onClose ? (
+          <IconButton
+            aria-label='cerrar modal'
+            onClick={onClose}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 8,
+              color: botones,
+              '&:hover': {
+                backgroundColor: '#00000040',
+                color: botonesHover
+              }
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        ) : null}
+      </DialogTitle>
     )
   }
 
@@ -221,7 +250,7 @@ const ModalPortafolio = (props) => {
             {/* <CategoriasTarjeta categorias={categorias} /> */}
           </div>
         </DialogContent>
-        <DialogActions sx={{ m: 0, p: '10px' }}>
+        <DialogActions sx={{ m: 0, py: '10px', px: '24px' }}>
           <EnlacesModal titulo={titulo} enlaces={enlaces} />
           {/* {`Enlaces: ${enlaces ? enlaces[0].url : null} - ${
             enlaces ? enlaces[1].url : null
@@ -233,27 +262,3 @@ const ModalPortafolio = (props) => {
 }
 
 export default ModalPortafolio
-
-const ModalTitulo = (props) => {
-  const { children, onClose } = props
-
-  return (
-    <DialogTitle sx={{ m: 0, p: '10px' }}>
-      {children}
-      {onClose ? (
-        <IconButton
-          aria-label='cerrar modal'
-          onClick={onClose}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 8,
-            color: 'gray'
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </DialogTitle>
-  )
-}
