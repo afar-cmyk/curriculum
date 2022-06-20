@@ -8,8 +8,6 @@ const TarjetaPortafolio = (props) => {
   const { temaActual, esquemaTema } = React.useContext(ColoresContext)
 
   const {
-    bordes,
-    bordesHover,
     tarjetasBordes,
     tarjetasBordesHover,
     tarjetaTitulo,
@@ -48,7 +46,7 @@ const TarjetaPortafolio = (props) => {
     },
     '&:hover p': { color: tarjetaParrafoHover },
     '& .miniatura-tarjeta': {
-      opacity: '0.75'
+      opacity: '0.85'
     },
     '&:hover .miniatura-tarjeta': {
       opacity: '1'

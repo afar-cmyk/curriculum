@@ -1,7 +1,6 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Box } from '@mui/material'
 
 const MiniaturaTarjeta = (props) => {
   const { imagen, titulo } = props

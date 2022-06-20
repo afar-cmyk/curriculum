@@ -25,8 +25,13 @@ const ModalPortafolio = (props) => {
   const { abrirModal, manejadorCerrarModal, esquemaTema, temaActual, bordes } =
     React.useContext(ColoresContext)
 
-  const { botones, botonesHover, titulos, fondo, tarjetasCategoriasTexto } =
-    esquemaTema[temaActual]
+  const {
+    botones,
+    botonesHover,
+    titulos,
+    fondoModal,
+    tarjetasCategoriasTexto
+  } = esquemaTema[temaActual]
 
   const TitulosH2 = ({ titulo, colorTitulo }) => {
     let titulos = {
@@ -202,7 +207,7 @@ const ModalPortafolio = (props) => {
         open={abrirModal}
         sx={{
           '& .MuiDialog-paper': {
-            backgroundColor: '#1a1a1a',
+            backgroundColor: fondoModal,
             border: '1px solid #ffffff0d',
             boxShadow:
               '0px 11px 15px -7px hsl(188deg 60% 15% / 16%), 0px 24px 38px 3px hsl(188deg 60% 15% / 14%), 0px 9px 46px 8px hsl(188deg 60% 15% / 12%)'

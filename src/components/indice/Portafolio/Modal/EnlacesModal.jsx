@@ -10,14 +10,14 @@ const EnlacesModal = (props) => {
     React.useContext(ColoresContext)
 
   const {
-    bordes,
+    // bordes,
     // bordesHover,
     botones,
     botonesHover,
     tarjetasBordes,
-    tarjetasBordesHover,
-    fondo,
-    botonesBackground
+    tarjetasBordesHover
+    // fondo,
+    // botonesBackground
   } = esquemaTema[temaActual]
 
   let botonesEnlaces = {

@@ -10,8 +10,6 @@ const EnlacesTarjeta = (props) => {
     React.useContext(ColoresContext)
 
   const {
-    bordes,
-    bordesHover,
     tarjetasBordes,
     tarjetasBordesHover,
     botones,

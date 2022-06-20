@@ -86,7 +86,8 @@ export const ColoresProvider = ({ children }) => {
       tarjetasBordes: '#11c3db47',
       tarjetasBordesHover: '#11c3db96',
       tarjetasCategorias: '#333333',
-      tarjetasCategoriasTexto: '#cccccc'
+      tarjetasCategoriasTexto: '#cccccc',
+      fondoModal: '#1a1a1a'
     },
     claro: {
       fondo: '#f2f2f2',
@@ -119,7 +120,8 @@ export const ColoresProvider = ({ children }) => {
       tarjetasBordes: '#11c3db47',
       tarjetasBordesHover: '#11c3db',
       tarjetasCategorias: '#cccccc',
-      tarjetasCategoriasTexto: '#333333'
+      tarjetasCategoriasTexto: '#333333',
+      fondoModal: '#e6e6e6'
     }
   }
 
