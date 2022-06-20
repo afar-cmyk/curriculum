@@ -203,12 +203,13 @@ const ModalPortafolio = (props) => {
         sx={{
           '& .MuiDialog-paper': {
             backgroundColor: '#1a1a1a',
+            border: '1px solid #ffffff0d',
             boxShadow:
               '0px 11px 15px -7px hsl(188deg 60% 15% / 16%), 0px 24px 38px 3px hsl(188deg 60% 15% / 14%), 0px 9px 46px 8px hsl(188deg 60% 15% / 12%)'
           },
           '& 	.MuiDialogContent-root': {
-            borderTop: '1px solid #00000080',
-            borderBottom: '1px solid #00000080'
+            borderTop: '1px solid #ffffff0d',
+            borderBottom: '1px solid #ffffff0d'
           }
         }}
       >
