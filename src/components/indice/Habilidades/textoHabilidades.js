@@ -32,7 +32,7 @@ const listaHabilidades = [
     contenido: 85
   },
   {
-    titulo: 'Adobe Media Enconder',
+    titulo: 'Adobe Media Encoder',
     contenido: 75
   },
   {
