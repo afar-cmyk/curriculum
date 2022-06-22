@@ -16,7 +16,8 @@ const Acerca = () => {
   let contenedorAcerca = {
     mb: { xs: '27px', md: '30px', lg: '45px' },
     '& p': {
-      lineHeight: 'calc(1ex / 0.32)',
+      lineHeight: '1.5em',
+      wordSpacing: '0.05em',
       width: { lg: '100%' },
       fontSize: { xs: '1.125em', lg: '1.2em' },
       m: 0,

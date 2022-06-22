@@ -9,21 +9,23 @@ const FechaTitulo = (props) => {
 
   const { fechas, tarjetaTitulo } = esquemaTema[temaActual]
 
-  //barrasSecundario
   let envolturaTitulo = {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'nowrap',
     alignItems: 'center',
     gap: '12px',
-    marginBottom: { xs: '0.5vw', lg: '5px' },
+    marginBottom: 0,
     '& h3': {
+      lineHeight: '39px',
+      height: '33px',
       fontWeight: 700,
       fontSize: { xs: '1.08em', lg: '1.23em' },
       color: tarjetaTitulo,
       m: 0
     },
     '& div': {
+      fontFamily: 'Anaheim',
       textAlign: 'center',
       width: 'fit-content',
       px: '14px',

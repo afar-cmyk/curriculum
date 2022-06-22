@@ -77,6 +77,7 @@ const NavBar = () => {
 
   let botonIdioma = {
     ...estilosIconos,
+    fontFamily: 'Source Sans Pro',
     fontSize: '0.93em',
     height: '80%',
     '& .MuiSvgIcon-root': {

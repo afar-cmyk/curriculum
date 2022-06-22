@@ -20,6 +20,7 @@ const CategoriasTarjeta = (props) => {
     paddingLeft: '0.5em',
     paddingRight: '0.5em',
     border: `solid 1px ${bordes}`,
+    fontFamily: 'Anaheim',
     fontSize: '0.8em',
     color: tarjetasCategoriasTexto,
     backgroundColor: fondo

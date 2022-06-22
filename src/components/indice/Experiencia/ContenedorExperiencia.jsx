@@ -20,6 +20,8 @@ const ContenedorExperiencia = (props) => {
   }
 
   let contenidoExperiencia = {
+    lineHeight: '1.7em',
+    wordSpacing: '0.05em',
     margin: 0,
     pl: '22px',
     listStyle: 'square',

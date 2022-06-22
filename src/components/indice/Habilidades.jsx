@@ -34,6 +34,7 @@ const HabilidadesTecnicas = () => {
     flexDirection: 'column',
     gap: '3px',
     fontSize: { xs: '16px', lg: '1.2em' },
+    fontFamily: 'Anaheim',
     fontWeight: 300,
     color: textosBold,
     marginBottom: '6px',

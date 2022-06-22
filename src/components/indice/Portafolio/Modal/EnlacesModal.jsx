@@ -22,6 +22,7 @@ const EnlacesModal = (props) => {
   }
 
   let estilosIconos = {
+    fontFamily: 'Source Sans Pro',
     border: 'solid 0.75px',
     borderColor: tarjetasBordes,
     color: botones,
