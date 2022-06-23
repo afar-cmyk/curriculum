@@ -17,7 +17,7 @@ const TarjetaContacto = (props) => {
   } = esquemaTema[temaActual]
 
   let contenedorTarjeta = {
-    gap: { xs: '0.2em', sm: '0.3em' },
+    gap: { xs: '0.2em', sm: '0.5em' },
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

@@ -27,7 +27,7 @@ const ModalPortafolio = (props) => {
     let titulos = {
       color: colorTitulo,
       fontSize: '1.4rem',
-      fontFamily: 'Anaheim',
+      fontFamily: 'Source Sans Pro',
       margin: 0,
       fontWeight: 300
     }
