@@ -27,7 +27,7 @@ const TarjetaEstudios = (props) => {
       width: 'fit-content',
       fontWeight: 700,
       lineHeight: 'calc(0.9ex / 0.32)',
-      fontSize: { xs: '1em', sm: '1.05em', xl: '1em' },
+      fontSize: { xs: '0.95em', sm: '1.05em', xl: '1em' },
       color: tarjetaTitulo,
       m: 0
     },
@@ -36,7 +36,7 @@ const TarjetaEstudios = (props) => {
       color: tarjetaParrafo,
       width: 'fit-content',
       m: 0,
-      fontSize: { xs: '16px', lg: '1.1em', xl: '1em' }
+      fontSize: { xs: '0.95em', lg: '1.1em', xl: '1em' }
     },
     '&:hover p': { color: tarjetaParrafoHover }
   }

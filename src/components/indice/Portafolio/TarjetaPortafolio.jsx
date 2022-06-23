@@ -30,7 +30,8 @@ const TarjetaPortafolio = (props) => {
     '&:hover': { border: `solid 1px ${tarjetasBordesHover}` },
     '& h3': {
       width: 'fit-content',
-      fontWeight: 700,
+      fontFamily: 'NeusaNext',
+      fontWeight: 500,
       fontSize: '1.1em',
       color: tarjetaTitulo,
       mt: 0,

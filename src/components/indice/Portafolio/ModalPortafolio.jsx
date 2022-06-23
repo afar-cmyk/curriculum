@@ -54,7 +54,8 @@ const ModalPortafolio = (props) => {
           color: tarjetasCategoriasTexto
         }}
       >
-        Fecha:
+        <span style={{ height: '0.8rem' }}>Fecha:</span>
+
         <div
           style={{
             borderRadius: '0.3em',
@@ -95,7 +96,7 @@ const ModalPortafolio = (props) => {
           color: tarjetasCategoriasTexto
         }}
       >
-        Estado:
+        <span style={{ height: '0.8rem' }}>Estado:</span>
         <div
           style={{
             borderRadius: '0.3em',
@@ -136,7 +137,7 @@ const ModalPortafolio = (props) => {
           color: tarjetasCategoriasTexto
         }}
       >
-        Etiquetas:
+        <span style={{ height: '0.8rem' }}>Etiquetas:</span>
         {etiquetas.map((categoria, indice) => {
           return (
             <div
