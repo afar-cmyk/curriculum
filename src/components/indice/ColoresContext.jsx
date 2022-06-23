@@ -87,7 +87,16 @@ export const ColoresProvider = ({ children }) => {
       tarjetasBordesHover: '#11c3db96',
       tarjetasCategorias: '#333333',
       tarjetasCategoriasTexto: '#cccccc',
-      fondoModal: '#1a1a1a'
+      fondoModal: '#1a1a1a',
+      separadoresModal: '#ffffff1a',
+      parrafoModal: '#e0e0e0',
+      tituloModal: '#f2f2f2',
+      etiquetasTitulo: '#cccccc',
+      etiquetasContenido: '#cccccc',
+      etiquetasTituloFondo: '#0d0d0d',
+      etiquetasContenidoFondo: '#383434',
+      modalEnlacesBoton: '#0d0d0d',
+      modalEnlacesBotonHover: '#0000001f'
     },
     claro: {
       fondo: '#f2f2f2',
@@ -121,7 +130,16 @@ export const ColoresProvider = ({ children }) => {
       tarjetasBordesHover: '#11c3db',
       tarjetasCategorias: '#cccccc',
       tarjetasCategoriasTexto: '#333333',
-      fondoModal: '#e6e6e6'
+      fondoModal: '#e6e6e6',
+      separadoresModal: '#0000001a',
+      parrafoModal: '#1f1f1f',
+      tituloModal: '#0d0d0d',
+      etiquetasTitulo: '#141414',
+      etiquetasContenido: '#141414',
+      etiquetasTituloFondo: '#f2f2f2',
+      etiquetasContenidoFondo: '#cccccc',
+      modalEnlacesBoton: '#f2f2f2',
+      modalEnlacesBotonHover: '#ffffffcc'
     }
   }
 

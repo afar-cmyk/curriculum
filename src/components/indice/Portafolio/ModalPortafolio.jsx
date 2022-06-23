@@ -20,6 +20,12 @@ const ModalPortafolio = (props) => {
     botonesHover,
     titulos,
     fondoModal,
+    separadoresModal,
+    tituloModal,
+    parrafoModal,
+    etiquetasTitulo,
+    etiquetasContenidoFondo,
+    etiquetasTituloFondo,
     tarjetasCategoriasTexto
   } = esquemaTema[temaActual]
 
@@ -50,8 +56,8 @@ const ModalPortafolio = (props) => {
           paddingBottom: '0.2em',
           border: `solid 1px ${bordes}`,
           fontSize: '0.8em',
-          backgroundColor: '#00000040',
-          color: tarjetasCategoriasTexto
+          backgroundColor: etiquetasTituloFondo,
+          color: etiquetasTitulo
         }}
       >
         <span style={{ height: '0.8rem' }}>Fecha:</span>
@@ -65,7 +71,7 @@ const ModalPortafolio = (props) => {
             border: `solid 1px ${bordes}`,
             fontFamily: 'Anaheim',
             fontSize: '0.73rem',
-            backgroundColor: '#383434',
+            backgroundColor: etiquetasContenidoFondo,
             color: tarjetasCategoriasTexto,
             marginLeft: '0.5em'
           }}
@@ -92,8 +98,8 @@ const ModalPortafolio = (props) => {
           paddingBottom: '0.2em',
           border: `solid 1px ${bordes}`,
           fontSize: '0.8em',
-          backgroundColor: '#00000040',
-          color: tarjetasCategoriasTexto
+          backgroundColor: etiquetasTituloFondo,
+          color: etiquetasTitulo
         }}
       >
         <span style={{ height: '0.8rem' }}>Estado:</span>
@@ -106,7 +112,7 @@ const ModalPortafolio = (props) => {
             border: `solid 1px ${bordes}`,
             fontFamily: 'Anaheim',
             fontSize: '0.73rem',
-            backgroundColor: '#383434',
+            backgroundColor: etiquetasContenidoFondo,
             color: tarjetasCategoriasTexto,
             marginLeft: '0.5em'
           }}
@@ -133,8 +139,8 @@ const ModalPortafolio = (props) => {
           paddingBottom: '0.2em',
           border: `solid 1px ${bordes}`,
           fontSize: '0.8em',
-          backgroundColor: '#00000040',
-          color: tarjetasCategoriasTexto
+          backgroundColor: etiquetasTituloFondo,
+          color: etiquetasTitulo
         }}
       >
         <span style={{ height: '0.8rem' }}>Etiquetas:</span>
@@ -150,7 +156,7 @@ const ModalPortafolio = (props) => {
                 border: `solid 1px ${bordes}`,
                 fontFamily: 'Anaheim',
                 fontSize: '0.73rem',
-                backgroundColor: '#383434',
+                backgroundColor: etiquetasContenidoFondo,
                 color: tarjetasCategoriasTexto,
                 marginLeft: '0.5em'
               }}
@@ -205,8 +211,9 @@ const ModalPortafolio = (props) => {
               '0px 11px 15px -7px hsl(188deg 60% 15% / 16%), 0px 24px 38px 3px hsl(188deg 60% 15% / 14%), 0px 9px 46px 8px hsl(188deg 60% 15% / 12%)'
           },
           '& 	.MuiDialogContent-root': {
-            borderTop: '1px solid #ffffff0d',
-            borderBottom: '1px solid #ffffff0d'
+            borderTop: '1px solid',
+            borderBottom: '1px solid',
+            borderColor: separadoresModal
           }
         }}
       >
@@ -223,14 +230,14 @@ const ModalPortafolio = (props) => {
             display: 'flex'
           }}
         >
-          <div style={{ color: '#e0e0e0' }}>
+          <div style={{ color: parrafoModal }}>
             <h2
               style={{
                 fontSize: 'calc(1.6em + 1vw)',
                 marginTop: 0,
                 marginBottom: '0.1em',
                 textAlign: 'center',
-                color: '#f2f2f2'
+                color: tituloModal
               }}
             >
               {titulo}

@@ -9,8 +9,15 @@ const EnlacesModal = (props) => {
   const { temaActual, esquemaTema, idiomaActual } =
     React.useContext(ColoresContext)
 
-  const { botones, botonesHover, tarjetasBordes, tarjetasBordesHover } =
-    esquemaTema[temaActual]
+  const {
+    botones,
+    botonesHover,
+    tarjetasBordes,
+    tarjetasBordesHover,
+    modalEnlacesBoton,
+    modalEnlacesBotonHover,
+    etiquetasTitulo
+  } = esquemaTema[temaActual]
 
   let botonesEnlaces = {
     display: 'flex',
@@ -18,7 +25,7 @@ const EnlacesModal = (props) => {
     justifyContent: 'center',
     alignItems: 'center',
     gap: '0.8em',
-    color: '#cccccc'
+    color: etiquetasTitulo
   }
 
   let estilosIconos = {
@@ -27,14 +34,14 @@ const EnlacesModal = (props) => {
     borderColor: tarjetasBordes,
     color: botones,
     padding: '4px',
-    backgroundColor: '#00000040',
+    backgroundColor: modalEnlacesBoton,
     '& .MuiSvgIcon-root': {
       fontSize: '1.3em'
     },
     '&&:hover': {
       color: botonesHover,
       borderColor: tarjetasBordesHover,
-      backgroundColor: '#00000000'
+      backgroundColor: modalEnlacesBotonHover
     },
     '&:hover .MuiChip-icon': {
       color: botonesHover
