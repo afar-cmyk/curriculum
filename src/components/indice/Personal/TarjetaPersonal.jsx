@@ -17,6 +17,7 @@ const TarjetaContacto = (props) => {
   } = esquemaTema[temaActual]
 
   let contenedorTarjeta = {
+    gap: { xs: '0.2em', sm: '0.3em' },
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -28,18 +29,21 @@ const TarjetaContacto = (props) => {
     '&:hover h3': { color: tarjetaTituloHover },
     '&:hover p': { color: tarjetaParrafoHover },
     '& h3': {
+      height: { xs: '15px' },
       width: 'fit-content',
       fontWeight: 700,
-      lineHeight: 'calc(0.9ex / 0.32)',
-      fontSize: { xs: '1em', sm: '1.05em', xl: '1.13em' },
+      lineHeight: '20px',
+      fontSize: { xs: '15px', sm: '1.05em', xl: '1.13em' },
       color: tarjetaTitulo,
       m: 0
     },
     '& p': {
+      lineHeight: '20px',
       width: 'fit-content',
       color: tarjetaParrafo,
       m: 0,
-      fontSize: { xs: '16px', lg: '1.1em', xl: '1.1em' }
+      fontSize: { xs: '15px', lg: '1.1em', xl: '1.1em' },
+      height: { xs: '16px', lg: '1.1em', xl: '1.1em' }
     }
   }
 

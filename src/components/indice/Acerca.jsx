@@ -19,7 +19,7 @@ const Acerca = () => {
       lineHeight: '1.5em',
       wordSpacing: '0.05em',
       width: { lg: '100%' },
-      fontSize: { xs: '1.125em', lg: '1.2em' },
+      fontSize: { xs: '1.013em', lg: '1.15em' },
       m: 0,
       color: textos
     },
