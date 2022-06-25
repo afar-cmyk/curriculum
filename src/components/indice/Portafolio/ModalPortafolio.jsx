@@ -11,8 +11,13 @@ const ModalPortafolio = (props) => {
   const { id, fecha, estado, titulo, categorias, enlaces, descripcion } =
     props.valores
 
-  const { abrirModal, manejadorCerrarModal, esquemaTema, temaActual } =
-    React.useContext(ColoresContext)
+  const {
+    abrirModal,
+    manejadorCerrarModal,
+    esquemaTema,
+    temaActual,
+    idiomaActual
+  } = React.useContext(ColoresContext)
 
   const { fondoModal, separadoresModal, tituloModal, parrafoModal } =
     esquemaTema[temaActual]
@@ -53,6 +58,11 @@ const ModalPortafolio = (props) => {
     px: '24px'
   }
 
+  let textoEncabezado = {
+    español: 'Ficha Técnica',
+    ingles: 'Data Sheet'
+  }
+
   return (
     <Dialog
       onClose={props.onClose}
@@ -61,7 +71,7 @@ const ModalPortafolio = (props) => {
       sx={{ ...contenedorModal }}
     >
       <EncabezadoModal id={id} onClose={manejadorCerrarModal}>
-        {'Ficha Técnica'}
+        {textoEncabezado[idiomaActual]}
       </EncabezadoModal>
       <DialogContent
         dividers
