@@ -7,12 +7,13 @@ import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import ColoresContext from '../ColoresContext'
 import EnlacesModal from './Modal/EnlacesModal'
+import EtiquetasModal from './Modal/EtiquetasModal'
 
 const ModalPortafolio = (props) => {
   const { id, fecha, estado, titulo, categorias, enlaces, descripcion } =
     props.valores
 
-  const { abrirModal, manejadorCerrarModal, esquemaTema, temaActual, bordes } =
+  const { abrirModal, manejadorCerrarModal, esquemaTema, temaActual } =
     React.useContext(ColoresContext)
 
   const {
@@ -22,11 +23,7 @@ const ModalPortafolio = (props) => {
     fondoModal,
     separadoresModal,
     tituloModal,
-    parrafoModal,
-    etiquetasTitulo,
-    etiquetasContenidoFondo,
-    etiquetasTituloFondo,
-    tarjetasCategoriasTexto
+    parrafoModal
   } = esquemaTema[temaActual]
 
   const TitulosH2 = ({ titulo, colorTitulo }) => {
@@ -38,135 +35,6 @@ const ModalPortafolio = (props) => {
       fontWeight: 300
     }
     return <h2 style={{ ...titulos }}>{titulo}</h2>
-  }
-
-  const Fechas = ({ fecha }) => {
-    return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          borderRadius: '0.3em',
-          width: 'fit-content',
-          height: 'fit-content',
-          paddingLeft: '0.5em',
-          paddingRight: '0.5em',
-          paddingTop: '0.2em',
-          paddingBottom: '0.2em',
-          border: `solid 1px ${bordes}`,
-          fontSize: '0.8em',
-          backgroundColor: etiquetasTituloFondo,
-          color: etiquetasTitulo
-        }}
-      >
-        <span style={{ height: '0.8rem' }}>Fecha:</span>
-
-        <div
-          style={{
-            borderRadius: '0.3em',
-            width: 'fit-content',
-            paddingLeft: '0.5em',
-            paddingRight: '0.5em',
-            border: `solid 1px ${bordes}`,
-            fontFamily: 'Anaheim',
-            fontSize: '0.73rem',
-            backgroundColor: etiquetasContenidoFondo,
-            color: tarjetasCategoriasTexto,
-            marginLeft: '0.5em'
-          }}
-        >
-          {fecha}
-        </div>
-      </div>
-    )
-  }
-
-  const EstadoActual = ({ estado }) => {
-    return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          borderRadius: '0.3em',
-          width: 'fit-content',
-          height: 'fit-content',
-          paddingLeft: '0.5em',
-          paddingRight: '0.5em',
-          paddingTop: '0.2em',
-          paddingBottom: '0.2em',
-          border: `solid 1px ${bordes}`,
-          fontSize: '0.8em',
-          backgroundColor: etiquetasTituloFondo,
-          color: etiquetasTitulo
-        }}
-      >
-        <span style={{ height: '0.8rem' }}>Estado:</span>
-        <div
-          style={{
-            borderRadius: '0.3em',
-            width: 'fit-content',
-            paddingLeft: '0.5em',
-            paddingRight: '0.5em',
-            border: `solid 1px ${bordes}`,
-            fontFamily: 'Anaheim',
-            fontSize: '0.73rem',
-            backgroundColor: etiquetasContenidoFondo,
-            color: tarjetasCategoriasTexto,
-            marginLeft: '0.5em'
-          }}
-        >
-          {estado}
-        </div>
-      </div>
-    )
-  }
-
-  const Etiquetas = ({ etiquetas }) => {
-    return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          borderRadius: '0.3em',
-          width: 'fit-content',
-          height: 'fit-content',
-          paddingLeft: '0.5em',
-          paddingRight: '0.5em',
-          paddingTop: '0.2em',
-          paddingBottom: '0.2em',
-          border: `solid 1px ${bordes}`,
-          fontSize: '0.8em',
-          backgroundColor: etiquetasTituloFondo,
-          color: etiquetasTitulo
-        }}
-      >
-        <span style={{ height: '0.8rem' }}>Etiquetas:</span>
-        {etiquetas.map((categoria, indice) => {
-          return (
-            <div
-              key={`categoria-${indice}`}
-              style={{
-                borderRadius: '0.3em',
-                width: 'fit-content',
-                paddingLeft: '0.5em',
-                paddingRight: '0.5em',
-                border: `solid 1px ${bordes}`,
-                fontFamily: 'Anaheim',
-                fontSize: '0.73rem',
-                backgroundColor: etiquetasContenidoFondo,
-                color: tarjetasCategoriasTexto,
-                marginLeft: '0.5em'
-              }}
-            >
-              {categoria}
-            </div>
-          )
-        })}
-      </div>
-    )
   }
 
   const ModalTitulo = (props) => {
@@ -251,10 +119,11 @@ const ModalPortafolio = (props) => {
                 gap: '0.5em'
               }}
             >
-              <EstadoActual estado={estado} /> <Fechas fecha={fecha} />
+              <EtiquetasModal tipo='estado' valores={estado} />
+              <EtiquetasModal tipo='fecha' valores={fecha} />
             </div>
             {descripcion}
-            <Etiquetas etiquetas={categorias} />
+            <EtiquetasModal tipo='etiquetas' valores={categorias} />
           </div>
         </DialogContent>
         <DialogActions sx={{ m: 0, py: '10px', px: '24px' }}>
