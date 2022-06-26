@@ -125,16 +125,17 @@ let esquemaTextos = {
         descripcion: [
           <React.Fragment key='es-desc-btc2'>
             <p>
-              Bot que muestra el valor actual del Bitcoin en pesos colombianos y
-              API en el sitio web que convierte el valor ingresado en BTC a
-              pesos colombianos.
+              Bot que dice el valor actual de Bitcoin en pesos colombianos y API
+              en el sitio web que convierte el valor dado en BTC a pesos
+              colombianos.
             </p>
             <p>
               Desarrollo del Bot utilizando <strong>NodeJS</strong> y{' '}
-              <strong>Ngrook</strong>, webscrapping con{' '}
-              <strong>Puppeteer</strong> para construir la API llamando los
-              datos desde una fuente actualizada, desarrollo del sitio web con
-              <strong>Nuxt3</strong> y <strong>Tailwind CSS</strong>.
+              <strong>Ngrook</strong>, webscrapping usando{' '}
+              <strong>Puppeteer</strong> para construir la API que llama el
+              valor de las divisas desde una fuente actualizada, desarrollo del
+              sitio web con <strong> Nuxt3</strong> y{' '}
+              <strong>Tailwind CSS</strong>.
             </p>
           </React.Fragment>
         ]
@@ -259,16 +260,16 @@ let esquemaTextos = {
         descripcion: [
           <React.Fragment key='en-desc-btc2'>
             <p>
-              Bot que muestra el valor actual del Bitcoin en pesos colombianos y
-              API en el sitio web que convierte el valor ingresado en BTC a
-              pesos colombianos.
+              Bot that tells the current value of Bitcoin in Colombian pesos and
+              API on the website that converts the given value in BTC to
+              Colombian pesos.
             </p>
             <p>
-              Desarrollo del Bot utilizando <strong>NodeJS</strong> y{' '}
-              <strong>Ngrook</strong>, webscrapping con{' '}
-              <strong>Puppeteer</strong> para construir la API llamando los
-              datos desde una fuente actualizada, desarrollo del sitio web con
-              <strong>Nuxt3</strong> y <strong>Tailwind CSS</strong>.
+              Bot development using <strong>NodeJS</strong> and{' '}
+              <strong>Ngrook</strong>, webscrapping using{' '}
+              <strong>Puppeteer</strong> to build the API that calls the
+              currency values from an updated source, website development with{' '}
+              <strong>Nuxt3</strong> and <strong>Tailwind CSS</strong>.
             </p>
           </React.Fragment>
         ]
