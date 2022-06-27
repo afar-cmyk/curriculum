@@ -20,7 +20,7 @@ const FechaTitulo = (props) => {
       lineHeight: '39px',
       height: '33px',
       fontWeight: 700,
-      fontSize: { xs: '1.08em', lg: '1.23em' },
+      fontSize: { xs: '1.08em', lg: '1.13em' },
       color: tarjetaTitulo,
       m: 0
     },

@@ -33,7 +33,7 @@ const ContenedorExperiencia = (props) => {
     },
     '& p': {
       m: 0,
-      fontSize: { xs: '16px', lg: '1.2em' },
+      fontSize: { xs: '16px', lg: '1.1em' },
       color: textos
     }
   }
