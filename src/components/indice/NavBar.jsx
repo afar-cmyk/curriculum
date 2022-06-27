@@ -156,6 +156,16 @@ const NavBar = () => {
             size='small'
             clickable={true}
             icon={<Language />}
+            aria-label={
+              estadoIdioma
+                ? 'Cambiar el idioma a Inglés'
+                : 'Switch language to Spanish'
+            }
+            title={
+              estadoIdioma
+                ? 'Cambiar el idioma a Inglés'
+                : 'Switch language to Spanish'
+            }
             label={textoIdioma[idiomaActual]['label']}
             sx={{ ...botonIdioma }}
           />
