@@ -1,8 +1,8 @@
 <h1 align="center">
-  Andrés Felipe Alvarez
+  Curriculum & Portfolio
 </h1>
 
-## [![Netlify Status](https://api.netlify.com/api/v1/badges/f06c7a17-2451-490b-9a8f-680d7e7bda0d/deploy-status)](https://app.netlify.com/sites/andresfelipe/deploys) Curriculum-vitae and Portfolio 
+## [![Netlify Status](https://api.netlify.com/api/v1/badges/f06c7a17-2451-490b-9a8f-680d7e7bda0d/deploy-status)](https://app.netlify.com/sites/andresfelipe/deploys)
 
 `english`<br/>
 Responsive curriculum vitae development in GatsbyJS, React and Material UI, hosted on Netlify and GitHub pages.
