@@ -16,14 +16,14 @@ const EtiquetasModal = (props) => {
 
   let ponerTipo = {
     español: {
-      etiquetas: 'Etiquetas',
-      fecha: 'Fecha',
-      estado: 'Estado'
+      etiquetas: 'Etiquetas:',
+      fecha: 'Fecha:',
+      estado: 'Estado:'
     },
     ingles: {
-      etiquetas: 'Tags',
-      fecha: 'Date',
-      estado: 'Status'
+      etiquetas: 'Tags:',
+      fecha: 'Date:',
+      estado: 'Status:'
     }
   }
 
@@ -61,7 +61,7 @@ const EtiquetasModal = (props) => {
 
   return (
     <div style={{ ...contenedorEtiquetas }}>
-      <span style={{ height: '0.8rem' }}>{ponerTipo[idiomaActual][tipo]}:</span>
+      <span style={{ height: '0.8rem' }}>{ponerTipo[idiomaActual][tipo]}</span>
       {identificarValores ? (
         valores.map((datos, indice) => {
           return (
