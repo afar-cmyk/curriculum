@@ -16,7 +16,7 @@ let esquemaTextos = {
         contenido: telefono
       },
       {
-        titulo: 'E-Mail',
+        titulo: 'Correo Electrónico',
         contenido: email
       },
       {
