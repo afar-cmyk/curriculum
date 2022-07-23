@@ -120,7 +120,7 @@ let esquemaTextos = {
             to edit, colorize and compose the content, used on advertising
             campaigns.
           </p>,
-          <p>Video transcoding in FFMPEG.</p>
+          <p>Video transcoding using FFMPEG.</p>
         ]
       }
     ]
