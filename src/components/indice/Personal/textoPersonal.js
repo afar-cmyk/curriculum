@@ -1,6 +1,6 @@
 const nombre = 'Andrés Felipe Álvarez Ramírez'
 const telefono = '(+57) 319 388 0900'
-const email = 'andres.felipealvarez03@gmail.com'
+const email = 'andresfelipe.alvarez03@gmail.com'
 const ubicacion = 'Pereira, Colombia'
 
 let esquemaTextos = {
