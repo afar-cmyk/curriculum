@@ -111,15 +111,15 @@ let esquemaTextos = {
         estado: 'Activo',
         titulo: 'BTC 2 COP Bot',
         imagen: 'btc2cop',
-        categorias: ['Desarrollo', 'Diseño'],
+        categorias: ['Desarrollo', 'Diseño', 'API', 'Lambda'],
         enlaces: [
           {
             tipo: 'link',
-            url: ''
+            url: 'https://btc2cop.netlify.app/'
           },
           {
             tipo: 'repo',
-            url: ''
+            url: 'https://github.com/afar-cmyk/BTC2COP'
           }
         ],
         descripcion: [
@@ -133,9 +133,10 @@ let esquemaTextos = {
               Desarrollo del Bot utilizando <strong>NodeJS</strong> y{' '}
               <strong>Ngrook</strong>, webscrapping usando{' '}
               <strong>Puppeteer</strong> para construir la API que llama el
-              valor de las divisas desde una fuente actualizada, desarrollo del
-              sitio web con <strong> Nuxt3</strong> y{' '}
-              <strong>Tailwind CSS</strong>.
+              valor de las divisas desde una fuente actualizada, almacenando
+              esta información en una colección de MongoDB usando{' '}
+              <strong>MongoAtlas</strong>, desarrollo del sitio web con{' '}
+              <strong> Nuxt3</strong> y <strong>Tailwind CSS</strong>.
             </p>
           </React.Fragment>
         ]
@@ -246,15 +247,15 @@ let esquemaTextos = {
         estado: 'Activo',
         titulo: 'BTC 2 COP Bot',
         imagen: 'btc2cop',
-        categorias: ['Development', 'Design'],
+        categorias: ['Development', 'Design', 'API', 'Lambda'],
         enlaces: [
           {
             tipo: 'link',
-            url: ''
+            url: 'https://btc2cop.netlify.app/'
           },
           {
             tipo: 'repo',
-            url: ''
+            url: 'https://github.com/afar-cmyk/BTC2COP'
           }
         ],
         descripcion: [
@@ -268,8 +269,10 @@ let esquemaTextos = {
               Bot development using <strong>NodeJS</strong> and{' '}
               <strong>Ngrook</strong>, webscrapping using{' '}
               <strong>Puppeteer</strong> to build the API that calls the
-              currency values from an updated source, website development with{' '}
-              <strong>Nuxt3</strong> and <strong>Tailwind CSS</strong>.
+              currency values from an updated source, storing this information
+              in a hosted MongoDB collection using <strong>MongoAtlas</strong>,
+              website development with <strong>Nuxt3</strong> and{' '}
+              <strong>Tailwind CSS</strong>.
             </p>
           </React.Fragment>
         ]
