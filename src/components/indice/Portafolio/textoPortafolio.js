@@ -109,7 +109,7 @@ let esquemaTextos = {
         id: 'btc2-es',
         fecha: '2022',
         estado: 'Activo',
-        titulo: 'BTC 2 COP Bot',
+        titulo: 'BTC 2 COP',
         imagen: 'btc2cop',
         categorias: ['Desarrollo', 'Diseño', 'API', 'Lambda'],
         enlaces: [
@@ -245,7 +245,7 @@ let esquemaTextos = {
         id: 'btc2-en',
         fecha: '2022',
         estado: 'Activo',
-        titulo: 'BTC 2 COP Bot',
+        titulo: 'BTC 2 COP',
         imagen: 'btc2cop',
         categorias: ['Development', 'Design', 'API', 'Lambda'],
         enlaces: [
