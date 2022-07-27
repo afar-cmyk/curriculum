@@ -48,18 +48,6 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/index/*`, `/404/*`]
-        // workboxConfig: {
-        //   runtimeCaching: [
-        //     {
-        //       urlPattern: /(\.woff$|\.woff2$|\.svg$)/,
-        //       handler: `StaleWhileRevalidate`
-        //     },
-        //     {
-        //       urlPattern: /(\.js$|\.css$|\.html$)/,
-        //       handler: `NetworkFirst`
-        //     }
-        //   ]
-        // }
       }
     }
   ]
