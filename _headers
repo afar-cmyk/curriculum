@@ -5,19 +5,19 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: same-origin
+/component---cache-caches-gatsby-plugin-offline-app-shell-js-36218f963606868b2b65.js
+  Cache-Control: public, max-age=31536000, immutable
 /framework-115da4d3c6c521cf7ce8.js
   Cache-Control: public, max-age=31536000, immutable
-/styles.b1010341fb2d8f4cd308.css
+/styles.4371697fd6dd6de4dcc9.css
   Cache-Control: public, max-age=31536000, immutable
 /e50e9c162871c1d91fba5ce567a5656e16dc6783-5b4e6dfc898ccbb1887c.js
   Cache-Control: public, max-age=31536000, immutable
 /component---src-pages-404-js-71bce903a171e9e0a84b.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-index-js-d9556ba4deb496aa44ec.js
+/component---src-pages-index-js-ac772f5652874e5f0bd1.js
   Cache-Control: public, max-age=31536000, immutable
-/component---cache-caches-gatsby-plugin-offline-app-shell-js-36218f963606868b2b65.js
-  Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-fa258b2bd0320af501f9.js
+/webpack-runtime-ac06de0c900f8db99213.js
   Cache-Control: public, max-age=31536000, immutable
 /app-d5de18332a1be7023f92.js
   Cache-Control: public, max-age=31536000, immutable
@@ -25,8 +25,15 @@
   Cache-Control: public, max-age=31536000, immutable
 /sw.js
   Cache-Control: no-cache
+/curriculum/offline-plugin-app-shell-fallback/
+  Link: </curriculum/webpack-runtime-ac06de0c900f8db99213.js>; rel=preload; as=script
+  Link: </curriculum/framework-115da4d3c6c521cf7ce8.js>; rel=preload; as=script
+  Link: </curriculum/app-d5de18332a1be7023f92.js>; rel=preload; as=script
+  Link: </curriculum/component---cache-caches-gatsby-plugin-offline-app-shell-js-36218f963606868b2b65.js>; rel=preload; as=script
+  Link: </curriculum/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </curriculum/page-data/offline-plugin-app-shell-fallback/page-data.json>; rel=preload; as=fetch; crossorigin
 /curriculum/404/
-  Link: </curriculum/webpack-runtime-fa258b2bd0320af501f9.js>; rel=preload; as=script
+  Link: </curriculum/webpack-runtime-ac06de0c900f8db99213.js>; rel=preload; as=script
   Link: </curriculum/framework-115da4d3c6c521cf7ce8.js>; rel=preload; as=script
   Link: </curriculum/app-d5de18332a1be7023f92.js>; rel=preload; as=script
   Link: </curriculum/framework-115da4d3c6c521cf7ce8.js>; rel=preload; as=script
@@ -35,7 +42,7 @@
   Link: </curriculum/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </curriculum/page-data/404/page-data.json>; rel=preload; as=fetch; crossorigin
 /curriculum/404.html
-  Link: </curriculum/webpack-runtime-fa258b2bd0320af501f9.js>; rel=preload; as=script
+  Link: </curriculum/webpack-runtime-ac06de0c900f8db99213.js>; rel=preload; as=script
   Link: </curriculum/framework-115da4d3c6c521cf7ce8.js>; rel=preload; as=script
   Link: </curriculum/app-d5de18332a1be7023f92.js>; rel=preload; as=script
   Link: </curriculum/framework-115da4d3c6c521cf7ce8.js>; rel=preload; as=script
@@ -44,18 +51,11 @@
   Link: </curriculum/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </curriculum/page-data/404.html/page-data.json>; rel=preload; as=fetch; crossorigin
 /curriculum/
-  Link: </curriculum/webpack-runtime-fa258b2bd0320af501f9.js>; rel=preload; as=script
+  Link: </curriculum/webpack-runtime-ac06de0c900f8db99213.js>; rel=preload; as=script
   Link: </curriculum/framework-115da4d3c6c521cf7ce8.js>; rel=preload; as=script
   Link: </curriculum/app-d5de18332a1be7023f92.js>; rel=preload; as=script
   Link: </curriculum/framework-115da4d3c6c521cf7ce8.js>; rel=preload; as=script
   Link: </curriculum/e50e9c162871c1d91fba5ce567a5656e16dc6783-5b4e6dfc898ccbb1887c.js>; rel=preload; as=script
-  Link: </curriculum/component---src-pages-index-js-d9556ba4deb496aa44ec.js>; rel=preload; as=script
+  Link: </curriculum/component---src-pages-index-js-ac772f5652874e5f0bd1.js>; rel=preload; as=script
   Link: </curriculum/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </curriculum/page-data/index/page-data.json>; rel=preload; as=fetch; crossorigin
-/curriculum/offline-plugin-app-shell-fallback/
-  Link: </curriculum/webpack-runtime-fa258b2bd0320af501f9.js>; rel=preload; as=script
-  Link: </curriculum/framework-115da4d3c6c521cf7ce8.js>; rel=preload; as=script
-  Link: </curriculum/app-d5de18332a1be7023f92.js>; rel=preload; as=script
-  Link: </curriculum/component---cache-caches-gatsby-plugin-offline-app-shell-js-36218f963606868b2b65.js>; rel=preload; as=script
-  Link: </curriculum/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </curriculum/page-data/offline-plugin-app-shell-fallback/page-data.json>; rel=preload; as=fetch; crossorigin
